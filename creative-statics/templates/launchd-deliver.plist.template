@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Template launchd : delivery matinal à 8h00 local.
+  Package tous les créatives → ZIP Desktop → notification macOS →
+  tentative email via Mail.app (si compte configuré).
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>{{LABEL}}</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>{{SKILLS_ROOT}}/projects/{{CLIENT_SLUG}}/05-meta-ads/pipeline/run_delivery_morning.sh</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key><integer>8</integer>
+        <key>Minute</key><integer>0</integer>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>{{SKILLS_ROOT}}/projects/{{CLIENT_SLUG}}/05-meta-ads/pipeline/launchd-deliver.out</string>
+    <key>StandardErrorPath</key>
+    <string>{{SKILLS_ROOT}}/projects/{{CLIENT_SLUG}}/05-meta-ads/pipeline/launchd-deliver.err</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>

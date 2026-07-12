@@ -1,0 +1,115 @@
+{
+  "$schema_version": "1.0.0",
+  "$description": "EXEMPLE GOLD STANDARD (données fictives) — brief produit depuis une transcription d'appel type pour un menuisier extérieur régional. À utiliser comme référence de qualité pour tous les briefs futurs. Tous les noms, chiffres et coordonnées ci-dessous sont inventés.",
+  "meta": {
+    "prospect_full_name": "Prénom Acme",
+    "prospect_first_name": "Prénom",
+    "company_legal_name": "Fermetures Acme",
+    "company_display_name": "Acme Fermetures",
+    "siret": null,
+    "industry": "BTP — menuiseries extérieures (fenêtres, portes, portails, volets, pergolas)",
+    "industry_vocab": {
+      "deal_word": "chantier",
+      "deal_word_plural": "chantiers",
+      "customer_word": "propriétaire"
+    },
+    "decision_deadline_iso": "2026-04-25",
+    "call_date_iso": "2026-04-21",
+    "client_slug": "acme"
+  },
+  "contact": {
+    "email": "contact@example-client.com",
+    "phone": "01 23 45 67 89",
+    "whatsapp": "06 00 00 00 00",
+    "address_line": "1 rue de l'Exemple",
+    "postal_code": "00000",
+    "city": "Villexemple"
+  },
+  "business": {
+    "founded_year": 1986,
+    "years_in_business": 40,
+    "team_size_label": "1 commercial + le gérant à temps partiel (20-25% du temps commercial)",
+    "social_proof": [
+      {
+        "label": "Google",
+        "rating": "4.9/5",
+        "count": 120
+      }
+    ],
+    "geo_radius_km": 60,
+    "geo_cities_covered": [
+      "Département (00)",
+      "Département voisin partiel (00)",
+      "Département voisin nord (00)"
+    ]
+  },
+  "icp": {
+    "description": "Propriétaires 30-70 ans, projet menuiserie extérieure premium (fenêtres, portail, pergola), refusent les promos low-cost et veulent du solide",
+    "age_range": "30-70 ans",
+    "budget_range_label": "5 000 € à 15 000 € par chantier"
+  },
+  "economics": {
+    "avg_deal_size_eur": 5000,
+    "current_monthly_volume_label": "~30 appels entrants / mois",
+    "primary_acquisition_channels": [
+      "Bouche-à-oreille (70%)",
+      "Enseigne physique sur axe passant",
+      "Google recherches locales"
+    ]
+  },
+  "dream_state": {
+    "headline_hook": "Moins de RDV. Mieux qualifiés. Sans diluer vos 40 ans d'image premium.",
+    "verbatim_wins": [
+      "Il vaut mieux en avoir moins, qu'on a payé un peu plus cher, mais qui correspondent vraiment à l'image",
+      "Des gens qui ont le budget",
+      "Image haut de gamme préservée"
+    ]
+  },
+  "objections": {
+    "headline_subtitle_bullets": [
+      "Fini les prospects qui \"comparent 3 devis\"",
+      "Fini les RDV à 55 km qui n'ont pas le budget",
+      "Fini les promos low-cost qui salissent votre marque"
+    ],
+    "verbatim_pains": [
+      "ça bloquait souvent au niveau du prix",
+      "pas vraiment les gens qualifiés",
+      "mon commercial a été absent de l'entreprise, beaucoup de frais de véhicules de carburant",
+      "à un moment donné, je vais mettre de la confusion dans l'esprit... créer aussi une distorsion de l'image de l'entreprise sur le long terme",
+      "ça ne m'intéresse pas d'aller perdre du temps"
+    ]
+  },
+  "prior_agency_pain": {
+    "amount_wasted_eur": 15000,
+    "duration_months": 4,
+    "outcome": "3 clients signés sur 4 mois, CA ≈ montant investi, zéro marge dégagée",
+    "root_cause": "L'agence Meta a lancé des campagnes en promotions low-cost, attirant des prospects hors cible, créant des RDV non qualifiés à 60 km, et diluant l'image premium construite en 40 ans"
+  },
+  "roi_calc_defaults": {
+    "avg_basket_eur": 5000,
+    "use_industry_vocab_in_calc": true
+  },
+  "pricing": {
+    "lf_fee_eur": 790,
+    "recommended_ad_budget_eur": 500,
+    "engagement": "none"
+  },
+  "sales_process_current": {
+    "team_structure_label": "1 commercial terrain + le gérant à temps partiel 20-25%",
+    "current_pain_in_process": "Commercial déplacé 60 km pour des prospects pas qualifiés. Coûts carburant en forte hausse. Temps commercial perdu sur des RDV qui ne signent pas."
+  },
+  "follow_up": {
+    "next_call_iso": "2026-04-24T11:00:00+02:00",
+    "channel": "whatsapp"
+  },
+  "needs_human_review": [],
+  "quality_gates_passed": {
+    "contact_and_business_filled": true,
+    "headline_hook_format_ok": true,
+    "three_fini_les_bullets_ok": true,
+    "industry_vocab_populated": true,
+    "min_verbatims_ok": true,
+    "prior_agency_cleanly_handled": true,
+    "basket_in_industry_range": true
+  }
+}

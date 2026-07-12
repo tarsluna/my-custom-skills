@@ -1,0 +1,58 @@
+{
+  "_doc": "Profil de marque V2. Copier dans <client>/05-meta-ads/client-brand-profile.json et remplir depuis 00-onboarding/onboarding-form.md + assets fournis. Aucun secret ici (pas de clé API).",
+  "client": "client-slug",
+  "brand_name": "Nom de marque affiché",
+  "accent_archetype": "Confiance | Urgence | Energie | Authority | Luxe",
+  "tone": "ex: direct, chaleureux, tutoiement, zéro jargon, anti-promesse",
+  "do": [
+    "tutoyer",
+    "phrases courtes (8-12 mots)",
+    "citer un chiffre sourçable",
+    "montrer le produit réel"
+  ],
+  "dont": [
+    "jargon non traduit",
+    "promesse non tenable",
+    "emoji",
+    "angle saturé concurrent"
+  ],
+  "palette": [
+    { "role": "background_dark", "hex": "#0A1628", "usage": "fond sombre dominant" },
+    { "role": "offwhite", "hex": "#F5F0E6", "usage": "texte sur fond sombre / fond clair" },
+    { "role": "secondary", "hex": "#E4DAC6", "usage": "descente tonale / ligne 2" },
+    { "role": "accent", "hex": "#FF5A1F", "usage": "CTA UNIQUEMENT — 1 seul point focal" }
+  ],
+  "fonts": {
+    "serif_display_name": "Instrument Serif",
+    "serif_display_path": "../creative-statics/assets/fonts/InstrumentSerif-Regular.ttf",
+    "grotesk_bold_name": "Space Grotesk Bold",
+    "grotesk_bold_path": "../creative-statics/assets/fonts/SpaceGrotesk-Bold.ttf",
+    "_note": "fonts utilisées surtout par brand_lock_pass.py (rendu charte-exact). GPT Image 2 approxime les fonts dans l'image."
+  },
+  "logo": {
+    "image_path": "assets/logo.png",
+    "fallback_text": "MARQUE",
+    "placement": "top-left",
+    "_note": "si image_path absent, brand_lock_pass dessine fallback_text + underline accent"
+  },
+  "brand_assets": {
+    "_doc": "images de référence passées à GPT Image 2 (input_images) pour cohérence produit/visage/ambiance. URLs ou chemins locaux.",
+    "product": ["assets/product-1.jpg"],
+    "founder_or_spokesperson": ["assets/founder.jpg"],
+    "mood": ["assets/mood-1.jpg"]
+  },
+  "render": {
+    "provider": "higgsfield-cloud",
+    "model_slug": "",
+    "_model_slug_note": "VIDE tant que non confirmé via `gpt_image2_generate.py --list-models | grep -i gpt`. Ne pas lancer de batch facturé avant de l'avoir rempli.",
+    "default_resolution": "2k",
+    "hero_resolution": "4k",
+    "aspect_map": { "feed-4x5": "4:5", "story-9x16": "9:16", "feed-1x1": "1:1" },
+    "soul_id": "",
+    "_soul_id_note": "optionnel — si spokesperson récurrent (style S4). Créer via higgsfield-api.md § Soul ID."
+  },
+  "legal": {
+    "disclaimer_line": "",
+    "_note": "mention légale optionnelle incrustée par brand_lock_pass (bas de créative)"
+  }
+}

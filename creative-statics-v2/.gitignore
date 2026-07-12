@@ -1,0 +1,32 @@
+# Secrets — NEVER commit
+.env
+*.key
+secrets/
+**/api-keys*
+
+# Generated creatives & runtime artifacts
+creatives-v2/
+**/raw/
+**/locked/
+**/.cache/
+**/logs/
+*.png
+*.jpg
+*.jpeg
+*.webp
+!templates/**/*.png
+
+# Filled client data (templates only in repo)
+client-brand-profile.json
+variation-matrix.json
+competitor-insights.json
+**/_council/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store

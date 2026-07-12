@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Template launchd : itération créatives toutes les 2 h entre 04:15 et 22:15.
+  10 créneaux / jour, plafonnés à `MAX_ITER` (défaut 6).
+  Remplacer les placeholders {{...}} puis déposer dans ~/Library/LaunchAgents/
+  et charger avec `launchctl load ~/Library/LaunchAgents/{{LABEL}}.plist`.
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>{{LABEL}}</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>{{SKILLS_ROOT}}/projects/{{CLIENT_SLUG}}/05-meta-ads/pipeline/run_cron.sh</string>
+    </array>
+
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict><key>Hour</key><integer>4</integer><key>Minute</key><integer>15</integer></dict>
+        <dict><key>Hour</key><integer>6</integer><key>Minute</key><integer>15</integer></dict>
+        <dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>15</integer></dict>
+        <dict><key>Hour</key><integer>10</integer><key>Minute</key><integer>15</integer></dict>
+        <dict><key>Hour</key><integer>12</integer><key>Minute</key><integer>15</integer></dict>
+        <dict><key>Hour</key><integer>14</integer><key>Minute</key><integer>15</integer></dict>
+        <dict><key>Hour</key><integer>16</integer><key>Minute</key><integer>15</integer></dict>
+        <dict><key>Hour</key><integer>18</integer><key>Minute</key><integer>15</integer></dict>
+        <dict><key>Hour</key><integer>20</integer><key>Minute</key><integer>15</integer></dict>
+        <dict><key>Hour</key><integer>22</integer><key>Minute</key><integer>15</integer></dict>
+    </array>
+
+    <key>StandardOutPath</key>
+    <string>{{SKILLS_ROOT}}/projects/{{CLIENT_SLUG}}/05-meta-ads/pipeline/launchd-iterate.out</string>
+    <key>StandardErrorPath</key>
+    <string>{{SKILLS_ROOT}}/projects/{{CLIENT_SLUG}}/05-meta-ads/pipeline/launchd-iterate.err</string>
+
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>

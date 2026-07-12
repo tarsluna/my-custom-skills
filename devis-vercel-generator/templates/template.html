@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Devis the platform — {{CLIENT_COMPANY}}</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #FFFDF5;
+      --black: #000000;
+      --black-deep: #0B0B0B;
+      --blue: #3B82F6;
+      --blue-deep: #2563EB;
+      --blue-sky: #EFF6FF;
+      --pink: #FFC4EB;
+      --yellow: #FDE047;
+      --green: #58BC82;
+      --text-1: #000000;
+      --text-2: #374151;
+      --text-3: #6B7280;
+      --line: #9CA3AF;
+      --gray-light: #E5E7EB;
+      --shadow-sm: 4px 4px 0 #000;
+      --shadow-md: 6px 6px 0 #000;
+      --shadow-lg: 8px 8px 0 #000;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      background: var(--cream);
+      color: var(--text-1);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4,
+    .display, .btn, .badge, .logo, .section-label, .price-amount,
+    .price-label, .meta-label, .nav-ref {
+      font-family: 'Space Grotesk', system-ui, sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--cream);
+      border-bottom: 3px solid var(--black);
+      padding: 14px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--black);
+      letter-spacing: -0.03em;
+    }
+
+    .logo-mark {
+      width: 36px; height: 36px;
+      border-radius: 9999px;
+      background: var(--blue);
+      border: 3px solid var(--black);
+      box-shadow: 3px 3px 0 var(--black);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-mark svg {
+      width: 18px; height: 18px;
+      stroke: var(--black-deep);
+      stroke-width: 2;
+      stroke-linejoin: round;
+      fill: #fff;
+    }
+
+    .logo-word { font-weight: 700; }
+    .logo-word span { color: var(--blue); }
+
+    .nav-ref {
+      font-size: 0.72rem;
+      color: var(--text-3);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      padding: 130px 32px 80px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 80px; right: -120px;
+      width: 380px; height: 380px;
+      background: var(--blue);
+      border: 3px solid var(--black);
+      border-radius: 9999px;
+      opacity: 0.08;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -80px;
+      width: 260px; height: 260px;
+      background: var(--yellow);
+      border: 3px solid var(--black);
+      border-radius: 9999px;
+      opacity: 0.22;
+    }
+
+    .hero > * { position: relative; z-index: 1; }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border: 3px solid var(--black);
+      border-radius: 9999px;
+      box-shadow: 4px 4px 0 var(--black);
+      font-weight: 700;
+      font-size: 0.78rem;
+      margin-bottom: 28px;
+      animation: slideDown 0.5s ease both;
+    }
+
+    .badge-pink   { background: var(--pink);   color: var(--black); }
+    .badge-yellow { background: var(--yellow); color: var(--black); }
+    .badge-green  { background: var(--green);  color: #FFF; }
+    .badge-blue   { background: var(--blue);   color: #FFF; }
+    .badge-cream  { background: var(--cream);  color: var(--black); }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5.8vw, 4.4rem);
+      font-weight: 700;
+      line-height: 1;
+      max-width: 900px;
+      margin-bottom: 22px;
+      animation: slideUp 0.6s ease both 0.1s;
+      color: var(--black);
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .hero .subtitle {
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-size: 1.08rem;
+      font-weight: 400;
+      color: var(--text-2);
+      max-width: 560px;
+      margin-bottom: 56px;
+      line-height: 1.6;
+      animation: slideUp 0.6s ease both 0.2s;
+    }
+
+    /* PRICE HERO BLOCK */
+    .price-hero {
+      animation: slideUp 0.6s ease both 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .price-tag {
+      background: var(--cream);
+      color: var(--black);
+      border: 3px solid var(--black);
+      border-radius: 24px;
+      box-shadow: 10px 10px 0 var(--black);
+      padding: 36px 60px;
+      text-align: center;
+      position: relative;
+    }
+
+    .price-tag .price-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .price-tag .price-amount {
+      font-size: 4.4rem;
+      font-weight: 700;
+      line-height: 1;
+      color: var(--black);
+      letter-spacing: -0.04em;
+    }
+
+    .price-tag .price-amount span {
+      font-size: 1.8rem;
+      color: var(--blue);
+    }
+
+    .price-tag .price-desc {
+      font-size: 0.88rem;
+      color: var(--text-3);
+      margin-top: 10px;
+      font-weight: 500;
+    }
+
+    /* BUTTONS */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 18px 40px;
+      border: 3px solid var(--black);
+      border-radius: 9999px;
+      box-shadow: 6px 6px 0 var(--black);
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+
+    .btn-primary { background: var(--blue); color: var(--cream); }
+    .btn-primary:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--black); }
+    .btn-primary:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--black); }
+    .btn-secondary { background: var(--cream); color: var(--black); }
+    .btn-secondary:hover { transform: translate(-2px, -2px); box-shadow: 8px 8px 0 var(--black); background: var(--yellow); }
+    .btn-secondary:active { transform: translate(3px, 3px); box-shadow: 2px 2px 0 var(--black); }
+
+    .validity-note {
+      font-size: 0.82rem;
+      color: var(--text-3);
+      font-weight: 500;
+    }
+
+    /* SECTIONS */
+    section {
+      padding: 90px 32px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: var(--pink);
+      border: 3px solid var(--black);
+      border-radius: 9999px;
+      box-shadow: 3px 3px 0 var(--black);
+      padding: 6px 16px;
+      margin-bottom: 22px;
+      color: var(--black);
+    }
+
+    .section-label.yellow { background: var(--yellow); }
+    .section-label.green  { background: var(--green); color: #fff; }
+    .section-label.blue   { background: var(--blue); color: #fff; }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      line-height: 1.05;
+      margin-bottom: 16px;
+      color: var(--black);
+    }
+
+    .section-title em { color: var(--blue); font-style: italic; }
+
+    .section-sub {
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-size: 1.04rem;
+      color: var(--text-2);
+      max-width: 620px;
+      line-height: 1.6;
+      margin-bottom: 56px;
+    }
+
+    /* SERVICES GRID */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .card {
+      border: 3px solid var(--black);
+      border-radius: 16px;
+      box-shadow: 8px 8px 0 var(--black);
+      padding: 32px;
+      background: var(--cream);
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+
+    .card:hover { transform: translate(-3px, -3px); box-shadow: 11px 11px 0 var(--black); }
+
+    .card-icon {
+      width: 56px; height: 56px;
+      border: 3px solid var(--black);
+      border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 22px;
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 4px 4px 0 var(--black);
+    }
+
+    .card:nth-child(2) .card-icon { background: var(--yellow); color: var(--black); }
+    .card:nth-child(3) .card-icon { background: var(--pink); color: var(--black); }
+    .card:nth-child(4) .card-icon { background: var(--green); color: #fff; }
+    .card:nth-child(5) .card-icon { background: var(--blue); color: #fff; }
+    .card:nth-child(6) .card-icon { background: var(--yellow); color: var(--black); }
+
+    .card h3 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: var(--black);
+      letter-spacing: -0.02em;
+    }
+
+    .card ul { list-style: none; }
+
+    .card ul li {
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-size: 0.92rem;
+      color: var(--text-2);
+      padding: 8px 0;
+      border-bottom: 1.5px solid var(--gray-light);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      line-height: 1.5;
+    }
+
+    .card ul li:last-child { border-bottom: none; }
+
+    .card ul li::before {
+      content: '→';
+      font-weight: 700;
+      color: var(--blue);
+      flex-shrink: 0;
+      margin-top: 1px;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 34px;
+      top: 16px; bottom: 16px;
+      width: 3px;
+      background: var(--black);
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 36px;
+      align-items: flex-start;
+      padding: 0 0 44px 0;
+    }
+
+    .timeline-num {
+      flex-shrink: 0;
+      width: 70px; height: 70px;
+      background: var(--blue);
+      color: #fff;
+      border: 3px solid var(--black);
+      border-radius: 9999px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      z-index: 1;
+      box-shadow: 5px 5px 0 var(--black);
+    }
+
+    .timeline-item:nth-child(2) .timeline-num { background: var(--yellow); color: var(--black); }
+    .timeline-item:nth-child(3) .timeline-num { background: var(--pink); color: var(--black); }
+    .timeline-item:nth-child(4) .timeline-num { background: var(--green); color: #fff; }
+
+    .timeline-content { padding-top: 16px; }
+
+    .timeline-content h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--black);
+      letter-spacing: -0.02em;
+    }
+
+    .timeline-content p {
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-size: 0.95rem;
+      color: var(--text-2);
+      line-height: 1.6;
+    }
+
+    /* DEVIS TABLE */
+    .table-wrap {
+      border: 3px solid var(--black);
+      border-radius: 16px;
+      box-shadow: 8px 8px 0 var(--black);
+      overflow: hidden;
+      background: var(--cream);
+    }
+
+    .devis-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .devis-table th {
+      background: var(--black);
+      color: var(--cream);
+      padding: 18px 24px;
+      text-align: left;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .devis-table td {
+      padding: 18px 24px;
+      border-bottom: 2px solid var(--gray-light);
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-size: 0.94rem;
+      vertical-align: top;
+      color: var(--text-2);
+    }
+
+    .devis-table td strong { color: var(--black); font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+    .devis-table tr:last-child td { border-bottom: none; }
+    .devis-table tbody tr:hover td { background: var(--blue-sky); }
+
+    .devis-table .total-row td {
+      background: var(--blue);
+      color: #fff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      border-bottom: none;
+    }
+
+    .devis-table .total-row td.price {
+      color: var(--yellow);
+      font-size: 1.6rem;
+    }
+
+    .devis-table .total-row td strong { color: #fff; }
+
+    .table-note {
+      margin-top: 18px;
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-size: 0.85rem;
+      color: var(--text-3);
+      line-height: 1.5;
+    }
+
+    /* META INFO */
+    .meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+
+    @media (max-width: 640px) {
+      .meta-grid { grid-template-columns: 1fr; }
+    }
+
+    .meta-block {
+      border: 3px solid var(--black);
+      border-radius: 16px;
+      box-shadow: 6px 6px 0 var(--black);
+      padding: 28px 30px;
+      background: var(--cream);
+    }
+
+    .meta-block .meta-label {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: var(--blue);
+      color: #fff;
+      border: 3px solid var(--black);
+      border-radius: 9999px;
+      padding: 4px 12px;
+      margin-bottom: 16px;
+    }
+
+    .meta-block:nth-child(2) .meta-label { background: var(--yellow); color: var(--black); }
+
+    .meta-block p {
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--text-2);
+    }
+
+    .meta-block strong { color: var(--black); font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+
+    /* CONDITIONS */
+    .conditions-box {
+      border: 3px solid var(--black);
+      border-radius: 16px;
+      box-shadow: 8px 8px 0 var(--black);
+      padding: 36px 40px;
+      background: var(--cream);
+    }
+
+    .conditions-box h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 22px;
+      color: var(--black);
+      letter-spacing: -0.02em;
+    }
+
+    .conditions-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .conditions-box ul li {
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-size: 0.94rem;
+      color: var(--text-2);
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      line-height: 1.55;
+    }
+
+    .conditions-box ul li::before {
+      content: '✓';
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      color: var(--cream);
+      background: var(--blue);
+      border: 2px solid var(--black);
+      border-radius: 9999px;
+      width: 22px; height: 22px;
+      min-width: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .conditions-box ul li strong { color: var(--black); font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+
+    /* CTA FINAL */
+    .cta-section {
+      background: var(--blue);
+      padding: 100px 32px;
+      text-align: center;
+      border-top: 3px solid var(--black);
+      border-bottom: 3px solid var(--black);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 220px; height: 220px;
+      background: var(--yellow);
+      border: 3px solid var(--black);
+      border-radius: 9999px;
+      opacity: 0.6;
+    }
+
+    .cta-section::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -60px;
+      width: 180px; height: 180px;
+      background: var(--pink);
+      border: 3px solid var(--black);
+      border-radius: 9999px;
+      opacity: 0.5;
+    }
+
+    .cta-section > * { position: relative; z-index: 1; }
+
+    .cta-section h2 {
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      color: var(--cream);
+      margin-bottom: 16px;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+    }
+
+    .cta-section h2 em { font-style: italic; color: var(--yellow); }
+
+    .cta-section p {
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      color: rgba(255, 255, 245, 0.92);
+      font-size: 1.05rem;
+      margin-bottom: 44px;
+      line-height: 1.55;
+      max-width: 620px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-section .btn-primary { background: var(--yellow); color: var(--black); font-size: 1.08rem; padding: 20px 48px; }
+    .cta-section .btn-primary:hover { background: var(--cream); }
+    .cta-section .btn-secondary { background: var(--cream); color: var(--black); }
+
+    .cta-section .cta-sub {
+      margin-top: 22px;
+      font-size: 0.82rem;
+      color: rgba(255, 255, 245, 0.72);
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--cream);
+      padding: 38px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    footer .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--black);
+      letter-spacing: -0.03em;
+    }
+
+    footer .footer-tag {
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-size: 0.85rem;
+      color: var(--blue);
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    footer .footer-meta {
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-size: 0.78rem;
+      color: var(--text-3);
+    }
+
+    /* HERO CTAs */
+    .hero-cta-row, .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* SCROLL HINT */
+    .scroll-hint {
+      margin-top: 48px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(5px); }
+    }
+
+    /* ROI CALCULATOR */
+    .roi-calculator {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .roi-calculator { grid-template-columns: 1fr; }
+    }
+
+    .roi-inputs {
+      border: 3px solid var(--black);
+      border-radius: 16px;
+      box-shadow: 8px 8px 0 var(--black);
+      padding: 32px;
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
+    .roi-field { display: flex; flex-direction: column; gap: 6px; }
+
+    .roi-field label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--black);
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .roi-field label strong { color: var(--blue); font-weight: 700; }
+
+    .roi-default {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 500;
+      color: var(--text-3);
+      background: var(--gray-light);
+      border: 2px solid var(--black);
+      border-radius: 9999px;
+      padding: 2px 10px;
+    }
+
+    .roi-hint {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 0.8rem;
+      color: var(--text-3);
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+
+    .roi-field input[type="number"] {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--black);
+      background: var(--cream);
+      border: 3px solid var(--black);
+      border-radius: 12px;
+      padding: 12px 16px;
+      outline: none;
+      transition: box-shadow 0.12s ease, transform 0.12s ease;
+      width: 100%;
+    }
+
+    .roi-field input[type="number"]:focus { box-shadow: 4px 4px 0 var(--blue); transform: translate(-1px, -1px); }
+
+    .roi-slider-wrap {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 4px;
+    }
+
+    .roi-slider-wrap input[type="range"] {
+      flex: 1;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 10px;
+      background: var(--gray-light);
+      border: 2px solid var(--black);
+      border-radius: 9999px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .roi-slider-wrap input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px; height: 24px;
+      background: var(--blue);
+      border: 3px solid var(--black);
+      border-radius: 9999px;
+      box-shadow: 2px 2px 0 var(--black);
+      cursor: pointer;
+    }
+
+    .roi-slider-wrap input[type="range"]::-moz-range-thumb {
+      width: 24px; height: 24px;
+      background: var(--blue);
+      border: 3px solid var(--black);
+      border-radius: 9999px;
+      box-shadow: 2px 2px 0 var(--black);
+      cursor: pointer;
+    }
+
+    .roi-slider-value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--black);
+      background: var(--yellow);
+      border: 3px solid var(--black);
+      border-radius: 9999px;
+      padding: 4px 14px;
+      min-width: 64px;
+      text-align: center;
+      box-shadow: 3px 3px 0 var(--black);
+    }
+
+    .roi-results {
+      border: 3px solid var(--black);
+      border-radius: 16px;
+      box-shadow: 8px 8px 0 var(--black);
+      padding: 32px;
+      background: var(--blue);
+      color: var(--cream);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: sticky;
+      top: 100px;
+    }
+
+    .roi-results-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--yellow);
+    }
+
+    .roi-results-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+
+    .roi-stat {
+      background: rgba(255, 253, 245, 0.1);
+      border: 2px solid rgba(255, 253, 245, 0.25);
+      border-radius: 12px;
+      padding: 16px 10px;
+      text-align: center;
+    }
+
+    .roi-stat-value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--cream);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .roi-stat-label {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 0.78rem;
+      color: rgba(255, 253, 245, 0.75);
+      margin-top: 8px;
+      font-weight: 500;
+    }
+
+    .roi-ca {
+      background: var(--cream);
+      color: var(--black);
+      border: 3px solid var(--black);
+      border-radius: 12px;
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .roi-ca-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 0.92rem;
+      color: var(--text-2);
+      padding: 8px 0;
+      border-bottom: 1.5px solid var(--gray-light);
+    }
+
+    .roi-ca-row:last-child { border-bottom: none; }
+
+    .roi-ca-row strong {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      color: var(--black);
+      font-size: 1.05rem;
+    }
+
+    .roi-ca-row-final {
+      background: var(--yellow);
+      margin: 6px -22px -20px;
+      padding: 22px 22px 24px;
+      border-top: 3px solid var(--black);
+      border-bottom: none;
+      border-radius: 0 0 9px 9px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+    }
+
+    .roi-ca-row-final span {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      color: var(--black);
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .roi-ca-row-final strong {
+      font-size: 2.8rem;
+      color: var(--black);
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .roi-disclaimer {
+      font-family: 'Inter Tight', sans-serif;
+      font-size: 0.76rem;
+      color: rgba(255, 253, 245, 0.6);
+      line-height: 1.5;
+    }
+
+    /* HIDDEN PDF DIV
+       Default: display:none so it costs no layout. The downloadPDF() handler
+       briefly switches it to a normal in-flow block (so html2pdf's container
+       can measure non-zero height) under a full-screen cream overlay, then
+       restores display:none. Earlier hacks (position:fixed/absolute, opacity:0,
+       left:-10000px) all caused html2canvas to render a 0-height canvas — see
+       incident PDF blanc 2026-04-30. */
+    #pdf-devis {
+      display: none;
+      width: 800px;
+      background: #FFFDF5;
+      color: #000;
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      padding: 32px;
+    }
+    /* Full-screen cream overlay shown during PDF generation. */
+    #pdf-render-overlay {
+      position: fixed;
+      inset: 0;
+      background: #FFFDF5;
+      z-index: 2147483647;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter Tight', system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: #000;
+      letter-spacing: -0.01em;
+    }
+    #pdf-devis * { box-sizing: border-box; }
+    #pdf-devis .pdf-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 3px solid #000;
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+    #pdf-devis .pdf-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+    #pdf-devis .pdf-logo-mark {
+      width: 32px; height: 32px;
+      background: #3B82F6;
+      border: 3px solid #000;
+      border-radius: 9999px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    #pdf-devis .pdf-logo-mark svg { width: 16px; height: 16px; }
+    #pdf-devis .pdf-meta { text-align: right; font-family: 'Space Grotesk', sans-serif; }
+    #pdf-devis .pdf-meta .pdf-ref { font-size: 1rem; font-weight: 700; }
+    #pdf-devis .pdf-meta .pdf-date { font-size: 0.8rem; color: #6B7280; margin-top: 4px; }
+    #pdf-devis h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 24px 0 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid #000;
+    }
+    #pdf-devis .pdf-parties {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    #pdf-devis .pdf-party {
+      flex: 1;
+      border: 2px solid #000;
+      border-radius: 8px;
+      padding: 16px;
+      background: #FFFDF5;
+    }
+    #pdf-devis .pdf-party-label {
+      display: inline-block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: #3B82F6;
+      color: #fff;
+      border: 2px solid #000;
+      border-radius: 9999px;
+      padding: 3px 10px;
+      margin-bottom: 10px;
+    }
+    #pdf-devis .pdf-party:nth-child(2) .pdf-party-label { background: #FDE047; color: #000; }
+    #pdf-devis .pdf-party p { font-size: 0.82rem; line-height: 1.6; color: #374151; }
+    #pdf-devis .pdf-party strong { color: #000; font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+    #pdf-devis table { width: 100%; border-collapse: collapse; border: 2px solid #000; }
+    #pdf-devis table th {
+      background: #000;
+      color: #FFFDF5;
+      padding: 10px 12px;
+      text-align: left;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    #pdf-devis table td {
+      padding: 10px 12px;
+      border-bottom: 1.5px solid #E5E7EB;
+      font-size: 0.82rem;
+      color: #374151;
+      vertical-align: top;
+    }
+    #pdf-devis table td strong { color: #000; font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+    #pdf-devis table .pdf-total-row td {
+      background: #3B82F6;
+      color: #fff;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      border-bottom: none;
+    }
+    #pdf-devis table .pdf-total-row td strong { color: #fff; }
+    #pdf-devis table .pdf-total-row td.pdf-price { color: #FDE047; font-size: 1.2rem; text-align: right; }
+    #pdf-devis ol { margin-left: 20px; }
+    #pdf-devis ol li {
+      font-size: 0.85rem;
+      line-height: 1.55;
+      color: #374151;
+      margin-bottom: 8px;
+    }
+    #pdf-devis ol li strong { color: #000; font-family: 'Space Grotesk', sans-serif; font-weight: 700; }
+    #pdf-devis .pdf-footer {
+      margin-top: 24px;
+      padding-top: 16px;
+      border-top: 2px solid #000;
+      font-size: 0.8rem;
+      color: #374151;
+      text-align: center;
+      line-height: 1.6;
+    }
+    #pdf-devis .pdf-footer a { color: #3B82F6; font-weight: 700; word-break: break-all; }
+    #pdf-devis .pdf-page-break { page-break-before: always; }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+      nav { padding: 12px 20px; }
+      .nav-ref { display: none; }
+      .hero { padding: 110px 20px 60px; }
+      .price-tag { padding: 28px 32px; }
+      .price-tag .price-amount { font-size: 3.2rem; }
+      section { padding: 60px 20px; }
+      .conditions-box { padding: 28px 24px; }
+      .timeline-item { gap: 20px; }
+      .timeline-num { width: 56px; height: 56px; font-size: 1.2rem; }
+      .timeline::before { left: 26px; }
+      .devis-table th, .devis-table td { padding: 14px 16px; font-size: 0.86rem; }
+      .cta-section { padding: 70px 20px; }
+      footer { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24"><polygon points="13,2 4,14 11,14 9,22 20,10 13,10 15,2" fill="#fff" stroke="#0B0B0B" stroke-width="2" stroke-linejoin="round"/></svg>
+      </div>
+      <span class="logo-word">Lead<span>Factory</span></span>
+    </div>
+    <div class="nav-ref">Devis N° {{DEVIS_REF}}</div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="badge badge-pink">🎯 Offre test 1er mois — Sans engagement</div>
+    <h1>{{HERO_H1_HTML}}</h1>
+    <p class="subtitle">
+      Fini les {{FINI_LES_1}}. Fini les {{FINI_LES_2}}. Fini les {{FINI_LES_3}}. the platform filtre 5 à 10 fois vos leads Meta avant qu'ils n'atteignent l'agenda de votre commercial.
+    </p>
+
+    <div class="price-hero">
+      <div class="price-tag">
+        <div class="price-label">Premier mois test</div>
+        <div class="price-amount"><span>€</span>{{LF_FEE}}<span> TTC</span></div>
+        <div class="price-desc">Campagnes pub + suivi dédié + reporting hebdo</div>
+      </div>
+      <div class="hero-cta-row">
+        <a href="{{STRIPE_LINK}}" target="_blank" class="btn btn-primary">
+          Accepter et payer — {{LF_FEE}} €
+        </a>
+        <button class="btn btn-secondary" id="btn-download-pdf">
+          ⬇ Télécharger PDF
+        </button>
+      </div>
+      <div class="validity-note">Offre valable jusqu'au {{DEADLINE_FR}} · Sans engagement de renouvellement</div>
+    </div>
+
+    <div class="scroll-hint">
+      <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+        <path d="M19 9l-7 7-7-7"/>
+      </svg>
+      Détail de l'offre
+    </div>
+  </div>
+
+  <!-- PARTIES -->
+  <section>
+    <div class="section-label">Informations</div>
+    <h2 class="section-title">Les <em>parties</em></h2>
+    <p class="section-sub">Détails du présent devis entre les parties concernées.</p>
+
+    <div class="meta-grid">
+      <div class="meta-block">
+        <div class="meta-label">Émetteur</div>
+        <p>
+          <strong>[Your Company LLC]</strong><br>
+          the operator, CEO<br>
+          you@example.com<br><br>
+          <strong>Réf :</strong> {{DEVIS_REF}}<br>
+          <strong>Date :</strong> {{DATE_FR}}<br>
+          <strong>Validité :</strong> 7 jours (jusqu'au {{DEADLINE_FR}})
+        </p>
+      </div>
+      <div class="meta-block">
+        <div class="meta-label">Destinataire</div>
+        <p>
+          <strong>{{CLIENT_FULL_NAME}}</strong><br>
+          {{CLIENT_COMPANY}} — {{CLIENT_ROLE}}<br>
+          {{CLIENT_ADDRESS_LINE}}, {{CLIENT_POSTAL_CODE}} {{CLIENT_CITY}}<br>
+          {{CLIENT_PHONE}}<br><br>
+          <strong>Objet :</strong> Lancement campagnes the platform<br>
+          <strong>Offre :</strong> Test 1er mois sans engagement
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESTATIONS -->
+  <section>
+    <div class="section-label yellow">Inclus dans l'offre</div>
+    <h2 class="section-title">Ce que <em>vous obtenez</em></h2>
+    <p class="section-sub">{{SERVICES_INTRO}}</p>
+
+    <div class="services-grid">
+      <div class="card">
+        <div class="card-icon">🎯</div>
+        <h3>Campagnes Meta Ads</h3>
+        <ul>
+          <li>Publicités Facebook & Instagram ciblées {{CUSTOMER_WORD_PLURAL}}</li>
+          <li>Ciblage géo {{GEO_RADIUS_KM}} km autour de {{CLIENT_CITY}}</li>
+          <li>Angles premium cohérents avec votre positionnement</li>
+          <li>Tests A/B visuels et copies en continu</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔎</div>
+        <h3>Pré-qualification des leads</h3>
+        <ul>
+          <li>Formulaire Instant Form avec 5 à 10 filtres</li>
+          <li>{{PREQUAL_FILTERS}}</li>
+          <li>Seuls les prospects qualifiés passent</li>
+          <li>Fin des déplacements inutiles pour votre commercial</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-icon">📅</div>
+        <h3>{{MEETING_WORD_PLURAL_CAPS}} bookés automatiquement</h3>
+        <ul>
+          <li>Lead qualifié redirigé vers l'agenda du commercial</li>
+          <li>{{MEETING_WORD}} 15 min pour valider le projet</li>
+          <li>Déplacement physique seulement si confirmé</li>
+          <li>Zéro trou dans la raquette, zéro relance manuelle</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-icon">📊</div>
+        <h3>Équipe humaine dédiée</h3>
+        <ul>
+          <li><strong>Call hebdomadaire</strong> avec votre Account Manager</li>
+          <li>Media Buyer senior qui optimise vos campagnes</li>
+          <li>Designer + copywriter sur vos créatives</li>
+          <li>Dashboard temps réel + rapport chaque lundi</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-icon">🖥️</div>
+        <h3>Plateforme & CRM inclus</h3>
+        <ul>
+          <li>Accès à la plateforme de gestion & tracking</li>
+          <li>CRM dédié pour gérer tous vos prospects</li>
+          <li>Analyse des campagnes et suivi des conversions</li>
+          <li>Historique complet {{DEAL_WORD_PLURAL}} → signatures</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-icon">🎓</div>
+        <h3>Formation sales offerte</h3>
+        <ul>
+          <li><strong>4h de modules vidéo spécifiques</strong></li>
+          <li>Setting : convertir vos leads en RDV</li>
+          <li>Closing : signer vos {{DEAL_WORD_PLURAL}} au prix premium</li>
+          <li>Valeur 990 € — offert avec l'offre test</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF / CHIFFRES CLÉS -->
+  <section>
+    <div class="section-label blue">Preuve</div>
+    <h2 class="section-title">Les chiffres de <em>the platform</em></h2>
+    <p class="section-sub">[X] clients accompagnés. [X] rendez-vous qualifiés générés. [X]€ ajoutés aux chiffres d'affaires de vos clients. Notés [X]/5 sur Google.</p>
+
+    <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 24px;">
+      <div class="card" style="text-align:center; padding: 32px 24px;">
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:3rem; font-weight:700; color:var(--blue); letter-spacing:-0.04em; line-height:1;">[X]</div>
+        <p style="margin-top:10px; font-family:'Inter Tight',sans-serif; color:var(--text-2); font-size:0.9rem; font-weight:500;">RDV qualifiés générés</p>
+      </div>
+      <div class="card" style="text-align:center; padding: 32px 24px;">
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:3rem; font-weight:700; color:var(--blue); letter-spacing:-0.04em; line-height:1;">[X]€</div>
+        <p style="margin-top:10px; font-family:'Inter Tight',sans-serif; color:var(--text-2); font-size:0.9rem; font-weight:500;">CA ajouté à nos clients</p>
+      </div>
+      <div class="card" style="text-align:center; padding: 32px 24px;">
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:3rem; font-weight:700; color:var(--blue); letter-spacing:-0.04em; line-height:1;">130</div>
+        <p style="margin-top:10px; font-family:'Inter Tight',sans-serif; color:var(--text-2); font-size:0.9rem; font-weight:500;">Clients accompagnés</p>
+      </div>
+      <div class="card" style="text-align:center; padding: 32px 24px;">
+        <div style="font-family:'Space Grotesk',sans-serif; font-size:3rem; font-weight:700; color:var(--blue); letter-spacing:-0.04em; line-height:1;">[X]<span style="font-size:1.4rem; color:var(--text-3);">/5</span></div>
+        <p style="margin-top:10px; font-family:'Inter Tight',sans-serif; color:var(--text-2); font-size:0.9rem; font-weight:500;">Note Google</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROI CALCULATOR -->
+  <section>
+    <div class="section-label green">Simulateur ROI</div>
+    <h2 class="section-title">Estimez votre <em>retour sur investissement</em></h2>
+    <p class="section-sub">Entrez votre panier moyen et votre budget Meta. Les taux de conversion par défaut sont nos moyennes clients — ajustez-les selon votre secteur. Le calcul se met à jour en temps réel.</p>
+
+    <div class="roi-calculator">
+      <div class="roi-inputs">
+        <div class="roi-field">
+          <label for="roi-panier">Panier moyen {{CUSTOMER_WORD}} (€)</label>
+          <div class="roi-hint">{{PANIER_HINT}}</div>
+          <input type="number" id="roi-panier" value="{{AVG_BASKET_EUR}}" min="100" step="100">
+        </div>
+
+        <div class="roi-field">
+          <label for="roi-budget">Budget Meta à investir (€/mois)</label>
+          <div class="roi-hint">Recommandation minimum : 500 €/mois</div>
+          <input type="number" id="roi-budget" value="500" min="100" step="50">
+        </div>
+
+        <div class="roi-field">
+          <label for="roi-cpl">Coût par lead moyen (€) <span class="roi-default">défaut 20 €</span></label>
+          <div class="roi-hint">Moyenne observée sur Meta avec pré-qualification</div>
+          <input type="number" id="roi-cpl" value="20" min="1" step="1">
+        </div>
+
+        <div class="roi-field">
+          <label for="roi-conv1">Taux conversion <strong>lead → {{MEETING_WORD_SHORT}}</strong> <span class="roi-default">défaut 50 %</span></label>
+          <div class="roi-hint">% des leads qui bookent un {{MEETING_WORD}}</div>
+          <div class="roi-slider-wrap">
+            <input type="range" id="roi-conv1" value="50" min="10" max="100" step="5">
+            <span class="roi-slider-value"><span id="roi-conv1-val">50</span>%</span>
+          </div>
+        </div>
+
+        <div class="roi-field">
+          <label for="roi-conv2">Taux conversion <strong>{{MEETING_WORD_SHORT}} → {{DEAL_WORD}}</strong> <span class="roi-default">défaut 20 %</span></label>
+          <div class="roi-hint">% des {{MEETING_WORD_PLURAL_SHORT}} qui aboutissent à un {{DEAL_WORD}} signé</div>
+          <div class="roi-slider-wrap">
+            <input type="range" id="roi-conv2" value="20" min="5" max="80" step="5">
+            <span class="roi-slider-value"><span id="roi-conv2-val">20</span>%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="roi-results">
+        <div class="roi-results-label">Votre mois type avec the platform</div>
+        <div class="roi-results-grid">
+          <div class="roi-stat">
+            <div class="roi-stat-value" id="roi-leads">25</div>
+            <div class="roi-stat-label">Leads qualifiés</div>
+          </div>
+          <div class="roi-stat">
+            <div class="roi-stat-value" id="roi-rdv">12</div>
+            <div class="roi-stat-label">{{MEETING_WORD_PLURAL_CAPS}} bookés</div>
+          </div>
+          <div class="roi-stat">
+            <div class="roi-stat-value" id="roi-clients">2</div>
+            <div class="roi-stat-label">{{DEAL_WORD_PLURAL_CAPS}} signés</div>
+          </div>
+        </div>
+
+        <div class="roi-ca">
+          <div class="roi-ca-row">
+            <span>Investissement total (LF + budget pub)</span>
+            <strong id="roi-invest">1 290 €</strong>
+          </div>
+          <div class="roi-ca-row">
+            <span>Retour sur investissement</span>
+            <strong id="roi-return">×9,7</strong>
+          </div>
+          <div class="roi-ca-row roi-ca-row-final">
+            <span>CA estimé généré</span>
+            <strong id="roi-ca">12 500 €</strong>
+          </div>
+        </div>
+
+        <p class="roi-disclaimer">
+          * Estimation basée sur nos moyennes clients. Résultats réels variables selon votre secteur, votre offre et la qualité des filtres de pré-qualification.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEVIS TABLE -->
+  <section>
+    <div class="section-label green">Tarification</div>
+    <h2 class="section-title">Détail du <em>devis</em></h2>
+    <p class="section-sub">Récapitulatif des prestations incluses dans l'offre test 1er mois.</p>
+
+    <div class="table-wrap">
+      <table class="devis-table">
+        <thead>
+          <tr>
+            <th>Prestation</th>
+            <th>Description</th>
+            <th style="text-align:right;">Montant</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Équipe dédiée (humaine)</strong></td>
+            <td>Account Manager responsable de votre succès, Media Buyer senior, Designer, Copywriter, Monteur vidéo</td>
+            <td style="text-align:right;">Inclus</td>
+          </tr>
+          <tr>
+            <td><strong>Setup & Stratégie</strong></td>
+            <td>{{SETUP_DESCRIPTION}}</td>
+            <td style="text-align:right;">Inclus</td>
+          </tr>
+          <tr>
+            <td><strong>Créatives (10 + 2)</strong></td>
+            <td>10 visuels statiques + 1 à 2 vidéos IA, angles adaptés à {{CREATIVES_ANGLE_CONTEXT}}</td>
+            <td style="text-align:right;">Inclus</td>
+          </tr>
+          <tr>
+            <td><strong>Meta Ads (1 mois)</strong></td>
+            <td>Gestion complète Facebook & Instagram, ciblage {{GEO_RADIUS_KM}} km autour de {{CLIENT_CITY}}</td>
+            <td style="text-align:right;">Inclus</td>
+          </tr>
+          <tr>
+            <td><strong>Formulaire de pré-qualification</strong></td>
+            <td>Instant Form Meta avec 5 à 10 filtres ({{PREQUAL_FILTERS_SHORT}})</td>
+            <td style="text-align:right;">Inclus</td>
+          </tr>
+          <tr>
+            <td><strong>Prise de {{MEETING_WORD_PLURAL_CAPS}} automatisée</strong></td>
+            <td>Redirection agenda + notifications au commercial en temps réel</td>
+            <td style="text-align:right;">Inclus</td>
+          </tr>
+          <tr>
+            <td><strong>Call hebdomadaire (humain)</strong></td>
+            <td>1 call par semaine avec votre Account Manager + dashboard temps réel + rapport chaque lundi</td>
+            <td style="text-align:right;">Inclus</td>
+          </tr>
+          <tr>
+            <td><strong>Call bilan & décision</strong></td>
+            <td>Call de fin de mois : résultats, ROI, leads générés, recommandations pour la suite</td>
+            <td style="text-align:right;">Inclus</td>
+          </tr>
+          <tr>
+            <td><strong>Plateforme & CRM</strong></td>
+            <td>Plateforme et CRM de gestion des prospects et d'analyse des campagnes inclus, avec suivi des conversions</td>
+            <td style="text-align:right;">Inclus</td>
+          </tr>
+          <tr>
+            <td><strong>Formation setting & closing</strong></td>
+            <td>Formation offerte setting & closing : 4h de modules vidéo spécifiques</td>
+            <td style="text-align:right;">Inclus</td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="2"><strong>TOTAL TTC — Mois test (sans engagement)</strong></td>
+            <td class="price" style="text-align:right;"><strong>{{LF_FEE}} €</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="table-note">
+      * Budget publicitaire Meta non inclus. Recommandation minimum pour votre zone : <strong style="color: var(--black);">500 €/mois</strong> pour obtenir une dizaine de leads qualifiés et valider la preuve de concept.
+    </p>
+
+    <div style="margin-top: 40px; border: 3px solid var(--black); border-radius: 16px; box-shadow: 6px 6px 0 var(--black); padding: 32px 36px; background: var(--yellow);">
+      <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:20px;">
+        <div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; color:var(--black); margin-bottom:8px;">Prix moyen du marché</div>
+          <p style="font-family:'Inter Tight',sans-serif; font-size:0.95rem; color:var(--text-2); max-width:440px; line-height:1.5;">Nos concurrents facturent en moyenne <strong style="color:var(--black);">1 690 €/mois avec 3 mois d'engagement</strong> pour la même prestation Meta Ads. Vous, vous testez 1 mois à <strong style="color:var(--black);">790 €</strong>, sans engagement.</p>
+        </div>
+        <div style="text-align:right;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.04em; color:var(--black); margin-bottom:4px;">Économie 1er mois</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-size:2.4rem; font-weight:700; color:var(--black); letter-spacing:-0.04em; line-height:1;">−900 €</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section>
+    <div class="section-label blue">Comment ça marche</div>
+    <h2 class="section-title">4 étapes jusqu'aux <em>premiers {{MEETING_WORD_PLURAL_SHORT}}</em> qualifiés</h2>
+    <p class="section-sub">Un process rodé, de la mise en place aux premiers rendez-vous dans l'agenda de votre commercial.</p>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-num">1</div>
+        <div class="timeline-content">
+          <h3>Onboarding & Audit (Jour 1–3)</h3>
+          <p>Accès comptes publicitaires, analyse de votre secteur et concurrents {{GEO_ZONE}}, définition de l'avatar {{CUSTOMER_WORD}} qualifié et critères de filtrage ({{PREQUAL_FILTERS_SHORT}}).</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-num">2</div>
+        <div class="timeline-content">
+          <h3>Création & Lancement (Jour 4–7)</h3>
+          <p>Création des visuels Meta (images statiques + 1 à 2 vidéos), rédaction des copies premium, mise en place du formulaire de pré-qualification Instant Form, paramétrage tracking et lancement des campagnes sur Facebook & Instagram.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-num">3</div>
+        <div class="timeline-content">
+          <h3>Optimisation continue (Jour 8–28)</h3>
+          <p>Analyse quotidienne des performances, ajustements ciblage, ajout/suppression de filtres en fonction de la qualité des {{MEETING_WORD_PLURAL_SHORT}} bookés, tests A/B créatifs, rapports hebdomadaires chaque lundi.</p>
+        </div>
+      </div>
+      <div class="timeline-item" style="padding-bottom: 0;">
+        <div class="timeline-num">4</div>
+        <div class="timeline-content">
+          <h3>Bilan & Décision (Jour 30)</h3>
+          <p>Call de bilan complet : volume de {{MEETING_WORD_PLURAL_SHORT}} qualifiés générés, CPL moyen, {{DEAL_WORD_PLURAL}} signés, ROI. Vous décidez librement de la suite — aucun engagement de renouvellement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONDITIONS -->
+  <section>
+    <div class="section-label">Conditions</div>
+    <h2 class="section-title">Ce que vous devez <em>savoir</em></h2>
+    <p class="section-sub">Transparence totale sur les modalités de l'offre test.</p>
+
+    <div class="conditions-box">
+      <h3>Conditions générales de cette offre</h3>
+      <ul>
+        <li>Offre test d'un mois, <strong>sans engagement de renouvellement</strong> — vous décidez à la fin du mois selon les résultats.</li>
+        <li>Le budget publicitaire Meta est à la charge du client (non inclus dans les {{LF_FEE}} € de gestion). Recommandation : <strong>500 € minimum</strong> pour le premier mois.</li>
+        <li>Paiement à la commande via le lien Stripe ci-dessous — sécurisé et immédiat.</li>
+        <li>Devis valable <strong>7 jours</strong> à compter du {{DATE_FR}} (expire le {{DEADLINE_FR}}).</li>
+        <li>Démarrage des campagnes sous 48–72h après règlement et accès aux comptes publicitaires.</li>
+        <li>Reporting hebdomadaire envoyé chaque lundi par email.</li>
+        <li>Objectif annoncé : des {{MEETING_WORD_PLURAL}} pré-qualifiés dans l'agenda de votre commercial, zéro déplacement inutile.</li>
+        <li>En cas de renouvellement, les tarifs sont redéfinis selon les résultats obtenus.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <div class="cta-section">
+    <h2>Prêt à recevoir vos premiers<br><em>{{MEETING_WORD_PLURAL_SHORT}} qualifiés</em> en 10 jours ?</h2>
+    <p>Cliquez ci-dessous pour accepter l'offre et procéder au paiement sécurisé. Démarrage des campagnes sous 48–72h.</p>
+    <div class="cta-row">
+      <a href="{{STRIPE_LINK}}" target="_blank" class="btn btn-primary">
+        Accepter et payer — {{LF_FEE}} €
+      </a>
+      <button class="btn btn-secondary" id="btn-download-pdf-2">
+        ⬇ Télécharger PDF
+      </button>
+    </div>
+    <p class="cta-sub">Paiement 100% sécurisé via Stripe · Sans engagement de renouvellement</p>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <div class="logo-mark" style="width:30px;height:30px;box-shadow:2px 2px 0 #000;">
+        <svg viewBox="0 0 24 24"><polygon points="13,2 4,14 11,14 9,22 20,10 13,10 15,2" fill="#fff" stroke="#0B0B0B" stroke-width="2" stroke-linejoin="round"/></svg>
+      </div>
+      <span>Lead<span style="color:var(--blue);">Factory</span></span>
+    </div>
+    <div class="footer-tag">Leads qualifiés en automatique.</div>
+    <div class="footer-meta">Devis {{DEVIS_REF}} · {{DATE_FR}} · Valable 7 jours</div>
+  </footer>
+
+  <!-- HIDDEN PDF DIV — rendered by html2pdf.js on demand -->
+  <div id="pdf-devis" aria-hidden="true">
+    <div class="pdf-header">
+      <div class="pdf-logo">
+        <div class="pdf-logo-mark">
+          <svg viewBox="0 0 24 24"><polygon points="13,2 4,14 11,14 9,22 20,10 13,10 15,2" fill="#fff" stroke="#0B0B0B" stroke-width="2" stroke-linejoin="round"/></svg>
+        </div>
+        <span>Lead<span style="color:#3B82F6;">Factory</span></span>
+      </div>
+      <div class="pdf-meta">
+        <div class="pdf-ref">DEVIS N° {{DEVIS_REF}}</div>
+        <div class="pdf-date">Émis le {{DATE_FR}}</div>
+      </div>
+    </div>
+
+    <h2>1. Les parties</h2>
+    <div class="pdf-parties">
+      <div class="pdf-party">
+        <div class="pdf-party-label">Émetteur</div>
+        <p>
+          <strong>[Your Company LLC]</strong><br>
+          the operator, CEO<br>
+          you@example.com<br><br>
+          <strong>Réf :</strong> {{DEVIS_REF}}<br>
+          <strong>Date :</strong> {{DATE_FR}}<br>
+          <strong>Validité :</strong> 7 jours
+        </p>
+      </div>
+      <div class="pdf-party">
+        <div class="pdf-party-label">Destinataire</div>
+        <p>
+          <strong>{{CLIENT_FULL_NAME}}</strong><br>
+          {{CLIENT_COMPANY}} — {{CLIENT_ROLE}}<br>
+          {{CLIENT_ADDRESS_LINE}}<br>
+          {{CLIENT_POSTAL_CODE}} {{CLIENT_CITY}}<br>
+          {{CLIENT_PHONE}}<br>
+          {{CLIENT_EMAIL}}
+        </p>
+      </div>
+    </div>
+
+    <h2>2. Détail du devis</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Prestation</th>
+          <th>Description</th>
+          <th style="text-align:right;">Montant</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Équipe dédiée (humaine)</strong></td><td>Account Manager, Media Buyer senior, Designer, Copywriter, Monteur vidéo</td><td style="text-align:right;">Inclus</td></tr>
+        <tr><td><strong>Setup & Stratégie</strong></td><td>{{SETUP_DESCRIPTION}}</td><td style="text-align:right;">Inclus</td></tr>
+        <tr><td><strong>Créatives (10 + 2)</strong></td><td>10 visuels statiques + 1 à 2 vidéos IA, angles adaptés à {{CREATIVES_ANGLE_CONTEXT}}</td><td style="text-align:right;">Inclus</td></tr>
+        <tr><td><strong>Meta Ads (1 mois)</strong></td><td>Gestion complète Facebook & Instagram, ciblage {{GEO_RADIUS_KM}} km autour de {{CLIENT_CITY}}</td><td style="text-align:right;">Inclus</td></tr>
+        <tr><td><strong>Formulaire de pré-qualification</strong></td><td>Instant Form Meta avec 5 à 10 filtres ({{PREQUAL_FILTERS_SHORT}})</td><td style="text-align:right;">Inclus</td></tr>
+        <tr><td><strong>Prise de {{MEETING_WORD_PLURAL_CAPS}} automatisée</strong></td><td>Redirection agenda + notifications au commercial en temps réel</td><td style="text-align:right;">Inclus</td></tr>
+        <tr><td><strong>Call hebdomadaire (humain)</strong></td><td>1 call par semaine avec votre Account Manager + dashboard + rapport chaque lundi</td><td style="text-align:right;">Inclus</td></tr>
+        <tr><td><strong>Call bilan & décision</strong></td><td>Call de fin de mois : résultats, ROI, leads générés, recommandations</td><td style="text-align:right;">Inclus</td></tr>
+        <tr><td><strong>Plateforme & CRM</strong></td><td>Plateforme et CRM de gestion des prospects et d'analyse des campagnes inclus, avec suivi des conversions</td><td style="text-align:right;">Inclus</td></tr>
+        <tr><td><strong>Formation setting & closing</strong></td><td>Formation offerte setting & closing : 4h de modules vidéo spécifiques</td><td style="text-align:right;">Inclus</td></tr>
+        <tr class="pdf-total-row">
+          <td colspan="2"><strong>TOTAL TTC — Mois test (sans engagement)</strong></td>
+          <td class="pdf-price"><strong>{{LF_FEE}} €</strong></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>3. Conditions générales</h2>
+    <ol>
+      <li>Offre test d'un mois, <strong>sans engagement de renouvellement</strong>.</li>
+      <li>Budget publicitaire Meta à la charge du client (non inclus). Recommandation : 500 € minimum/mois.</li>
+      <li>Paiement à la commande via le lien Stripe fourni (sécurisé et immédiat).</li>
+      <li>Devis valable <strong>7 jours</strong> à compter du {{DATE_FR}} (expire le {{DEADLINE_FR}}).</li>
+      <li>Démarrage des campagnes sous 48–72h après règlement et accès aux comptes publicitaires.</li>
+      <li>Reporting hebdomadaire envoyé chaque lundi par email.</li>
+      <li>Objectif : {{MEETING_WORD_PLURAL}} pré-qualifiés dans l'agenda du commercial, zéro déplacement inutile.</li>
+      <li>En cas de renouvellement, les tarifs sont redéfinis selon les résultats obtenus.</li>
+    </ol>
+
+    <div class="pdf-footer">
+      <p><strong>Paiement sécurisé via Stripe :</strong> <a href="{{STRIPE_LINK}}">{{STRIPE_LINK}}</a></p>
+      <p style="margin-top:6px;">Devis valable 7 jours jusqu'au {{DEADLINE_FR}} — the platform · Leads qualifiés en automatique.</p>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const LF_FEE = {{LF_FEE}};
+      const $ = (id) => document.getElementById(id);
+      const inputs = {
+        panier: $('roi-panier'),
+        budget: $('roi-budget'),
+        cpl: $('roi-cpl'),
+        conv1: $('roi-conv1'),
+        conv2: $('roi-conv2'),
+      };
+      const out = {
+        conv1Val: $('roi-conv1-val'),
+        conv2Val: $('roi-conv2-val'),
+        leads: $('roi-leads'),
+        rdv: $('roi-rdv'),
+        clients: $('roi-clients'),
+        ca: $('roi-ca'),
+        invest: $('roi-invest'),
+        ret: $('roi-return'),
+      };
+
+      const fmt = (n) => new Intl.NumberFormat('fr-FR').format(Math.round(n));
+      const money = (n) => fmt(n) + ' €';
+
+      function compute() {
+        const panier = Math.max(0, Number(inputs.panier.value) || 0);
+        const budget = Math.max(0, Number(inputs.budget.value) || 0);
+        const cpl = Math.max(1, Number(inputs.cpl.value) || 1);
+        const c1 = Number(inputs.conv1.value) || 0;
+        const c2 = Number(inputs.conv2.value) || 0;
+
+        const leads = budget / cpl;
+        const rdv = leads * (c1 / 100);
+        const clients = rdv * (c2 / 100);
+        const ca = clients * panier;
+        const invest = LF_FEE + budget;
+        const ratio = invest > 0 ? ca / invest : 0;
+
+        out.conv1Val.textContent = c1;
+        out.conv2Val.textContent = c2;
+        out.leads.textContent = fmt(leads);
+        out.rdv.textContent = fmt(rdv);
+        out.clients.textContent = clients < 1 && clients > 0 ? clients.toFixed(1).replace('.', ',') : fmt(clients);
+        out.ca.textContent = money(ca);
+        out.invest.textContent = money(invest);
+        out.ret.textContent = ratio >= 1
+          ? '×' + ratio.toFixed(1).replace('.', ',')
+          : ratio > 0 ? '×' + ratio.toFixed(2).replace('.', ',') : '—';
+      }
+
+      Object.values(inputs).forEach((el) => {
+        el.addEventListener('input', compute);
+      });
+      compute();
+
+      // REAL PDF GENERATION — html2pdf.js on #pdf-devis
+      // The element is display:none by default so it costs no layout.
+      // During capture we make it a normal in-flow block under a full-screen
+      // cream overlay (so the user never sees the raw devis flash on screen).
+      // Awaiting document.fonts.ready ensures Space Grotesk is loaded.
+      async function downloadPDF(button) {
+        const el = document.getElementById('pdf-devis');
+        if (!el) return;
+
+        const restoreLabel = button ? button.textContent : null;
+        if (button) {
+          button.disabled = true;
+          button.textContent = 'Génération du PDF…';
+        }
+
+        const overlay = document.createElement('div');
+        overlay.id = 'pdf-render-overlay';
+        overlay.textContent = '📄 Génération du PDF en cours…';
+        document.body.appendChild(overlay);
+
+        // Save original styles so we can restore them in finally.
+        const prev = {
+          display: el.style.display,
+          position: el.style.position,
+          left: el.style.left,
+          top: el.style.top,
+          opacity: el.style.opacity,
+          zIndex: el.style.zIndex,
+          pointerEvents: el.style.pointerEvents,
+          visibility: el.style.visibility,
+        };
+
+        // Make pdf-devis a real in-flow block so html2pdf's container measures
+        // non-zero height. Overlay on top hides the brief visual flash.
+        el.style.display = 'block';
+        el.style.position = 'static';
+        el.style.left = 'auto';
+        el.style.top = 'auto';
+        el.style.opacity = '1';
+        el.style.zIndex = 'auto';
+        el.style.pointerEvents = 'auto';
+        el.style.visibility = 'visible';
+
+        try {
+          if (document.fonts && document.fonts.ready) {
+            await document.fonts.ready;
+          }
+          // Two RAFs to let layout + paint settle before html2canvas measures.
+          await new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(r)));
+
+          const filename = 'Devis-{{CLIENT_NAME_SLUG}}-{{YYYYMMDD}}.pdf';
+          const opt = {
+            margin: [10, 10, 10, 10],
+            filename: filename,
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: {
+              scale: 2,
+              useCORS: true,
+              backgroundColor: '#FFFDF5',
+              scrollX: 0,
+              scrollY: 0,
+            },
+            jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+            pagebreak: { mode: ['css', 'legacy'] },
+          };
+
+          await html2pdf().set(opt).from(el).save();
+        } catch (err) {
+          console.error('[devis] PDF generation failed:', err);
+          alert("Le téléchargement du PDF a échoué. Réessayez ou contactez you@example.com.");
+        } finally {
+          // Restore the element to its hidden state.
+          el.style.display = prev.display;
+          el.style.position = prev.position;
+          el.style.left = prev.left;
+          el.style.top = prev.top;
+          el.style.opacity = prev.opacity;
+          el.style.zIndex = prev.zIndex;
+          el.style.pointerEvents = prev.pointerEvents;
+          el.style.visibility = prev.visibility;
+          overlay.remove();
+          if (button) {
+            button.disabled = false;
+            button.textContent = restoreLabel || '⬇ Télécharger PDF';
+          }
+        }
+      }
+
+      const btn1 = document.getElementById('btn-download-pdf');
+      const btn2 = document.getElementById('btn-download-pdf-2');
+      if (btn1) btn1.addEventListener('click', () => downloadPDF(btn1));
+      if (btn2) btn2.addEventListener('click', () => downloadPDF(btn2));
+    })();
+  </script>
+
+</body>
+</html>
