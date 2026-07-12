@@ -22,7 +22,7 @@ Trigger sur :
 
 Ne pas trigger pour :
 - Analyser une transcription d'appel → `sales-call-analyzer`
-- Créer la proposition de campagne Meta (post-onboarding) → `campaign-proposal`
+- Créer la proposition de campagne Meta (post-onboarding) → un document de proposition de campagne
 - Écrire les ads → `meta-ads-copywriter`
 
 ---

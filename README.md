@@ -1,6 +1,6 @@
-# Meta Ads & Lead-Gen Skills
+# My Custom Skills
 
-Un pack de **17 skills** (Claude Agent Skills) pour la génération de leads et le média-buying
+Un pack de **16 skills** (Claude Agent Skills) pour la génération de leads et le média-buying
 Meta Ads, de bout en bout : recherche & stratégie, copywriting, créatives, landing pages,
 lancement de campagnes, et analyse d'appels de vente. Chaque skill est autonome (dossier + `SKILL.md`).
 
@@ -38,7 +38,6 @@ lancement de campagnes, et analyse d'appels de vente. Chaque skill est autonome 
 |---|---|
 | [`cold-traffic-landing-page`](./cold-traffic-landing-page/SKILL.md) | Landing page cold-traffic haute conversion. |
 | [`devis-vercel-generator`](./devis-vercel-generator/SKILL.md) | Page de devis (HTML + PDF) déployée sur Vercel. |
-| [`campaign-proposal`](./campaign-proposal/SKILL.md) | Document « Proposition de Campagne Meta Ads ». |
 | [`meta-campaign-launcher`](./meta-campaign-launcher/SKILL.md) | Setup de campagnes Meta de A à Z via la Graph API (tout en PAUSED). |
 | [`rework-campaign`](./rework-campaign/SKILL.md) | Audit + scoring d'un compte Meta Ads (CPL/CPA, hook/hold rate…). |
 

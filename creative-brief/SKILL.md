@@ -28,7 +28,7 @@ Trigger sur :
 - "Génère le brief créatif pour {client}"
 
 NE PAS trigger pour :
-- Créer la proposition de campagne → `campaign-proposal`
+- Créer la proposition de campagne → un document de proposition de campagne
 - Écrire les scripts d'ads → `meta-ads-copywriter`
 - Écrire un script VSL → `vsl-copywriter`
 - Recherche client → `deep-search`
@@ -107,7 +107,7 @@ Lire toutes les sources disponibles pour le client :
 1. **Onboarding** : `projects/{client}/00-onboarding/` — toutes les réponses du formulaire d'onboarding.
 2. **Deep Search** : `projects/{client}/01-deep-search/` — analyse approfondie du client, marché, persona.
 3. **Competitor Ads** : `projects/{client}/02-competitor-ads/` — analyse des publicités concurrentes.
-4. **Campaign Proposal** : `projects/{client}/03-campaign-proposal/` — proposition de campagne si déjà générée.
+4. **Campaign Proposal** : `projects/{client}/03-proposition-campagne/` — proposition de campagne si déjà générée.
 
 Si un dossier n'existe pas, continuer avec les données disponibles. Demander au user les infos manquantes critiques (nom du client, offre principale).
 

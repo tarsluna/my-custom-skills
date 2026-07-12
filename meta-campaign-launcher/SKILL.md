@@ -168,7 +168,7 @@ meta-campaign-launcher/
 | Sous-agent en parallèle | pour un setup long (multi-campagnes/placements), déléguer à un sous-agent avec ce SKILL.md en contexte |
 
 ## 🔗 Amont / aval
-- **Amont** : `creative-statics-v2` (les créas), `meta-ads-copywriter` (le copy), `campaign-proposal` (la structure validée par le client).
+- **Amont** : `creative-statics-v2` (les créas), `meta-ads-copywriter` (le copy), la proposition de campagne validée par le client.
 - **Aval** : suivi des leads (webhook leadgen natif de l'app → CRM), reporting (insights API).
 
 *Skill né d'un setup réel (juin 2026). Toutes les règles R1-R12 viennent d'erreurs API rencontrées en prod. Toujours PAUSED, jamais destructif, toujours re-vérifier account_status.*

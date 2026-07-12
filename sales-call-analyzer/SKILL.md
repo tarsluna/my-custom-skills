@@ -25,7 +25,7 @@ Trigger sur :
 
 NE PAS trigger pour :
 - Générer la landing page du devis elle-même → `devis-vercel-generator` (consomme le JSON produit ici)
-- Créer la proposition de campagne Meta → `campaign-proposal`
+- Créer la proposition de campagne Meta → un document de proposition de campagne
 - Écrire le script VSL → `vsl-copywriter`
 
 ---
