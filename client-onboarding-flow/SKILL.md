@@ -83,7 +83,7 @@ Le skill doit pouvoir extraire ces 12 champs minimum (nommés différemment selo
 │   ├── offre irrésistible.md            ← offre reconstruite + value stack + garantie + variations
 │   └── offre-diagnostic.md            ← diagnostic offre d'origine + scoring Value Equation
 ├── 03-campaign-proposal/
-│   └── Proposition-Campagne-{client}.docx
+│   └── Proposition-Campagne-{client}.pdf
 ├── 04-vsl/
 │   ├── strategy.md
 │   ├── script-v1.md
@@ -134,6 +134,8 @@ Sous-agent prompt :
 Attendre la fin des étapes 1 et 2 avant de continuer. Vérifier que les 4 livrables clés existent (`01-market-awareness.md`, `02-competitor-research.md`, `03-psychographic.md`, `analysis.md`). Si un fichier manque, relancer le sous-agent concerné avec un prompt correctif.
 
 ### Étape 2.5 — Démonte Ton Offre (skill `demonte-ton-offre`)
+
+> Si le skill `demonte-ton-offre` n'est pas installé dans `~/.claude/skills/`, saute cette étape (le pipeline continue avec l'offre telle que décrite dans le formulaire) et signale-le dans le récapitulatif final.
 **Séquentiel. Consomme les outputs des étapes 1 et 2.** S'exécute APRÈS la research marché/concurrents et AVANT la proposition de campagne, car l'offre reconstruite devient un input de toutes les étapes downstream (Campaign Proposal, VSL, Meta Ads).
 
 Cette étape prend l'offre brute du client (`{product}` + `{price_point}` + `{differenciation}` du formulaire) et la **reconstruit en Offre Irrésistible** calibrée sur le marché/la cible révélés par le DeepSearch et l'analyse concurrentielle.
@@ -168,7 +170,7 @@ Sous-agent prompt :
 > - DeepSearch reports : `{PROJECT_DIR}/{client_name}/01-deep-search/`
 > - Competitor analysis : `{PROJECT_DIR}/{client_name}/02-competitor-ads/analysis.md`
 >
-> Produis le document `.docx` officiel de proposition de campagne (3 sections fixes : brief stratégique, formulaire/VSL placeholder, structure des campagnes Meta). Le brief stratégique doit refléter l'offre reconstruite. Sauvegarde dans `{PROJECT_DIR}/{client_name}/03-campaign-proposal/Proposition-Campagne-{client_name}.docx`.
+> Produis le document PDF officiel de proposition de campagne (3 sections fixes : brief stratégique, formulaire/VSL placeholder, structure des campagnes Meta). Le brief stratégique doit refléter l'offre reconstruite. Sauvegarde dans `{PROJECT_DIR}/{client_name}/03-campaign-proposal/Proposition-Campagne-{client_name}.docx`.
 
 ### Étape 4 — VSL (skill `vsl-copywriter`)
 **Séquentiel. Consomme étapes 1 + 2 + 3.**

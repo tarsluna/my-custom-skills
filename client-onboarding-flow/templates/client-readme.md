@@ -28,7 +28,7 @@
 - [`offre-diagnostic.md`](./02b-offre/offre-diagnostic.md) — diagnostic offre d'origine + scoring Value Equation avant/après
 
 ### 03 — Campaign Proposal
-- [`Proposition-Campagne-{CLIENT_NAME}.docx`](./03-campaign-proposal/Proposition-Campagne-{CLIENT_NAME}.docx) — **livrable client**
+- [`Proposition-Campagne-{CLIENT_NAME}.pdf`](./03-campaign-proposal/Proposition-Campagne-{CLIENT_NAME}.pdf) — **livrable client**
 
 ### 04 — VSL{VSL_SKIP_MARKER}
 - [`strategy.md`](./04-vsl/strategy.md)

@@ -50,7 +50,7 @@ Ou à la main : copie le dossier d'un skill dans `~/.claude/skills/` (ou le doss
 | [`vsl-end-to-end-builder`](./vsl-end-to-end-builder/SKILL.md) | Pipeline VSL complet : brief → recherche → script → production → déploiement. |
 | [`meta-ads-copywriter`](./meta-ads-copywriter/SKILL.md) | Scripts de pub face-cam (≥ 30 s) + copies texte Meta (primary text / headline / description). |
 | [`cold-traffic-landing-page`](./cold-traffic-landing-page/SKILL.md) | Landing page brandée haute conversion pour trafic froid Meta / TikTok / YouTube. |
-| [`campaign-proposal`](./campaign-proposal/SKILL.md) | Le document « Proposition de Campagne Meta Ads » remis au client : structure, ciblage, angles créatifs, nommage, questions de formulaire, génération .docx. |
+| [`campaign-proposal`](./campaign-proposal/SKILL.md) | Le document « Proposition de Campagne Meta Ads » remis au client : structure, ciblage, angles créatifs, nommage, questions de formulaire, génération PDF. |
 
 ### 3 · Production créative
 | Skill | Rôle |
@@ -85,9 +85,9 @@ Eugene Schwartz (5 niveaux de conscience) · Market Sophistication · Alex Hormo
 Imperium Acquisition · RMBC · 10 frameworks Meta Ads · 30MPC (cold call).
 
 ## Dépendance externe
-`client-onboarding-flow` appelle aussi le skill **`demonte-ton-offre`** (reconstruction d'offre irrésistible), publié séparément :
-[gquthier/autonomous-offer-rebuild](https://github.com/gquthier/autonomous-offer-rebuild). Installe-le dans `~/.claude/skills/demonte-ton-offre/`
-si tu veux le pipeline complet ; les autres skills fonctionnent sans.
+`client-onboarding-flow` appelle aussi un skill **`demonte-ton-offre`** (reconstruction d'une offre en offre
+irrésistible : value stack, garanties, bonus, pricing) qui n'est pas inclus ici. Sans lui, l'orchestrateur saute
+l'étape 2.5 et continue ; installe le tien dans `~/.claude/skills/demonte-ton-offre/` pour le pipeline complet.
 
 ## Prérequis et clés
 Certains skills appellent des services externes (Meta Graph API, Higgsfield, fal.ai, Vercel, Slack, un CRM).
