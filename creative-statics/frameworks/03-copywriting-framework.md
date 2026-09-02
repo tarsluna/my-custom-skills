@@ -1,4 +1,4 @@
-# Copywriting Framework — the platform × Acme
+# Copywriting Framework — Agence × Acme
 
 **Date** : 2026-04-21
 **Auteur** : copywriter (Council expert)
@@ -207,7 +207,7 @@ Règle : un CTA ne promet **que ce que Acme contrôle** — le code, le délai, 
 
 ---
 
-## Mission 2 — Framework de copywriting the platform
+## Mission 2 — Framework de copywriting de l'agence
 
 ### Principe n°0 — Le copy suit le diagnostic, pas l'inverse
 
@@ -380,4 +380,4 @@ Sélection des 10 angles faibles (critères : #5, #6, #7, #8, #9, #10, #11, #13,
 
 ---
 
-*Framework généré le 2026-04-21 par l'agent copywriter Council, à injecter dans le skill sous `skills/the platform/copywriting/FRAMEWORK.md`.*
+*Framework généré le 2026-04-21 par l'agent copywriter Council, à injecter dans le skill sous `frameworks/FRAMEWORK.md`.*

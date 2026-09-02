@@ -44,7 +44,7 @@ n'est pas une brique de prod scriptable → en prod, la résolution vient de Sea
 6. **Blocages réels rencontrés** : WAF Imperva/Incapsula (403 sur certains sites — non contournable sans
    navigateur réel/proxy), certificats TLS FR cassés (curl `-k` passe, fetch refuse), sites parking/morts.
 
-## Pièges d'install (machine de the operator)
+## Pièges d'install (machine de l'auteur)
 - **2 interpréteurs Python** : forcer `/opt/homebrew/bin/python3.14` (sinon ModuleNotFoundError sur ddgs).
 - PEP 668 : `pip install --break-system-packages <pkg>`.
 - Ne pas exécuter depuis `/tmp` (un `inspect.py` parasite y shadow la stdlib).

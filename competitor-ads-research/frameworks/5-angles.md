@@ -1,4 +1,4 @@
-# 5 angles the platform — référence de classification
+# 5 angles — référence de classification
 
 Chaque ad analysée DOIT être classifiée dans UN des 5 angles ci-dessous. Pas d'angle "Autre", pas de double classification.
 

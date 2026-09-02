@@ -27,7 +27,7 @@ Source : `brief.json` → `dream_state.headline_hook` (injecté dans `{{HERO_H1_
 ### Exemples non-conformes (ne pas produire)
 
 - *"Obtenez plus de leads qualifiés grâce à notre méthode éprouvée en marketing digital."* — 13 mots, ton IA, pas de rythme, pas d'objection désamorcée.
-- *"Boostez votre chiffre d'affaires avec the platform !"* — pub generic, pas de dream verbatim.
+- *"Boostez votre chiffre d'affaires avec {{AGENCY_NAME}} !"* — pub generic, pas de dream verbatim.
 - *"On va vous trouver plein de clients."* — pas d'accent sur un dream, pas de Sans Z.
 
 ---
@@ -85,9 +85,9 @@ Chaque bullet = `brief.json / objections.headline_subtitle_bullets[0..2]` → in
 ### Wrapper fixe
 
 Le template utilise ce wrapper exact :
-> Fini les `{{FINI_LES_1}}`. Fini les `{{FINI_LES_2}}`. Fini les `{{FINI_LES_3}}`. the platform filtre 5 à 10 fois vos leads Meta avant qu'ils n'atteignent l'agenda de votre commercial.
+> Fini les `{{FINI_LES_1}}`. Fini les `{{FINI_LES_2}}`. Fini les `{{FINI_LES_3}}`. {{AGENCY_NAME}} filtre 5 à 10 fois vos leads Meta avant qu'ils n'atteignent l'agenda de votre commercial.
 
-La dernière phrase ("the platform filtre…") est **immuable** — elle résume la ta promesse et clôt le hero en redirigeant sur l'agence.
+La dernière phrase ("{{AGENCY_NAME}} filtre…") est **immuable** — elle résume la ta promesse et clôt le hero en redirigeant sur l'agence.
 
 ---
 

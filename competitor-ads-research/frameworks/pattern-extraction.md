@@ -1,6 +1,6 @@
 # Extraction des patterns récurrents
 
-Une fois toutes les ads classifiées en angles + flaggées winner/non-winner, on extrait les **patterns** qui reviennent à travers le set concurrentiel. C'est ce qui rend le brief the platform actionnable.
+Une fois toutes les ads classifiées en angles + flaggées winner/non-winner, on extrait les **patterns** qui reviennent à travers le set concurrentiel. C'est ce qui rend le brief actionnable.
 
 ## Pattern 1 — Hook structures
 

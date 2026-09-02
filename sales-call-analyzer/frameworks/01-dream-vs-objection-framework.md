@@ -119,7 +119,7 @@ Quasi toujours une mine d'or d'objections verbatim.
 
 ## 🧱 4. Construire les 3 bullets `"Fini les X"`
 
-Le sous-titre hero affiche **exactement 3 bullets**, chacun commence par **"Fini les"** et cite une douleur verbatim mappée sur la solution the platform.
+Le sous-titre hero affiche **exactement 3 bullets**, chacun commence par **"Fini les"** et cite une douleur verbatim mappée sur la solution de l'agence.
 
 **Formule** :
 ```
@@ -149,9 +149,9 @@ Douleurs verbatim extraites :
 
 ### Phrase finale subtitle (après les 3 bullets)
 
-Exemple Acme : *"the platform filtre 5 à 10 fois vos leads Meta avant qu'ils n'atteignent l'agenda de votre commercial."*
+Exemple Acme : *"{{AGENCY_NAME}} filtre 5 à 10 fois vos leads Meta avant qu'ils n'atteignent l'agenda de votre commercial."*
 
-Formule : `the platform {mécanisme spécifique} avant {étape où la douleur se manifesterait}.`
+Formule : `{{AGENCY_NAME}} {mécanisme spécifique} avant {étape où la douleur se manifesterait}.`
 
 ---
 
@@ -162,4 +162,4 @@ Formule : `the platform {mécanisme spécifique} avant {étape où la douleur se
 - [ ] `dream_state.headline_hook` = 3 segments "X. Y. Sans Z.", max 12 mots
 - [ ] `objections.headline_subtitle_bullets` = exactement 3 bullets, chacun commence par "Fini les"
 - [ ] Chaque bullet est traçable à un verbatim
-- [ ] Le dernier élément du subtitle hero (hors des 3 bullets) est une promesse mécanisme the platform
+- [ ] Le dernier élément du subtitle hero (hors des 3 bullets) est une promesse mécanisme de l'agence

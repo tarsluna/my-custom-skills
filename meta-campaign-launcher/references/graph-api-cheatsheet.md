@@ -1,4 +1,4 @@
-# Meta Graph API — Cheatsheet campagnes (the platform)
+# Meta Graph API — Cheatsheet campagnes
 
 Version par défaut : **v21.0**. Base : `https://graph.facebook.com/v21.0`. Auth : `access_token=<META_ACCESS_TOKEN>` (System User).
 

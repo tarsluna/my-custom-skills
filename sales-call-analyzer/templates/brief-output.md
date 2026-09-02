@@ -106,7 +106,7 @@
 
 ## 💸 Tarification
 
-- **Fee the platform (mois test)** : {pricing.lf_fee_eur} €
+- **Fee agence (mois test)** : {pricing.lf_fee_eur} €
 - **Budget Meta recommandé** : {pricing.recommended_ad_budget_eur} €/mois
 - **Engagement** : {pricing.engagement}
 

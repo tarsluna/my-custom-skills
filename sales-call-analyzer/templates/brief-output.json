@@ -1,6 +1,6 @@
 {
   "$schema_version": "1.0.0",
-  "$description": "the platform sales-call brief. Contrat de sortie du skill sales-call-analyzer, consommé par devis-vercel-generator pour produire une landing page de devis personnalisée.",
+  "$description": "Sales-call brief de l'agence. Contrat de sortie du skill sales-call-analyzer, consommé par devis-vercel-generator pour produire une landing page de devis personnalisée.",
   "meta": {
     "prospect_full_name": null,
     "prospect_first_name": null,

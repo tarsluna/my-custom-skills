@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
 """
-the platform — Générateur PDF brandé pour les rapports Deep Search.
+Générateur PDF brandé pour les rapports Deep Search.
 
 Usage :
     python3 build_deep_search_pdf.py <input.md> <output.pdf> \
         --client "Nom Client" \
         --report-type "market-awareness|competitors|psychographic" \
-        [--logo path/to/logo.png] [--date "2026-04-10"]
+        [--brand "Nom agence"] [--logo path/to/logo.png] [--date "2026-04-10"]
 
-Génère un PDF brandé the platform (même charte que build_proposal.py)
+Génère un PDF brandé à l'agence (même charte que build_proposal.py)
 à partir d'un rapport Deep Search en markdown.
+
+Branding paramétrable : `--brand` (ou env AGENCY_NAME) pour le nom affiché dans
+le footer / la couverture / les métadonnées PDF, `--logo` (ou env AGENCY_LOGO)
+pour le logo en filigrane. Sans brand : footer neutre « Confidentiel », sans logo.
 """
+import os
 import re
 import sys
 import argparse
@@ -35,11 +40,17 @@ BLUE_DARK = HexColor("#1E2A4A")
 GREY_TEXT = HexColor("#2D2D2D")
 GREY_LIGHT = HexColor("#666666")
 
-# ── Default logo path (relative to this script) ──────────────────────
-DEFAULT_LOGO = (
-    Path(__file__).resolve().parent.parent.parent.parent.parent
-    / "Projects" / "the platform" / "logo.png"
-)
+# ── Brand (--brand / env AGENCY_NAME ; défaut neutre = pas de nom) ────
+DEFAULT_BRAND = os.environ.get("AGENCY_NAME", "")
+
+# ── Default logo path (--logo / env AGENCY_LOGO ; aucun logo par défaut) ─
+DEFAULT_LOGO = os.environ.get("AGENCY_LOGO") or None
+
+
+def brand_line(brand, text):
+    """'<brand> — <text>' si un brand est défini, sinon '<text>' (neutre)."""
+    return f"{brand} — {text}" if brand else text
+
 
 # ── Report type → cover title mapping ────────────────────────────────
 REPORT_TITLES = {
@@ -62,8 +73,9 @@ REPORT_SUBTITLES = {
 class WatermarkCanvas(Canvas):
     """Canvas subclass that draws a centered watermark logo on every page."""
 
-    def __init__(self, *args, logo_path=None, **kw):
+    def __init__(self, *args, logo_path=None, brand="", **kw):
         self._logo_path = logo_path
+        self._brand = brand
         super().__init__(*args, **kw)
 
     def showPage(self):
@@ -91,7 +103,7 @@ class WatermarkCanvas(Canvas):
         self.setFont("Helvetica", 8)
         self.setFillColor(GREY_LIGHT)
         w, _ = A4
-        self.drawCentredString(w / 2, 1.2 * cm, "the platform — Confidentiel")
+        self.drawCentredString(w / 2, 1.2 * cm, brand_line(self._brand, "Confidentiel"))
         self.restoreState()
 
 
@@ -246,7 +258,7 @@ def parse_markdown(md_text, styles):
 # Cover page
 # =====================================================================
 
-def build_cover(client, report_type, doc_date, logo_path, styles):
+def build_cover(client, report_type, doc_date, logo_path, styles, brand=""):
     """Build a cover page as a list of flowables."""
     elements = []
     elements.append(Spacer(1, 3.5 * cm))
@@ -312,7 +324,7 @@ def build_cover(client, report_type, doc_date, logo_path, styles):
         "CoverFooter", fontName="Helvetica", fontSize=9, leading=12,
         textColor=GREY_LIGHT, alignment=TA_CENTER,
     )
-    elements.append(Paragraph("the platform — Document confidentiel", footer_style))
+    elements.append(Paragraph(brand_line(brand, "Document confidentiel"), footer_style))
 
     elements.append(PageBreak())
     return elements
@@ -322,7 +334,7 @@ def build_cover(client, report_type, doc_date, logo_path, styles):
 # Main build
 # =====================================================================
 
-def build(md_path, out_path, client, report_type, logo_path=None, doc_date=None):
+def build(md_path, out_path, client, report_type, logo_path=None, doc_date=None, brand=""):
     if doc_date is None:
         doc_date = date.today().strftime("%d/%m/%Y")
 
@@ -334,7 +346,7 @@ def build(md_path, out_path, client, report_type, logo_path=None, doc_date=None)
     title = REPORT_TITLES.get(report_type, "Deep Search")
 
     def make_canvas(filename, pagesize=A4, **kwargs):
-        return WatermarkCanvas(filename, pagesize=pagesize, logo_path=logo_path, **kwargs)
+        return WatermarkCanvas(filename, pagesize=pagesize, logo_path=logo_path, brand=brand, **kwargs)
 
     doc = SimpleDocTemplate(
         str(out_path),
@@ -343,12 +355,12 @@ def build(md_path, out_path, client, report_type, logo_path=None, doc_date=None)
         bottomMargin=2.5 * cm,
         leftMargin=2.5 * cm,
         rightMargin=2.5 * cm,
-        title=f"the platform — {title} — {client}",
-        author="the platform",
+        title=brand_line(brand, f"{title} — {client}"),
+        author=brand,
     )
 
     elements = []
-    elements.extend(build_cover(client, report_type, doc_date, logo_path, styles))
+    elements.extend(build_cover(client, report_type, doc_date, logo_path, styles, brand=brand))
     elements.extend(parse_markdown(md, styles))
 
     doc.build(elements, canvasmaker=make_canvas)
@@ -368,10 +380,14 @@ if __name__ == "__main__":
         choices=["market-awareness", "competitors", "psychographic"],
         help="Type de rapport Deep Search",
     )
-    parser.add_argument("--logo", default=str(DEFAULT_LOGO), help="Path to logo PNG")
+    parser.add_argument(
+        "--brand", default=DEFAULT_BRAND,
+        help="Nom de l'agence (footer, couverture, métadonnées). Défaut : env AGENCY_NAME, sinon neutre",
+    )
+    parser.add_argument("--logo", default=DEFAULT_LOGO, help="Path to logo PNG (défaut : env AGENCY_LOGO, sinon aucun)")
     parser.add_argument("--date", default=None, help="Date du document (DD/MM/YYYY)")
     args = parser.parse_args()
     build(
         args.input, args.output, args.client, args.report_type,
-        logo_path=args.logo, doc_date=args.date,
+        logo_path=args.logo, doc_date=args.date, brand=args.brand,
     )

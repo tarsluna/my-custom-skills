@@ -13,7 +13,7 @@ Skill qui **configure des campagnes Meta Ads de bout en bout via la Graph API**,
 
 | Mode | Objectif Meta | Destination | Prérequis spécifiques |
 |---|---|---|---|
-| **LEADGEN** (défaut the platform) | `OUTCOME_LEADS` | Formulaire instantané Meta natif (on-ad) | Page a accepté les **CGU Lead Ads** (action humaine, 1×/page) ; un lead form |
+| **LEADGEN** (défaut) | `OUTCOME_LEADS` | Formulaire instantané Meta natif (on-ad) | Page a accepté les **CGU Lead Ads** (action humaine, 1×/page) ; un lead form |
 | **CONVERSION** | `OUTCOME_SALES` (ou `OUTCOME_LEADS` site) | Landing / page perso + pixel | **Pixel** installé sur la page + **événement** de conversion (ex. `Lead`, `Purchase`) |
 
 Le user choisit le mode. En cas de doute, demander. Une agence de service (prod vidéo, conseil…) → souvent **LEADGEN**. Un produit avec tunnel d'achat / landing trackée → **CONVERSION**.

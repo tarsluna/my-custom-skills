@@ -17,6 +17,18 @@ Tous les tokens sont **mustache-style** (`{{TOKEN}}`). Le script `scripts/genera
 
 ---
 
+## Tokens agence (émetteur)
+
+| Token | Source | Exemple | Fallback |
+|---|---|---|---|
+| `{{AGENCY_NAME}}` | `agency.name` (optionnel dans `brief.json`) ou env `AGENCY_NAME` | `Mon Agence` | `Votre agence` |
+| `{{AGENCY_TAGLINE}}` | `agency.tagline` ou env `AGENCY_TAGLINE` | `Leads qualifiés en automatique.` | `Leads qualifiés en automatique.` |
+| `{{AGENCY_OWNER_NAME}}` | `agency.owner_name` ou env `AGENCY_OWNER_NAME` | `Prénom Nom` | `[Your Name]` |
+
+Utilisés dans : `<title>`, logo nav / footer / header PDF (`{{AGENCY_NAME}}`), tagline footer + pied de PDF (`{{AGENCY_TAGLINE}}`), signature « {{AGENCY_OWNER_NAME}}, CEO » du bloc Émetteur (page + PDF), phrase finale du subtitle hero, section PREUVE, objet du devis.
+
+---
+
 ## Tokens client (destinataire)
 
 | Token | Source | Exemple | Fallback |

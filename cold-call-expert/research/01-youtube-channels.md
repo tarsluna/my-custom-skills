@@ -411,7 +411,7 @@ Pattern qui revient pour ICP **agences/services high-ticket** (compilation Insta
 ### Désaccords / écoles
 - **Permission-Based Opener** : Josh Braun et 30MPC l'adorent. **Patrick Dang / certains contenus 2024+** disent qu'elle est sur-utilisée et que dire "this is a cold call, give me 27 sec" marche mieux maintenant. Verdict : **PBO + framing "27 sec / cold call" = synthèse winning**.
 - **Scripts mot-à-mot** : Wendy Weiss = "thinking before speaking IS a script". Enzo Colucci = "refuse les scripts robotiques, embodie ton pitch". Réconciliation : **structure rigide + delivery flexible**.
-- **CTA timing** : Will Barron close direct à 10 min. 30MPC valide d'abord l'intérêt. Pour high-ticket service (the platform) → **30MPC > Barron** parce qu'un meeting 30 min est un commitment lourd pour fondateur d'agence.
+- **CTA timing** : Will Barron close direct à 10 min. 30MPC valide d'abord l'intérêt. Pour high-ticket service (l'agence) → **30MPC > Barron** parce qu'un meeting 30 min est un commitment lourd pour fondateur d'agence.
 - **Speaking ratio** : Gong dit 43:57 (rep:prospect) chez les tops. Modjo dit "en cold, limiter la parole du prospect". Réconciliation : **en opener/pitch (premières 60 sec) le rep parle plus ; en discovery post-engagement, on bascule 43:57**.
 
 ### Top 3 frameworks les plus cités
@@ -467,5 +467,5 @@ Pattern qui revient pour ICP **agences/services high-ticket** (compilation Insta
 ## Notes méthodo pour les agents downstream
 
 - Toutes les data % (Gong notamment) datent d'analyses 2018-2024 ; les **principes** restent valides en 2026 mais les **chiffres exacts** peuvent avoir bougé. Toujours citer la source quand on les utilise.
-- Pour le script generator the platform : **prioriser 30MPC framework + Enzo Colucci openers FR + Gong data points**. C'est la combo la plus dense et la plus actionnable pour l'ICP "fondateurs d'agences B2B francophones high-ticket".
+- Pour le script generator de l'agence : **prioriser 30MPC framework + Enzo Colucci openers FR + Gong data points**. C'est la combo la plus dense et la plus actionnable pour l'ICP "fondateurs d'agences B2B francophones high-ticket".
 - Ne PAS générer de scripts mot-à-mot : suivre Wendy Weiss + Enzo Colucci → **structure forte, delivery flexible**. Le LLM doit produire un script avec des *beats* (sections) que le commercial adapte, pas un texte à réciter.

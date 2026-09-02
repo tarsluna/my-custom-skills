@@ -8,7 +8,7 @@ description: Pipeline complet pour produire une Video Sales Letter (VSL) de A à
 Un pipeline structuré pour produire une Video Sales Letter complète : du brief client au script final prêt à tourner, en passant par la stratégie d'angle et l'architecture émotionnelle.
 
 ## Quand utiliser ce skill
-- L'utilisateur veut produire une VSL pour un client (the platform ou autre).
+- L'utilisateur veut produire une VSL pour un client (l'agence ou autre).
 - L'utilisateur a un produit/offre et veut un script vidéo de vente.
 - L'utilisateur demande une refonte de VSL existante.
 
@@ -113,7 +113,7 @@ Les templates de chaque étape sont dans `projects/vsl/TopCo/` (à promouvoir ve
 - **Sugarman** — slippery slide (chaque phrase fait lire la suivante)
 - **Halbert** — A-pile vs B-pile, voice of customer
 - **Belcher / Brunson** — VSL structure classique (Hook → Story → Offer)
-- **the platform** — Offre Irrésistible (value stack + risk reversal + scarcity)
+- **Hormozi** — Offre Irrésistible (value stack + risk reversal + scarcity)
 
 ## Notes
 - TOUJOURS faire valider la stratégie (étape 3) avant d'écrire le script.

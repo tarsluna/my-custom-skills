@@ -1,6 +1,6 @@
 # Research 02 — Books & Courses Cold Call
 
-> Synthese de la litterature moderne sur le cold call B2B, optimisee pour ecrire des scripts de cold call pour agences/consultants high-ticket (the platform et clients similaires : fondateurs d'agences B2B, conseil, services 6k EUR+). Pas de fluff — chaque section est consommable par un agent IA scripteur.
+> Synthese de la litterature moderne sur le cold call B2B, optimisee pour ecrire des scripts de cold call pour agences/consultants high-ticket (l'agence et clients similaires : fondateurs d'agences B2B, conseil, services 6k EUR+). Pas de fluff — chaque section est consommable par un agent IA scripteur.
 
 ---
 
@@ -610,9 +610,9 @@ Le **Reframe** est l'or pour la Problem Proposition. Exemple : *"Most agencies t
 
 ---
 
-## Source 14 — Closer Academy (FR) — C.L.O.S.E.R. (the platform, popularise FR par Closer Academy)
+## Source 14 — Closer Academy (FR) — C.L.O.S.E.R. (Hormozi, popularise FR par Closer Academy)
 
-Framework popularise dans la sphere closing FR (the platform origin US). Plus dedie au closing call que cold call, mais reutilisable pour la phase "advance".
+Framework popularise dans la sphere closing FR (Hormozi origin US). Plus dedie au closing call que cold call, mais reutilisable pour la phase "advance".
 
 ### Framework
 
@@ -703,7 +703,7 @@ Aligne sur les memes principes que Braun/30MPC pour la cible FR services/agences
 4. **Demander une demo** ("Can I book a 30-min demo ?") -> ask trop gros pour un cold call.
 5. **Skipper la recherche** ("I'll just dial 100 numbers") -> connect rate s'effondre, listening reduit, conversion morte.
 
-### Application the platform (cible founders agences B2B / consultants 6k+ services)
+### Application à l'agence (cible founders agences B2B / consultants 6k+ services)
 
 Stack recommande pour generer un script :
 
@@ -725,7 +725,7 @@ Stack recommande pour generer un script :
 - **The Qualified Sales Leader / John McMahon** — Enterprise B2B sales, peu sur cold call pur.
 - **MEDDIC / MEDDPICC** — qualification framework, applicable plus loin dans le cycle.
 - **Pareto Law / Pareto Lab cold call training** — recherche structurelle non trouvee publiquement, [a verifier acces direct].
-- **Closer Academy FR contenu interne** — frameworks specifiques au-dela de C.L.O.S.E.R. d'the platform [a verifier acces].
+- **Closer Academy FR contenu interne** — frameworks specifiques au-dela de C.L.O.S.E.R. d'Hormozi [a verifier acces].
 - **Sales Odyssey contenu detaille** — alignement philosophique fait, frameworks specifiques [a verifier].
 - **Gong Labs research papers** — donnees primaires sur ce qui fonctionne en cold call (deja partiellement absorbe via 30MPC).
 - **Outreach.io / Salesloft sequence templates** — operationnel cadence multi-channel.
@@ -764,4 +764,4 @@ Stack recommande pour generer un script :
 - [Cold Call to Meeting Conversion Rate — Optif](https://optif.ai/learn/questions/cold-call-to-meeting-conversion-rate/)
 - [Sell or Be Sold — Grant Cardone](https://store.grantcardone.com/products/sell-or-be-sold-book)
 - [Grant Cardone Cold Call Script Analysis — Medium](https://leonlshi.medium.com/analyzing-grant-cardones-cold-call-script-word-for-word-44dd204516f1)
-- [the platform C.L.O.S.E.R Framework](https://www.skool.com/acceleratoruniversity/what-is-closer-framework)
+- [Hormozi C.L.O.S.E.R Framework](https://www.skool.com/acceleratoruniversity/what-is-closer-framework)

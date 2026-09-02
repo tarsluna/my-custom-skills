@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Devis the platform — {{CLIENT_COMPANY}}</title>
+  <title>Devis {{AGENCY_NAME}} — {{CLIENT_COMPANY}}</title>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
   <style>
@@ -1155,7 +1155,7 @@
       <div class="logo-mark">
         <svg viewBox="0 0 24 24"><polygon points="13,2 4,14 11,14 9,22 20,10 13,10 15,2" fill="#fff" stroke="#0B0B0B" stroke-width="2" stroke-linejoin="round"/></svg>
       </div>
-      <span class="logo-word">Lead<span>Factory</span></span>
+      <span class="logo-word">{{AGENCY_NAME}}</span>
     </div>
     <div class="nav-ref">Devis N° {{DEVIS_REF}}</div>
   </nav>
@@ -1165,7 +1165,7 @@
     <div class="badge badge-pink">🎯 Offre test 1er mois — Sans engagement</div>
     <h1>{{HERO_H1_HTML}}</h1>
     <p class="subtitle">
-      Fini les {{FINI_LES_1}}. Fini les {{FINI_LES_2}}. Fini les {{FINI_LES_3}}. the platform filtre 5 à 10 fois vos leads Meta avant qu'ils n'atteignent l'agenda de votre commercial.
+      Fini les {{FINI_LES_1}}. Fini les {{FINI_LES_2}}. Fini les {{FINI_LES_3}}. {{AGENCY_NAME}} filtre 5 à 10 fois vos leads Meta avant qu'ils n'atteignent l'agenda de votre commercial.
     </p>
 
     <div class="price-hero">
@@ -1204,7 +1204,7 @@
         <div class="meta-label">Émetteur</div>
         <p>
           <strong>[Your Company LLC]</strong><br>
-          the operator, CEO<br>
+          {{AGENCY_OWNER_NAME}}, CEO<br>
           you@example.com<br><br>
           <strong>Réf :</strong> {{DEVIS_REF}}<br>
           <strong>Date :</strong> {{DATE_FR}}<br>
@@ -1218,7 +1218,7 @@
           {{CLIENT_COMPANY}} — {{CLIENT_ROLE}}<br>
           {{CLIENT_ADDRESS_LINE}}, {{CLIENT_POSTAL_CODE}} {{CLIENT_CITY}}<br>
           {{CLIENT_PHONE}}<br><br>
-          <strong>Objet :</strong> Lancement campagnes the platform<br>
+          <strong>Objet :</strong> Lancement campagnes {{AGENCY_NAME}}<br>
           <strong>Offre :</strong> Test 1er mois sans engagement
         </p>
       </div>
@@ -1298,7 +1298,7 @@
   <!-- PROOF / CHIFFRES CLÉS -->
   <section>
     <div class="section-label blue">Preuve</div>
-    <h2 class="section-title">Les chiffres de <em>the platform</em></h2>
+    <h2 class="section-title">Les chiffres de <em>{{AGENCY_NAME}}</em></h2>
     <p class="section-sub">[X] clients accompagnés. [X] rendez-vous qualifiés générés. [X]€ ajoutés aux chiffres d'affaires de vos clients. Notés [X]/5 sur Google.</p>
 
     <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 24px;">
@@ -1367,7 +1367,7 @@
       </div>
 
       <div class="roi-results">
-        <div class="roi-results-label">Votre mois type avec the platform</div>
+        <div class="roi-results-label">Votre mois type avec {{AGENCY_NAME}}</div>
         <div class="roi-results-grid">
           <div class="roi-stat">
             <div class="roi-stat-value" id="roi-leads">25</div>
@@ -1577,9 +1577,9 @@
       <div class="logo-mark" style="width:30px;height:30px;box-shadow:2px 2px 0 #000;">
         <svg viewBox="0 0 24 24"><polygon points="13,2 4,14 11,14 9,22 20,10 13,10 15,2" fill="#fff" stroke="#0B0B0B" stroke-width="2" stroke-linejoin="round"/></svg>
       </div>
-      <span>Lead<span style="color:var(--blue);">Factory</span></span>
+      <span>{{AGENCY_NAME}}</span>
     </div>
-    <div class="footer-tag">Leads qualifiés en automatique.</div>
+    <div class="footer-tag">{{AGENCY_TAGLINE}}</div>
     <div class="footer-meta">Devis {{DEVIS_REF}} · {{DATE_FR}} · Valable 7 jours</div>
   </footer>
 
@@ -1590,7 +1590,7 @@
         <div class="pdf-logo-mark">
           <svg viewBox="0 0 24 24"><polygon points="13,2 4,14 11,14 9,22 20,10 13,10 15,2" fill="#fff" stroke="#0B0B0B" stroke-width="2" stroke-linejoin="round"/></svg>
         </div>
-        <span>Lead<span style="color:#3B82F6;">Factory</span></span>
+        <span>{{AGENCY_NAME}}</span>
       </div>
       <div class="pdf-meta">
         <div class="pdf-ref">DEVIS N° {{DEVIS_REF}}</div>
@@ -1604,7 +1604,7 @@
         <div class="pdf-party-label">Émetteur</div>
         <p>
           <strong>[Your Company LLC]</strong><br>
-          the operator, CEO<br>
+          {{AGENCY_OWNER_NAME}}, CEO<br>
           you@example.com<br><br>
           <strong>Réf :</strong> {{DEVIS_REF}}<br>
           <strong>Date :</strong> {{DATE_FR}}<br>
@@ -1665,7 +1665,7 @@
 
     <div class="pdf-footer">
       <p><strong>Paiement sécurisé via Stripe :</strong> <a href="{{STRIPE_LINK}}">{{STRIPE_LINK}}</a></p>
-      <p style="margin-top:6px;">Devis valable 7 jours jusqu'au {{DEADLINE_FR}} — the platform · Leads qualifiés en automatique.</p>
+      <p style="margin-top:6px;">Devis valable 7 jours jusqu'au {{DEADLINE_FR}} — {{AGENCY_NAME}} · {{AGENCY_TAGLINE}}</p>
     </div>
   </div>
 

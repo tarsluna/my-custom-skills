@@ -1,6 +1,6 @@
 # Framework 04 — CTA Library
 
-> Source : `cta_library_v1` + `MetaAds_CTA_Framework` + the platform (reasons to act now).
+> Source : `cta_library_v1` + `MetaAds_CTA_Framework` + Hormozi (reasons to act now).
 > Used in **Phase 4** of the skill.
 
 ---
@@ -108,7 +108,7 @@ Le brief client doit dire **où** on envoie le viewer. À adapter selon :
 
 Le CTA n'est que le début. La conversion réelle dépend du speed-to-lead.
 
-**Standards the platform** (rappel des règles `lead_handling_and_followup_v1`) :
+**Standards agence** (rappel des règles `lead_handling_and_followup_v1`) :
 - **Speed-to-lead < 5 minutes** après le clic
 - **3 canaux × 48–72h** : SMS + Appel + Email
 - Premier message : "Comme tu viens de cliquer sur [pub spécifique], voici la prochaine étape"

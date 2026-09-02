@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Remplacer les placeholders :
+       {{CLIENT}}     slug du client (ex. acme)
+       {{PYTHON}}     chemin de python3 (`which python3`, ex. /opt/homebrew/bin/python3)
+       {{SKILL_DIR}}  chemin absolu de ce skill (ex. ~/.claude/skills/meta-lead-notifications, en absolu)
+       {{ENV_FILE}}   fichier secrets (ex. ~/.config/meta-lead-notifications/acme.env, en absolu)
+       {{STATE_DIR}}  dossier d'état/logs (ex. ~/.local/state/meta-lead-notifications/acme, en absolu)
+     puis :
+       cp ce fichier → ~/Library/LaunchAgents/com.lead-notif.{{CLIENT}}.plist
+       launchctl load ~/Library/LaunchAgents/com.lead-notif.{{CLIENT}}.plist
+     (launchd n'expand pas ~ : mettre des chemins absolus) -->
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.lead-notif.{{CLIENT}}</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>{{PYTHON}}</string>
+        <string>{{SKILL_DIR}}/scripts/poll_and_notify.py</string>
+        <string>--env</string>
+        <string>{{ENV_FILE}}</string>
+    </array>
+    <key>StartInterval</key>
+    <integer>180</integer>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>StandardOutPath</key>
+    <string>{{STATE_DIR}}/notif.log</string>
+    <key>StandardErrorPath</key>
+    <string>{{STATE_DIR}}/notif.err.log</string>
+</dict>
+</plist>

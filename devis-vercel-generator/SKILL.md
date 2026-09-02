@@ -7,7 +7,7 @@ description: Génère la page devis personnalisée (HTML + vraie génération PD
 
 Skill qui transforme un brief commercial (`brief-output.json` produit par `sales-call-analyzer`) en **page devis Vercel déployée**, fidèle au template `projects/devis-template/index.html`, avec génération d'un **vrai PDF** téléchargeable (pas `window.print()`).
 
-Sortie finale : une URL publique `https://devis-{client-slug}.vercel.app` que the operator envoie au prospect.
+Sortie finale : une URL publique `https://devis-{client-slug}.vercel.app` que le commercial envoie au prospect.
 
 ---
 
@@ -97,7 +97,7 @@ Si le brief est incomplet, tu t'arrêtes et tu demandes à l'utilisateur de rela
 1. **NAV** — ton logo (cercle bleu + éclair SVG inliné) + référence devis `LF-YYYYMMDD-seq`.
 2. **HERO** — badge pink "Offre test 1er mois — Sans engagement", H1 dream-vs-objection (italique bleu sur le mot clé), subtitle avec 3 bullets "Fini les…", price tag `{{lf_fee}}` €, CTA Stripe, bouton Télécharger PDF, note de validité.
 3. **LES PARTIES** — 2 meta blocks :
-   - Émetteur : **[Your Company LLC], [Your Name], CEO, you@example.com** — VALEURS FIXES, ne jamais remplacer.
+   - Émetteur : **[Your Company LLC], {{AGENCY_OWNER_NAME}}, CEO, you@example.com** — VALEURS FIXES, ne jamais remplacer.
    - Destinataire : champs prospect depuis `brief.json`.
 4. **CE QUE VOUS OBTENEZ** — 6 cartes (ORDRE FIXE) :
    1. Campagnes Meta Ads (adapter géo et ICP bullet 2 : radius_km + city + customer_word).
@@ -135,7 +135,7 @@ Si le brief est incomplet, tu t'arrêtes et tu demandes à l'utilisateur de rela
 9. **4 ÉTAPES** — timeline (adapter géo en étape 1 + `deal_word` en étape 4).
 10. **CONDITIONS** — 7-8 items en checklist. Adapter la ligne géo + `meeting_word` sur le bullet objectif.
 11. **CTA FINAL** — "Prêt à recevoir vos premiers {meeting_word_plural} qualifiés en 10 jours ?". H2 italique jaune sur les mots clés.
-12. **FOOTER** — ton logo + tagline "Leads qualifiés en automatique." + ref devis. **JAMAIS "[Your Company]" dans le footer** (seulement dans Émetteur pour la mention légale).
+12. **FOOTER** — ton logo + `{{AGENCY_NAME}}` + tagline `{{AGENCY_TAGLINE}}` + ref devis. **JAMAIS "[Your Company]" dans le footer** (seulement dans Émetteur pour la mention légale).
 
 ### Palette + typos
 
@@ -264,7 +264,7 @@ Détail complet + endroits exacts dans le template : `frameworks/02-industry-voc
 - [ ] Les 12 sections sont présentes dans l'ordre exact défini ci-dessus.
 - [ ] Chiffres verrouillés [X] / 5 M€ / 130 / 4,8 **inchangés**.
 - [ ] `[Your Company]` n'apparaît **que** dans le bloc Émetteur. Nulle part ailleurs.
-- [ ] Le footer dit `the platform`, pas `[Your Company]`.
+- [ ] Le footer dit `{{AGENCY_NAME}}`, pas `[Your Company]`.
 - [ ] La table devis contient **les 2 nouvelles lignes** : Plateforme & CRM + Formation setting & closing (10 lignes total + TOTAL).
 - [ ] Le lien Stripe est inclus dans le BODY du PDF (pas seulement dans la page web).
 - [ ] Le calculateur ROI utilise le `deal_word` industrie partout (ex : "chantiers signés" pour Acme, pas "clients").
@@ -280,7 +280,7 @@ Si un gate ne passe pas : corriger avant déploiement. Ne jamais livrer une URL 
 
 ## Exemple de référence : Acme / Fermetures Acme
 
-Le brief d'exemple `brief-output-example-filipe.json` (produit par `sales-call-analyzer`) → génère une page `devis-{client-slug}.vercel.app`.
+Le brief d'exemple `brief-output-example.json` (produit par `sales-call-analyzer`) → génère une page `devis-{client-slug}.vercel.app`.
 
 Caractéristiques injectées :
 - H1 : *Moins de RDV. Mieux qualifiés. Sans diluer vos 40 ans d'image premium.*
@@ -315,7 +315,7 @@ devis-vercel-generator/
 
 ---
 
-## Style éditorial du skill (voix the platform)
+## Style éditorial du skill (voix de l'agence)
 
 **À faire** : phrases courtes, tutoiement-vouvoiement business ("On vous génère"), promesses chiffrées, affirmations sans hedge, zéro jargon IA.
 

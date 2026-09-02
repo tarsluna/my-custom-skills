@@ -46,9 +46,9 @@ Variante "Honest Opener" très diffusée (issue de la même école) :
 - En **français B2B classique** : l'honest opener fonctionne moins bien qu'en US — préférer la version "permission tailored" 30MPC.
 
 ### Exemple textuel B2B service
-> *Contexte : the platform appelle Sophie, fondatrice d'une agence Meta Ads à 8 personnes.*
+> *Contexte : l'agence appelle Sophie, fondatrice d'une agence Meta Ads à 8 personnes.*
 >
-> "Sophie ? the operator de ton offre. Franchement, on s'est jamais parlé, c'est un cold call — tu veux raccrocher direct ou tu m'accordes 30 secondes pour te dire pourquoi je t'appelle ?"
+> "Sophie ? [Prénom] de [Ton agence]. Franchement, on s'est jamais parlé, c'est un cold call — tu veux raccrocher direct ou tu m'accordes 30 secondes pour te dire pourquoi je t'appelle ?"
 >
 > [Sophie : "Vas-y, 30 secondes."]
 >
@@ -90,7 +90,7 @@ PVC est un framework de **structure de pitch**, pas un script complet. Il s'ins�
 - ICP **founder solo** (la "perso" sur un solo entrepreneur sonne creepy).
 
 ### Exemple textuel B2B service
-> *the platform appelle Marc, fondateur d'un cabinet de conseil ops à 12 personnes, qui vient d'annoncer un nouveau partner.*
+> *L'agence appelle Marc, fondateur d'un cabinet de conseil ops à 12 personnes, qui vient d'annoncer un nouveau partner.*
 >
 > [Après opener permission-based] "Marc, j'ai vu sur LinkedIn que tu venais d'intégrer Pierre comme nouveau partner — félicitations. **(P)** En général quand un cab' de conseil ops fait grossir l'équipe, le bottleneck devient pas la livraison mais l'acquisition : les associés finissent par passer 30% de leur temps à chasser au lieu de livrer, et la croissance plafonne. **(V — triggering problem)** Nous, on installe un système d'outbound qui sort entre 8 et 15 discovery calls qualifiés par mois pour des cab' comme le tien, sans que tes associés touchent une boîte mail. **(V — solution)** Ça vaut le coup qu'on en discute 20 min cette semaine pour voir si c'est aligné avec ta trajectoire ? **(C — interest CTA)**"
 
@@ -128,10 +128,10 @@ Variante structurée souvent citée : **Hook (15s) → Bridge (15s) → Reason/V
 
 ### Exemple textuel B2B service
 > [Chrono démarre à "bonjour Marc"]
-> "Marc ? the operator, the platform. (1s) Je sais, c'est un cold call. (2s) J'appelle parce qu'on sort des discovery calls pour des cabinets d'ops à ta taille — typiquement entre 8 et 15 par mois — et j'ai vu que t'avais ouvert un nouveau bureau à Lyon. (12s) Tu me fais signe si ça te parle, sinon je te laisse ?" (15s) ✓
+> "Marc ? [Prénom], [Ton agence]. (1s) Je sais, c'est un cold call. (2s) J'appelle parce qu'on sort des discovery calls pour des cabinets d'ops à ta taille — typiquement entre 8 et 15 par mois — et j'ai vu que t'avais ouvert un nouveau bureau à Lyon. (12s) Tu me fais signe si ça te parle, sinon je te laisse ?" (15s) ✓
 
 ### Variations possibles
-- **"Crash test 7s"** : version ultra-courte pour C-level ultra-busy : *"Marc, the operator de ton offre. 8-15 discovery calls/mois pour des cab' d'ops à ta taille. Ça t'intéresse 2 min ?"*
+- **"Crash test 7s"** : version ultra-courte pour C-level ultra-busy : *"Marc, [Prénom] de [Ton agence]. 8-15 discovery calls/mois pour des cab' d'ops à ta taille. Ça t'intéresse 2 min ?"*
 - **15s + chiffre étrange** : "Je promets, 43 secondes max — chrono lancé." (l'absurdité du 43 fait rire).
 
 ---
@@ -166,7 +166,7 @@ Exemples de pattern interrupts documentés :
 - Trop tôt dans ta carrière commerciale : pattern interrupt mal exécuté = manque de naturel = pire qu'un opener classique.
 
 ### Exemple textuel B2B service
-> "Sophie ? the operator de ton offre. Écoute — un de vos concurrents direct m'a dit cette semaine que faire du cold call quand t'as une agence Meta Ads, c'est ringard. Sauf que ce même concurrent vient de booker 14 nouveaux clients en 60 jours grâce à ça. (pause) Donc je tente le coup. T'as 40 secondes ?"
+> "Sophie ? [Prénom] de [Ton agence]. Écoute — un de vos concurrents direct m'a dit cette semaine que faire du cold call quand t'as une agence Meta Ads, c'est ringard. Sauf que ce même concurrent vient de booker 14 nouveaux clients en 60 jours grâce à ça. (pause) Donc je tente le coup. T'as 40 secondes ?"
 
 ### Variations possibles
 - **Pattern interrupt + reverse** : "Sophie, je vais te dire un truc bizarre : je sais pas si on peut t'aider. C'est précisément ce que j'aimerais qu'on creuse 20 min..."
@@ -202,7 +202,7 @@ Principe Challenger : **"tell, don't ask"** au démarrage. Ils refusent le class
 - Avec un ICP **réfractaire à l'opinion frontale** (cultures latines très diplomates, certains profils techniques très data-driven).
 
 ### Exemple textuel B2B service
-> "Marc, c'est the operator de ton offre. Je t'appelle parce que je viens de finir une analyse des 40 cabinets d'ops conseil en France entre 5 et 30 personnes — et il y a un truc qui m'a frappé : 70% pensent que leur problème de croissance c'est la livraison, alors qu'en réalité c'est leur CAC qui explose silencieusement parce qu'ils dépendent à 80% du réseau personnel des associés. Quand un associé fatigue, le pipe s'effondre 6 mois plus tard. (pause) Je sais pas si c'est ton cas — mais c'est exactement le genre de truc qu'on déminait pour [Nom cab' pair]. Ça vaut le coup d'en parler 20 min ?"
+> "Marc, c'est [Prénom] de [Ton agence]. Je t'appelle parce que je viens de finir une analyse des 40 cabinets d'ops conseil en France entre 5 et 30 personnes — et il y a un truc qui m'a frappé : 70% pensent que leur problème de croissance c'est la livraison, alors qu'en réalité c'est leur CAC qui explose silencieusement parce qu'ils dépendent à 80% du réseau personnel des associés. Quand un associé fatigue, le pipe s'effondre 6 mois plus tard. (pause) Je sais pas si c'est ton cas — mais c'est exactement le genre de truc qu'on déminait pour [Nom cab' pair]. Ça vaut le coup d'en parler 20 min ?"
 
 ### Variations possibles
 - **Insight + question** : finir par "est-ce que c'est ton cas ?" pour vérifier le diagnostic (engage le prospect).
@@ -237,7 +237,7 @@ Pratique classique du sales, codifiée en script par Bob Burg, Joanne Black ("No
 - En **enterprise sales lourd** où il faut un vrai sponsor interne, pas un name drop externe.
 
 ### Exemple textuel B2B service
-> "Marc ? the operator de ton offre. Antoine Dupuy de [Cabinet ABC] m'a dit que ça vaudrait le coup que je t'appelle. On l'a aidé à sortir 12 discovery calls qualifiés par mois sur leur offre conseil ops sans qu'aucun associé touche LinkedIn, et il pensait que t'étais probablement dans une situation similaire avec votre récente embauche de Pierre. T'aurais 2 min ?"
+> "Marc ? [Prénom] de [Ton agence]. Antoine Dupuy de [Cabinet ABC] m'a dit que ça vaudrait le coup que je t'appelle. On l'a aidé à sortir 12 discovery calls qualifiés par mois sur leur offre conseil ops sans qu'aucun associé touche LinkedIn, et il pensait que t'étais probablement dans une situation similaire avec votre récente embauche de Pierre. T'aurais 2 min ?"
 
 ### Variations possibles
 - **Referral indirect** : "j'ai vu sur LinkedIn que tu connais Antoine Dupuy — on bosse avec son cab' depuis 8 mois sur leur outbound" (pas de name drop direct, mais lien social établi).
@@ -311,7 +311,7 @@ Le principe "soft" : pas d'opening pattern interrupt agressif, pas de pitch imm�
 - Quand tu **sais exactement** quel est leur problème (un trigger event fort) : alors va direct.
 
 ### Exemple textuel B2B service
-> "Marc ? the operator de ton offre. J'étais sur la page 'équipe' de ton site, et j'ai vu que vous êtes 12 maintenant avec Pierre — j'avais une question. T'as une sec ?
+> "Marc ? [Prénom] de [Ton agence]. J'étais sur la page 'équipe' de ton site, et j'ai vu que vous êtes 12 maintenant avec Pierre — j'avais une question. T'as une sec ?
 >
 > [Marc : "Oui, vas-y."]
 >
@@ -489,7 +489,7 @@ Codifié par **Craig Elias** ("trigger events"), Jill Konrath, et industrialisé
 - Trigger générique que tous tes concurrents mentionnent ("j'ai vu votre levée") = devient bruit.
 
 ### Exemple textuel B2B service
-> "Sophie ? the operator de ton offre. J'ai vu sur LinkedIn que vous venez de signer [Nom Client Connu] la semaine dernière — d'abord, bravo. C'est précisément pour ça que j'appelle : en général quand une agence Meta Ads signe un gros logo, la pression devient 'comment on en signe 3 autres pareils dans les 90 jours' sans dépendre du bouche-à-oreille. Si c'est dans tes priorités, ça vaudrait peut-être le coup d'en parler 20 min cette semaine ?"
+> "Sophie ? [Prénom] de [Ton agence]. J'ai vu sur LinkedIn que vous venez de signer [Nom Client Connu] la semaine dernière — d'abord, bravo. C'est précisément pour ça que j'appelle : en général quand une agence Meta Ads signe un gros logo, la pression devient 'comment on en signe 3 autres pareils dans les 90 jours' sans dépendre du bouche-à-oreille. Si c'est dans tes priorités, ça vaudrait peut-être le coup d'en parler 20 min cette semaine ?"
 
 ### Variations possibles
 - **Trigger + insight** : combiner trigger (levée) + insight ("70% des SaaS qui lèvent à ce stade explosent leur CAC dans les 12 mois").
@@ -592,7 +592,7 @@ Voici la **structure cible** d'un cold call B2B services / agences high-ticket (
 
 ```
 [0:00–0:07] OPENER — Permission + Pattern interrupt léger (Josh Braun + Tatulea)
-  "Marc ? the operator de ton offre. Honnêtement, on s'est jamais parlé,
+  "Marc ? [Prénom] de [Ton agence]. Honnêtement, on s'est jamais parlé,
    c'est un cold call — tu veux raccrocher direct ou tu m'accordes 30s
    pour te dire pourquoi je t'appelle ?"
 
@@ -639,11 +639,11 @@ Voici la **structure cible** d'un cold call B2B services / agences high-ticket (
    ou vendredi 11h ?"
 
 [2:30+] SI VOICEMAIL SEUL — Variantes
-  VM1 (15s): "Marc, the operator the platform. Je t'appelle pour ton
+  VM1 (15s): "Marc, [Prénom] de [Ton agence]. Je t'appelle pour ton
       acquisition outbound — on sort 12 RDV/mois pour [Nom cab' pair].
       Mon mail arrive, sujet 'discovery 20 min'. À toi de jouer."
 
-  VM2 (30s, après 5 jours): "Marc, the operator the platform, 2e voicemail
+  VM2 (30s, après 5 jours): "Marc, [Prénom] de [Ton agence], 2e voicemail
       promis dernier. J'ai vu que Pierre venait d'arriver — en général
       ça déplace la priorité acquisition au top dans les 60 jours.
       On en a parlé avec [Cab' pair] dans la même config, ils sont
@@ -758,11 +758,11 @@ Pourquoi pas plus ? Parce que :
 **Tactiques validées** ([Klenty — Gatekeeper](https://www.klenty.com/blog/how-to-get-past-the-gatekeeper/), [Cognism](https://www.cognism.com/blog/get-past-the-gatekeeper)) :
 
 1. **Le ton "comme attendu"** (le plus efficace) :
-   > "Bonjour, c'est the operator — vous pouvez me passer Marc s'il vous plaît ?"
+   > "Bonjour, c'est [Prénom] — vous pouvez me passer Marc s'il vous plaît ?"
    *Ne PAS donner son nom de boîte. Ne PAS expliquer. Ton confiant, calme, comme si on appelait un proche.*
 
 2. **Si la GK insiste "c'est de la part de qui / à propos de quoi ?"** :
-   > "the operator de ton offre. C'est par rapport à un projet sur lequel j'ai besoin de l'avis de Marc directement — pourriez-vous me le passer 2 min, ou me dire quand est le meilleur moment ?"
+   > "[Prénom] de [Ton agence]. C'est par rapport à un projet sur lequel j'ai besoin de l'avis de Marc directement — pourriez-vous me le passer 2 min, ou me dire quand est le meilleur moment ?"
 
 3. **Demander de l'aide (transforme GK en allié)** :
    > "Sincèrement vous allez pouvoir m'aider — je cherche à parler à la personne qui pilote l'acquisition nouveaux clients chez vous. C'est Marc directement, ou il y a quelqu'un d'autre dans l'équipe à qui je devrais m'adresser ?"

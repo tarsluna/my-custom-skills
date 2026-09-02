@@ -413,7 +413,7 @@
    - **Astuce :** ajouter "suite à mon mail" même si pas envoyé de mail — c'est la phrase magique qui débloque 30% des transferts. (Trent Dressel, Klenty)
 
 4. **Asking for Help (Josh Braun) — verbatim :**
-   > "Bonjour [prénom du gatekeeper], c'est the operator — vous pouvez m'aider 2 secondes ? Je voulais joindre Bob, mais puisque je vous ai, vous sauriez me dire si c'est bien lui qui gère [domaine] ou je devrais parler à quelqu'un d'autre ?"
+   > "Bonjour [prénom du gatekeeper], c'est [Votre prénom] — vous pouvez m'aider 2 secondes ? Je voulais joindre Bob, mais puisque je vous ai, vous sauriez me dire si c'est bien lui qui gère [domaine] ou je devrais parler à quelqu'un d'autre ?"
    - Marche dans les structures < 200 personnes où le gatekeeper a une vraie vue sur l'entreprise.
 
 5. **Authoritative Tonality (Marcus Chan) — verbatim :**
@@ -439,7 +439,7 @@
 **Approches :**
 
 1. **Transparence radicale (Matt Macnamara) — verbatim :**
-   > "Bonjour, c'est the operator de [Société]. Vous pouvez me passer [prénom prospect] ? Je vais sonner comme tous les commerciaux qui appellent — mais si vous m'accordez 15 secondes, je vous explique pourquoi cet appel est différent, et c'est à vous de décider si vous me passez ou pas."
+   > "Bonjour, c'est [Votre prénom] de [Société]. Vous pouvez me passer [prénom prospect] ? Je vais sonner comme tous les commerciaux qui appellent — mais si vous m'accordez 15 secondes, je vous explique pourquoi cet appel est différent, et c'est à vous de décider si vous me passez ou pas."
    - Marche parce que ça respecte l'autorité de l'EA.
 
 2. **Coach approach (SalesScripter) — verbatim :**
@@ -541,10 +541,10 @@
 **Quand utiliser :** Premier touch, prospect identifié, raison claire.
 
 **Template (verbatim) :**
-> "Bonjour [Prénom], c'est the operator de [Société]. Je vous appelais à propos de [résultat client en 6 mots — ex : "vos coûts d'acquisition Meta"]. Je rappelle demain à 11h. Si vous voulez me devancer : 06.XX.XX.XX.XX, je répète, 06.XX.XX.XX.XX. À demain."
+> "Bonjour [Prénom], c'est [Votre prénom] de [Société]. Je vous appelais à propos de [résultat client en 6 mots — ex : "vos coûts d'acquisition Meta"]. Je rappelle demain à 11h. Si vous voulez me devancer : 06.XX.XX.XX.XX, je répète, 06.XX.XX.XX.XX. À demain."
 
 **Variantes :**
-- *Variante "déjà parlé" :* "Bonjour [Prénom], c'est the operator. Je vous laisse un message rapide — j'ai parlé avec [contact mutuel / personne dans la boîte] qui m'a suggéré qu'on se parle de [sujet]. Je rappelle demain matin, ou vous me joignez au 06.XX.XX.XX.XX."
+- *Variante "déjà parlé" :* "Bonjour [Prénom], c'est [Votre prénom]. Je vous laisse un message rapide — j'ai parlé avec [contact mutuel / personne dans la boîte] qui m'a suggéré qu'on se parle de [sujet]. Je rappelle demain matin, ou vous me joignez au 06.XX.XX.XX.XX."
 
 **Source :** Cognism Script #3 (Internal Referral), Pipeline ZoomInfo.
 
@@ -555,7 +555,7 @@
 **Quand utiliser :** Touch 3, après un premier VM sans retour. Tu charges plus de contexte.
 
 **Template (verbatim) :**
-> "Bonjour [Prénom], c'est the operator de [Société], 2e tentative. Je vous appelle parce qu'on vient de faire passer [Client similaire] de [résultat avant] à [résultat après] en [délai] — et en regardant [Société], je pense qu'on peut faire pareil voire mieux. Je rappelle vendredi à 14h. Sinon mon numéro c'est 06.XX.XX.XX.XX, 06.XX.XX.XX.XX. Bonne fin de journée."
+> "Bonjour [Prénom], c'est [Votre prénom] de [Société], 2e tentative. Je vous appelle parce qu'on vient de faire passer [Client similaire] de [résultat avant] à [résultat après] en [délai] — et en regardant [Société], je pense qu'on peut faire pareil voire mieux. Je rappelle vendredi à 14h. Sinon mon numéro c'est 06.XX.XX.XX.XX, 06.XX.XX.XX.XX. Bonne fin de journée."
 
 **Variantes :**
 - *Variante "trigger" :* "...j'ai vu que vous veniez de [trigger : levée, ouverture, recrutement]. C'est exactement le moment où nos clients qui nous rejoignent ont le plus à gagner. Je vous explique en 10 min jeudi ? 06.XX.XX.XX.XX."
@@ -569,10 +569,10 @@
 **Quand utiliser :** Touch 5, prospect engagé mais silencieux, ou prospect "premium" qu'on veut intriguer.
 
 **Template (verbatim) — Cognism Script #6 :**
-> "Bonjour [Prénom], c'est the operator. Vous pouvez me rappeler ? Le numéro c'est 06.XX.XX.XX.XX."
+> "Bonjour [Prénom], c'est [Votre prénom]. Vous pouvez me rappeler ? Le numéro c'est 06.XX.XX.XX.XX."
 
 **Variante "mid-sentence hangup" (avancée — Prospeo) :**
-> "[Prénom], c'est the operator. Mon numéro c'est 06.XX.XX.XX.XX. En fait je parlais hier avec un collègue et il m'a suggéré qu'on devrait probablement..." [raccroche]
+> "[Prénom], c'est [Votre prénom]. Mon numéro c'est 06.XX.XX.XX.XX. En fait je parlais hier avec un collègue et il m'a suggéré qu'on devrait probablement..." [raccroche]
 
 Quand le prospect rappelle (curiosité — "qu'est-ce qu'il allait dire ?") :
 > "Ah hey, vous allez me détester — en vrai c'était un appel à froid. Vous voulez raccrocher ou vous me donnez 30 secondes ?"
@@ -614,7 +614,7 @@ Quand le prospect rappelle (curiosité — "qu'est-ce qu'il allait dire ?") :
 **Pourquoi :** Reply rates 10-16% avec personnalisation profonde, jusqu'à 30% sur les comptes les plus personnalisés. (Vidyard, iStudiosMedia)
 
 **Template script verbatim (60-90 sec) :**
-> "Salut [Prénom], the operator de [Société]. Je voulais pas vous envoyer un mail générique de plus — donc je vous fais une vidéo rapide sur votre site / votre page LinkedIn.
+> "Salut [Prénom], [Votre prénom] de [Société]. Je voulais pas vous envoyer un mail générique de plus — donc je vous fais une vidéo rapide sur votre site / votre page LinkedIn.
 >
 > [SHARE SCREEN sur leur site / LinkedIn]
 >
@@ -806,4 +806,4 @@ D'après GTMnow, HubSpot, InsideSales :
 
 ---
 
-*Fin du document. ~5800 mots. Document de référence pour agent IA generation de scripts cold call B2B the platform.*
+*Fin du document. ~5800 mots. Document de référence pour agent IA generation de scripts cold call B2B de l'agence.*

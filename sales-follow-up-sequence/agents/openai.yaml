@@ -1,0 +1,6 @@
+interface:
+  display_name: "Sales Follow-Up Sequence"
+  short_description: "Relances commerciales CRM securisees"
+  default_prompt: "Use $sales-follow-up-sequence to gerer la relance de ce lead CRM en verifiant statut, paiement, activite recente et prochaine action avant tout envoi."
+policy:
+  allow_implicit_invocation: true

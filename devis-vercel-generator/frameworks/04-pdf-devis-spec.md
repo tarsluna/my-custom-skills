@@ -124,7 +124,7 @@ Le script `generate.mjs` remplace `{{CLIENT_NAME_SLUG}}` et `{{YYYYMMDD}}` dans 
 
 ### 1. Header
 
-- **Logo the platform** (SVG inline — le même que la nav) à gauche
+- **Logo de l'agence** (SVG inline + `{{AGENCY_NAME}}` — le même que la nav) à gauche
 - **DEVIS N° LF-YYYYMMDD-seq** + **Émis le DD/MM/YYYY** à droite
 - Séparateur : bordure noire 3px en bas du header
 
@@ -135,7 +135,7 @@ Deux blocs côte à côte (flex: 1 chacun, gap 16px) :
 **Émetteur** (fond crème, label pill bleu)
 ```
 [Your Company LLC]
-the operator, CEO
+{{AGENCY_OWNER_NAME}}, CEO
 you@example.com
 
 Réf : LF-YYYYMMDD-seq
@@ -194,7 +194,7 @@ Bordure noire 2px séparation + texte centré :
 
 ```
 Paiement sécurisé via Stripe : {{STRIPE_LINK}}   ← lien cliquable (<a href>)
-Devis valable 7 jours jusqu'au {{DEADLINE_FR}} — the platform · Leads qualifiés en automatique.
+Devis valable 7 jours jusqu'au {{DEADLINE_FR}} — {{AGENCY_NAME}} · {{AGENCY_TAGLINE}}
 ```
 
 **Le lien Stripe doit être un vrai `<a href="{{STRIPE_LINK}}">{{STRIPE_LINK}}</a>`** — html2pdf.js préserve les liens cliquables dans le PDF final. Ne pas le transformer en texte inerte.
@@ -220,7 +220,7 @@ Avec 10 lignes + en-tête de table + parties + conditions, on est souvent sur 2 
 Le PDF **ne contient pas** :
 - Le hero (H1 + badge + subtitle)
 - Les 4 cards "Ce que vous obtenez" (marketing)
-- La section "Chiffres the platform" (preuve sociale)
+- La section "Chiffres de l'agence" (preuve sociale)
 - Le calculateur ROI interactif
 - Le bloc "Marché vs notre offre" (argument commercial)
 - La timeline "4 étapes" (process)

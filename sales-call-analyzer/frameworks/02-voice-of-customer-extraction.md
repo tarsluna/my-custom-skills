@@ -29,8 +29,8 @@ Le prospect a un mot spécifique pour désigner une transaction signée. Scanner
 ### Règle d'extraction
 
 1. Compter les occurrences des mots candidats dans la transcription.
-2. Le mot le plus utilisé par le **prospect** (pas the operator) gagne.
-3. Si the operator utilise "client" mais le prospect dit "chantier" → le prospect gagne.
+2. Le mot le plus utilisé par le **prospect** (pas le commercial) gagne.
+3. Si le commercial utilise "client" mais le prospect dit "chantier" → le prospect gagne.
 4. Si aucun des mots de la table ci-dessus n'apparaît, fallback = "client".
 
 ### Exemple Acme
@@ -76,9 +76,9 @@ Scanner les signaux de sensibilité prix :
 > « Nos clients acceptent de payer pour la qualité. »
 
 ### Signaux sur le budget publicitaire confirmé
-Quand the operator demande "OK pour 500 € de budget Meta ?" et le prospect accepte → capturer dans `pricing.recommended_ad_budget_eur`.
+Quand le commercial demande "OK pour 500 € de budget Meta ?" et le prospect accepte → capturer dans `pricing.recommended_ad_budget_eur`.
 
-Quand the operator annonce "790 € le premier mois" et le prospect confirme → `pricing.lf_fee_eur = 790`.
+Quand le commercial annonce "790 € le premier mois" et le prospect confirme → `pricing.lf_fee_eur = 790`.
 
 ### Exemple Acme
 

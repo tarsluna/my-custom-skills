@@ -361,11 +361,11 @@ Chaque seat doit :
 ⚠️ **`FAL_KEY` en clair dans `run_cron.sh`** est une dette connue. Pour usage production sur client réel :
 1. Migrer la clé vers macOS Keychain :
    ```sh
-   security add-generic-password -a "the platform" -s "FAL_KEY" -w "<key>"
+   security add-generic-password -a "$USER" -s "FAL_KEY" -w "<key>"
    ```
 2. Modifier `run_cron.sh` pour lire depuis keychain :
    ```sh
-   export FAL_KEY=$(security find-generic-password -a "the platform" -s "FAL_KEY" -w)
+   export FAL_KEY=$(security find-generic-password -a "$USER" -s "FAL_KEY" -w)
    ```
 
 ---

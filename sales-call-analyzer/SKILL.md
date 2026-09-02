@@ -1,11 +1,11 @@
 ---
 name: sales-call-analyzer
-description: Analyse une transcription d'appel de vente entre the operator (the platform) et un prospect, puis produit un brief structuré JSON + markdown que le skill `devis-vercel-generator` consomme pour générer une landing page de devis personnalisée. Le skill extrait le dream state verbatim, les objections verbatim (avec citations exactes), le vocabulaire industrie (chantier vs patient vs deal vs contrat), les faits société (raison sociale, adresse, gérant, téléphone, email), la géographie, l'appétit budgétaire, la timeline de décision, la structure commerciale actuelle, l'expérience avec agences précédentes, et la sensibilité prix. Use when the user asks "analyse l'appel de vente {client}", "brief commercial {client}", "prépare le devis depuis l'appel", "extract dream vs objection from call", "parse transcription vente", "prepare devis brief from call", "analyse transcription {client}". Trigger phrases: "analyse l'appel de vente", "brief commercial", "extract dream vs objection", "parse transcription vente", "prepare devis brief from call", "analyse transcription".
+description: Analyse une transcription d'appel de vente entre le commercial de l'agence et un prospect, puis produit un brief structuré JSON + markdown que le skill `devis-vercel-generator` consomme pour générer une landing page de devis personnalisée. Le skill extrait le dream state verbatim, les objections verbatim (avec citations exactes), le vocabulaire industrie (chantier vs patient vs deal vs contrat), les faits société (raison sociale, adresse, gérant, téléphone, email), la géographie, l'appétit budgétaire, la timeline de décision, la structure commerciale actuelle, l'expérience avec agences précédentes, et la sensibilité prix. Use when the user asks "analyse l'appel de vente {client}", "brief commercial {client}", "prépare le devis depuis l'appel", "extract dream vs objection from call", "parse transcription vente", "prepare devis brief from call", "analyse transcription {client}". Trigger phrases: "analyse l'appel de vente", "brief commercial", "extract dream vs objection", "parse transcription vente", "prepare devis brief from call", "analyse transcription".
 ---
 
 # Sales Call Analyzer
 
-Skill qui transforme une **transcription d'appel de vente** (entre the operator et un prospect) en **brief structuré** (`brief-output.json` + `brief-output.md`) qui sert d'input au skill `devis-vercel-generator`.
+Skill qui transforme une **transcription d'appel de vente** (entre le commercial et un prospect) en **brief structuré** (`brief-output.json` + `brief-output.md`) qui sert d'input au skill `devis-vercel-generator`.
 
 **Objectif** : extraire tout ce qu'il faut pour personnaliser un devis Vercel — dream state verbatim, objections verbatim, vocabulaire industrie, faits société, économie du business, timeline de décision, expérience avec agences précédentes.
 
@@ -71,7 +71,7 @@ Créer le dossier s'il n'existe pas.
 
 ## 🧪 Exemple de référence : Acme (menuisier extérieur, données fictives)
 
-La transcription d'exemple (Fermetures Acme, menuiserie extérieure) est le **gold standard** de ce skill. Le fichier `templates/brief-output-example-filipe.json` contient l'extraction complète (données inventées), à utiliser comme référence de qualité.
+La transcription d'exemple (Fermetures Acme, menuiserie extérieure) est le **gold standard** de ce skill. Le fichier `templates/brief-output-example.json` contient l'extraction complète (données inventées), à utiliser comme référence de qualité.
 
 Caractéristiques clés du cas Acme (à repérer dans toute transcription similaire) :
 - **Objection verbatim typique** : *"ça bloquait souvent au niveau du prix"* → devient `Fini les prospects qui "comparent 3 devis"`.
@@ -94,7 +94,7 @@ sales-call-analyzer/
 │   └── 04-enrichment-from-website.md              ← règles de fetch du site prospect
 └── templates/
     ├── brief-output.json                          ← schéma JSON vide (contrat downstream)
-    ├── brief-output-example-filipe.json           ← exemple rempli = gold standard
+    ├── brief-output-example.json           ← exemple rempli = gold standard
     ├── brief-output.md                            ← template markdown human-readable
     └── prompt-to-run-skill.md                     ← prompt template pour invoquer le skill
 ```

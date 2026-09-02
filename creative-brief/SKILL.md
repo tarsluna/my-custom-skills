@@ -1,13 +1,13 @@
 ---
 name: creative-brief
-description: Génère un brief créatif structuré pour le creative strategist (créa strat) de votre agence. Le brief contient toutes les informations nécessaires pour créer les visuels dans Figma — identité de marque, audience cible, paysage concurrentiel, 10 templates créatifs avec copywriting, style visuel, et liens vers tous les documents de référence. Le résultat est injecté dans l'app the platform (onglet "Brief Créatif") via la colonne ai_static_prompt avec le préfixe CREATIVE_BRIEF_JSON:. Use when the user asks to "brief créatif {client}", "creative brief {client}", "brief créa strat {client}", "brief designer {client}", "brief Figma {client}". Trigger phrases: "brief créatif", "creative brief", "brief créa strat", "brief designer", "brief Figma".
+description: Génère un brief créatif structuré pour le creative strategist (créa strat) de votre agence. Le brief contient toutes les informations nécessaires pour créer les visuels dans Figma — identité de marque, audience cible, paysage concurrentiel, 10 templates créatifs avec copywriting, style visuel, et liens vers tous les documents de référence. Le résultat est injecté dans votre app (onglet "Brief Créatif") via la colonne ai_static_prompt avec le préfixe CREATIVE_BRIEF_JSON:. Use when the user asks to "brief créatif {client}", "creative brief {client}", "brief créa strat {client}", "brief designer {client}", "brief Figma {client}". Trigger phrases: "brief créatif", "creative brief", "brief créa strat", "brief designer", "brief Figma".
 ---
 
 # Creative Brief Generator
 
 Skill qui produit le **brief créatif structuré** que le creative strategist de votre agence utilise pour créer les visuels publicitaires dans Figma. Le brief centralise toutes les données client (onboarding, deep search, competitor ads) dans un format exploitable par le designer.
 
-**Format de sortie** : JSON structuré injecté dans l'app the platform via `ai_static_prompt` (préfixe `CREATIVE_BRIEF_JSON:`). Le brief est ensuite éditable dans l'onglet "Brief Créatif" de la campagne.
+**Format de sortie** : JSON structuré injecté dans ton app via `ai_static_prompt` (préfixe `CREATIVE_BRIEF_JSON:`). Le brief est ensuite éditable dans l'onglet "Brief Créatif" de la campagne.
 
 **Règles critiques** :
 - **Emojis obligatoires** dans le contenu HTML généré pour structurer visuellement les sections.
@@ -124,9 +124,9 @@ Générer les 7 sections HTML + 10 templates créatifs structurés.
 - Les headlines doivent être percutants et courts (max 8 mots)
 - Inclure tous les liens et documents disponibles dans la section références
 
-### Phase 3 — Injection dans l'app the platform
+### Phase 3 — Injection dans ton app
 
-Après la génération du brief, **injecter automatiquement** le contenu structuré dans la base de données de l'app the platform.
+Après la génération du brief, **injecter automatiquement** le contenu structuré dans la base de données de ton app.
 
 **Étapes :**
 
@@ -203,7 +203,7 @@ creative-brief/
 - [ ] HTML compatible Tiptap (pas de CSS inline, pas de divs)
 - [ ] Section références contient tous les liens/documents disponibles
 - [ ] JSON injecté dans Supabase avec préfixe CREATIVE_BRIEF_JSON:
-- [ ] Brief visible dans l'onglet "Brief Créatif" de l'app the platform
+- [ ] Brief visible dans l'onglet "Brief Créatif" de ton app
 - [ ] Aucune phrase générique/placeholder — tout est spécifique au client
 
 ---

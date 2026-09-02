@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import argparse
 import csv
+import os
 import json
 import re
 from collections import Counter, defaultdict
@@ -36,9 +37,10 @@ def norm(s: str) -> str:
 
 
 def find_client_paths(client: str) -> tuple[Path | None, Path | None]:
-    """Locate data.csv and creatives/ for a client under projects."""
+    """Locate data.csv and creatives/ for a client under $CLIENTS_DIR (default: Projects/)."""
+    clients_dir = os.environ.get("CLIENTS_DIR", "Projects")
     for root in (Path.cwd(), *Path.cwd().parents):
-        base = root / "Projects" / "the platform" / client / "02-competitor-ads"
+        base = root / clients_dir / client / "02-competitor-ads"
         if base.exists():
             csv_p = base / "data.csv"
             cre_p = base / "creatives"

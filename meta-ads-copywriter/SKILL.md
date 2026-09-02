@@ -1,11 +1,11 @@
 ---
 name: meta-ads-copywriter
-description: Generate elite Meta Ads (Facebook/Instagram) for your clients — face-camera video scripts (30s minimum, default 30s/60s/90s) + ad copies (primary text / headline / description). Always offer-first (audit + reconstruct if weak), then multi-variant output (3+ angles). Combines the platform, Imperium Acquisition (Pillars/Pools/Action Threshold), the platform, Meta Ads playbooks (Callout/Value/CTA, What-Who-When, Hooks library). Use when the user asks to "écris des pubs Meta", "scripts pubs Facebook", "Meta Ads pour {client}", "génère des pubs vidéo face caméra", "ad copy", "publicités Meta", "pubs Instagram", "Lya pubs", "scripts UGC face cam". Trigger phrases: "pubs Meta {client}", "scripts pub face caméra", "Meta Ads {client}", "fais-moi des pubs", "génère 3 variantes pub Meta".
+description: Generate elite Meta Ads (Facebook/Instagram) for your clients — face-camera video scripts (30s minimum, default 30s/60s/90s) + ad copies (primary text / headline / description). Always offer-first (audit + reconstruct if weak), then multi-variant output (3+ angles). Combines Hormozi, Imperium Acquisition (Pillars/Pools/Action Threshold), the agency's Meta Ads playbooks (Callout/Value/CTA, What-Who-When, Hooks library). Use when the user asks to "écris des pubs Meta", "scripts pubs Facebook", "Meta Ads pour {client}", "génère des pubs vidéo face caméra", "ad copy", "publicités Meta", "pubs Instagram", "Lya pubs", "scripts UGC face cam". Trigger phrases: "pubs Meta {client}", "scripts pub face caméra", "Meta Ads {client}", "fais-moi des pubs", "génère 3 variantes pub Meta".
 ---
 
 # Meta Ads Copywriter (Elite Multi-Variant Generator)
 
-End-to-end skill that produces **face-camera video scripts (30s minimum — default 30s/60s/90s, never below 30s)** AND **Meta ad copies (primary text / headline / description)** for any client. Always starts by auditing the offer (the platform Value Equation + Imperium Pillars). If the offer is weak, the skill reconstructs it before writing a single ad. Output is always **multi-variant** (minimum 3 angles), always in **French**, always **markdown**.
+End-to-end skill that produces **face-camera video scripts (30s minimum — default 30s/60s/90s, never below 30s)** AND **Meta ad copies (primary text / headline / description)** for any client. Always starts by auditing the offer (Hormozi Value Equation + Imperium Pillars). If the offer is weak, the skill reconstructs it before writing a single ad. Output is always **multi-variant** (minimum 3 angles), always in **French**, always **markdown**.
 
 This skill is the spiritual successor of "Lya" (the Custom GPT previously used for the same job) and encodes 5 reference documents into a repeatable pipeline.
 
@@ -36,7 +36,7 @@ This skill is split into modular reference files. The main agent reads `SKILL.md
 meta-ads-copywriter/
 ├── SKILL.md                          ← you are here (orchestration + pipeline)
 ├── frameworks/
-│   ├── 01-offer-audit.md             ← the platform Value Equation + Imperium 6 Pillars + 10-step offer creation
+│   ├── 01-offer-audit.md             ← Hormozi Value Equation + Imperium 6 Pillars + 10-step offer creation
 │   ├── 02-hooks-library.md           ← Banque de hooks (verbal + visuel) + first-3s checklist
 │   ├── 03-value-angles.md            ← What-Who-When + 8 leviers + 5 Pools of Pain + 3 Pools of Confidence
 │   ├── 04-cta-library.md             ← CTAs simples / urgency / scarcity / because
@@ -45,11 +45,13 @@ meta-ads-copywriter/
 │   ├── brief-input.md                ← Inputs à collecter (ICP, offre, preuves, contraintes)
 │   ├── output-ad-pack.md             ← Template du livrable final (multi-variantes)
 │   └── output-offer-rebuild.md       ← Template si l'offre doit être reconstruite
+├── assets/
+│   └── build_meta_ads_docx.py        ← Livrable client .docx (voir Phase 6)
 ├── checklists/
 │   ├── pre-flight.md                 ← Avant de générer (offre OK, ICP clair, preuves dispo)
 │   └── quality-gate.md               ← Avant de livrer (Meta policy, congruence, multi-variantes, etc.)
 └── examples/
-    └── (à remplir au fil des clients — Top Closer = premier cas)
+    └── (optionnel — à remplir au fil de tes clients)
 ```
 
 ---
@@ -58,7 +60,7 @@ meta-ads-copywriter/
 
 ### Phase 1 — Load context & Inputs
 
-**1.1** Identify the client slug (e.g., `TopCo`, `maje-conseil`).
+**1.1** Identify the client slug (e.g., `topco`, `acme-conseil`).
 
 **1.2** Check if a brief already exists at:
 ```
@@ -113,7 +115,7 @@ For each of the 4 components, score 1–5 and write a 1-line justification:
 | 11–15 | **Mediocre** | Propose 2–3 surgical improvements, ask user to validate, then proceed |
 | ≤10 | **Weak** | STOP. Load `templates/output-offer-rebuild.md` and propose a full reconstruction. Do NOT write ads on a weak offer. |
 
-**2.5** When proposing a rebuild, use the **10 the platform steps** (see `frameworks/01-offer-audit.md`) :
+**2.5** When proposing a rebuild, use the **10 Hormozi steps** (see `frameworks/01-offer-audit.md`) :
 1. Niche & 11 psychographic questions
 2. Define the final outcome (big promise + measurable)
 3. Define duration (realistic + how to shorten)
@@ -268,6 +270,20 @@ Use the structure from `templates/output-ad-pack.md` (header with avatar/angles 
 projects/clients/{client-slug}/offer/v1.md
 ```
 
+**6.2 bis — Livrable client (.docx).** Générateur fourni dans `assets/build_meta_ads_docx.py` (chemin relatif au dossier du skill ; python-docx, même branding minimal noir/blanc Calibri que `vsl-copywriter/assets/build_vsl_docx.py`, footer « Confidentiel · {client} », nom d'agence optionnel via `--brand`) :
+
+```bash
+python3 assets/build_meta_ads_docx.py projects/clients/{client-slug}/meta-ads/v1.md Meta-Ads-{Client}.docx \
+  --client "{Client}" --date "{date}" --subtitle "{Nom de l'offre}" --brand "{Ton agence}"
+```
+
+Il rend le markdown du pack tel quel (titres, tableaux, listes, citations) et met en forme les conventions du pack Meta Ads : `**Hook**` / `**Body**` / `**CTA**` en étiquettes grises petites capitales, le texte qui suit en voix off 11 pt, les lignes `- **Primary text — …**` / `- **Headline …**` / `- **Description …**` en corps réduit, les lignes entièrement en italique en indications scéniques, et `>` en encadré gris (plan média, réserves de diffusion, placeholders `[PREUVE À PRODUIRE]`). Si `python-docx` manque : `pip3 install python-docx`.
+
+**Contrôle avant génération — les deux comptages ne sont pas optionnels :**
+
+- **Mots par script.** Compter au débit de référence de **155 mots/minute, silences compris** (calibration mesurée sur des VSL réellement enregistrées). Cibles : **78 mots pour 30 s, 156 pour 60 s, 233 pour 90 s**. Afficher le compte dans le titre du script (`#### 1B — 60 secondes · 156 mots`) : c'est ce qui empêche de livrer un « 30 s » qui dure 45 s. Les fourchettes 70–90 / 150–180 / 220–250 du `frameworks/05-script-structure.md` sont des bornes hautes, pas des cibles.
+- **Caractères par copie.** Primary text ≤125 / 125–200 / 200–280, headline ≤40, description ≤30. À vérifier par script, pas à l'œil — en français, une headline dépasse 40 caractères sans prévenir.
+
 **6.3** Final user message (in French) :
 
 > ✅ Pack pubs Meta généré pour **{CLIENT}**.
@@ -323,6 +339,6 @@ If `vsl-copywriter` has been run, **read `strategy.md`** to inherit the named me
   - `leadgen_adscopy.json` (13 modules : copy structure, hooks, value angles, CTA, storyboard, targeting, lead magnet, LP, testing, budgeting, CFA, lead handling, rule of 100)
   - `MetaAds_Strategy_Fundamentals.json` (6 expert profiles : strategy, callout, value, CTA, copywriting rules, scaling)
   - `structure_copy.json` (sector-specific Hook/Body/CTA guidelines : SaaS B2B / Marketing Agency / Coaching / Consulting)
-  - `Fiche de Création d'Offre.pdf` (10-step the platform-style FR offer creation)
+  - `Fiche de Création d'Offre.pdf` (10-step Hormozi-style FR offer creation)
   - `Acquisition Catalysts Offer Creation.pdf` (Imperium Acquisition : 6 Pillars, Pools of Pain/Confidence, Action Threshold, Offer Composition, Pricing Philosophy, Latent Conditions)
 - The detailed frameworks live in `frameworks/`. Load them on demand — don't dump them into the agent context preemptively.

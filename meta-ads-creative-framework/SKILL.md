@@ -51,7 +51,7 @@ meta-ads-creative-framework/
 
 ### Phase 1 — Charger le brief visuel
 
-**1.1** Identifier le client slug (ex : `TopCo`, `maje-conseil`).
+**1.1** Identifier le client slug (ex : `TopCo`, `acme-conseil`).
 
 **1.2** Verifier si un brief visuel existe deja :
 ```
@@ -156,7 +156,7 @@ projects/clients/{client-slug}/creative-specs/v1.md
 
 ---
 
-## Integration avec l'ecosysteme the platform
+## Integration avec l'ecosysteme de l'agence
 
 Cette skill est le **complement visuel** de la stage 3 du pipeline :
 

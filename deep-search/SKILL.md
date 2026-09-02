@@ -1,6 +1,6 @@
 ---
 name: deep-search
-description: Run the 3 the platform DeepSearch studies (Market Awareness, Competitor Research, Psychographic Research) automatically for a client and produce 3 finished markdown reports. Use when the user asks for "deep search", "market research", "étude de marché", "recherche concurrentielle", "psychographic research", "the platform research", or wants research documents for a client. Trigger phrases: "deep search pour {client}", "market research {client}", "étude de marché client", "lance le deep search", "the platform deep search".
+description: Run the 3 DeepSearch studies (Market Awareness, Competitor Research, Psychographic Research) automatically for a client and produce 3 finished markdown reports. Use when the user asks for "deep search", "market research", "étude de marché", "recherche concurrentielle", "psychographic research", "agency research", or wants research documents for a client. Trigger phrases: "deep search pour {client}", "market research {client}", "étude de marché client", "lance le deep search", "deep search agence".
 ---
 
 # Deep Search (Automated Pipeline)
@@ -46,11 +46,11 @@ projects/clients/{client-slug}/research/
 └── 03-psychographic.md
 ```
 
-Create the directory if it doesn't exist. The `{client-slug}` is the client name lowercased and kebab-cased (e.g., "TopCo" → "TopCo").
+Create the directory if it doesn't exist. The `{client-slug}` is the client name lowercased and kebab-cased (e.g., "TopCo" → "topco").
 
-### Step 4 — Générer les 3 PDFs brandés the platform
+### Step 4 — Générer les 3 PDFs brandés à l'agence
 
-Après avoir sauvegardé les 3 fichiers .md, générer **en parallèle** les 3 PDFs brandés the platform correspondants. Utiliser le script `build_deep_search_pdf.py` situé dans `skills/deep-search/assets/`.
+Après avoir sauvegardé les 3 fichiers .md, générer **en parallèle** les 3 PDFs brandés à l'agence correspondants. Utiliser le script `build_deep_search_pdf.py` situé dans `skills/deep-search/assets/`.
 
 Exécuter les 3 commandes en parallèle (3 appels Bash simultanés) :
 
@@ -78,7 +78,7 @@ python3 ~/skills/deep-search/assets/build_deep_search_pdf.py \
     --report-type "psychographic"
 ```
 
-Les PDFs générés reprennent l'identité visuelle the platform (logo en filigrane, couleurs #4A7FD4 / #1E2A4A, footer "the platform — Confidentiel", page de couverture brandée).
+Les PDFs générés reprennent l'identité visuelle de l'agence (logo en filigrane via `--logo` ou env `AGENCY_LOGO`, couleurs #4A7FD4 / #1E2A4A, footer "{Agence} — Confidentiel" via `--brand` ou env `AGENCY_NAME` — défaut neutre "Confidentiel", page de couverture brandée).
 
 Si `reportlab` n'est pas installé, l'installer avec : `pip3 install reportlab --break-system-packages`
 
@@ -99,7 +99,7 @@ If the user provides only a client name without context, use `AskUserQuestion` t
 
 Do NOT proceed to Step 2 without at least: niche, product, demo, competitor type.
 
-If the client already has a file in `projects/clients/{client}/` or is mentioned in `Projects/the platform.md`, READ it first to auto-fill the variables before asking the user.
+If the client already has a file in `projects/clients/{client}/` or is mentioned in your agency's client notes, READ it first to auto-fill the variables before asking the user.
 
 ---
 
@@ -220,7 +220,7 @@ Thanks!
 
 When delegating each prompt to a `general-purpose` sub-agent, frame the task like this:
 
-> You are running a deep market research study for the platform. Below is the full research prompt. You MUST:
+> You are running a deep market research study for the agency. Below is the full research prompt. You MUST:
 > 1. Use WebSearch and WebFetch extensively (minimum 10-15 queries) to gather real, sourced data about the **French market**.
 > 2. Cite every claim with a URL and a date when possible.
 > 3. Include quotes from real prospects/customers (forums, Reddit FR, Trustpilot, Avis Vérifiés, LinkedIn comments, Twitter/X, YouTube comments).
@@ -241,9 +241,9 @@ projects/clients/{client-slug}/
     ├── 01-market-awareness.md                          # rapport markdown
     ├── 02-competitors.md                                # rapport markdown
     ├── 03-psychographic.md                              # rapport markdown
-    ├── DeepSearch-Conscience-Marche-{Client}.pdf        # PDF brandé the platform
-    ├── DeepSearch-Concurrents-{Client}.pdf              # PDF brandé the platform
-    └── DeepSearch-Psychographique-{Client}.pdf          # PDF brandé the platform
+    ├── DeepSearch-Conscience-Marche-{Client}.pdf        # PDF brandé à l'agence
+    ├── DeepSearch-Concurrents-{Client}.pdf              # PDF brandé à l'agence
+    └── DeepSearch-Psychographique-{Client}.pdf          # PDF brandé à l'agence
 ```
 
 ## Final user message (in French)
@@ -256,7 +256,7 @@ After saving, send something like:
 > - `02-competitors.md` — {N} concurrents analysés
 > - `03-psychographic.md` — {N} insights psychographiques + quotes
 >
-> **Documents PDF brandés the platform :**
+> **Documents PDF brandés à l'agence :**
 > - `DeepSearch-Conscience-Marche-{Client}.pdf`
 > - `DeepSearch-Concurrents-{Client}.pdf`
 > - `DeepSearch-Psychographique-{Client}.pdf`
@@ -268,7 +268,7 @@ After saving, send something like:
 - TOUJOURS exécuter les 3 sub-agents en parallèle.
 - TOUJOURS sauvegarder en markdown français.
 - TOUJOURS inclure les sources (URLs + dates) dans les rapports.
-- TOUJOURS générer les 3 PDFs brandés the platform après les .md (Step 4).
+- TOUJOURS générer les 3 PDFs brandés à l'agence après les .md (Step 4).
 - Si une étude échoue ou retourne un contenu trop léger, relancer le sub-agent concerné avec une instruction plus stricte sur le volume de recherche.
 - Si la génération PDF échoue (reportlab manquant), installer avec `pip3 install reportlab --break-system-packages` puis relancer.
 
@@ -277,5 +277,5 @@ After saving, send something like:
 deep-search/
 ├── SKILL.md                          ← ce fichier
 └── assets/
-    └── build_deep_search_pdf.py      ← générateur PDF brandé the platform
+    └── build_deep_search_pdf.py      ← générateur PDF brandé à l'agence
 ```

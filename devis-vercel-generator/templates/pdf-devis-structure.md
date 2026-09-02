@@ -10,7 +10,7 @@ Raison d'être : produire un **vrai document devis** (1-2 pages A4) sans les sec
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│ [Logo the platform]         DEVIS N° LF-20260421-002     │
+│ [Logo {{AGENCY_NAME}}]      DEVIS N° LF-20260421-002     │
 │                            Émis le 21/04/2026            │
 ├─────────────────────────────────────────────────────────┤
 │                                                          │
@@ -18,7 +18,7 @@ Raison d'être : produire un **vrai document devis** (1-2 pages A4) sans les sec
 │ ┌─────────────────┐  ┌─────────────────┐                │
 │ │ Émetteur        │  │ Destinataire    │                │
 │ │ [Your Company LLC]  │  │ [Client Name]│                │
-│ │ the operator  │  │ Fermetures …    │                │
+│ │ {{AGENCY_OWNER_NAME}} │  │ Fermetures …    │        │
 │ │ …              │  │ …               │                │
 │ └─────────────────┘  └─────────────────┘                │
 │                                                          │
@@ -48,7 +48,7 @@ Raison d'être : produire un **vrai document devis** (1-2 pages A4) sans les sec
 ├─────────────────────────────────────────────────────────┤
 │ Paiement sécurisé via Stripe : https://buy.stripe…       │
 │ Devis valable 7 jours jusqu'au 28/04/2026 —              │
-│ the platform · Leads qualifiés en automatique.            │
+│ {{AGENCY_NAME}} · {{AGENCY_TAGLINE}}                      │
 └─────────────────────────────────────────────────────────┘
 ```
 
@@ -104,7 +104,7 @@ Le nom de fichier `{ClientName}` = slug kebab-case de `meta.company_legal_name` 
 
 - Pas de hero / H1 / badge
 - Pas de section cards "Ce que vous obtenez" (marketing)
-- Pas de section "Chiffres the platform" (marketing)
+- Pas de section "Chiffres de l'agence" (marketing)
 - Pas de calculateur ROI
 - Pas de bloc "Marché vs notre offre"
 - Pas de timeline 4 étapes

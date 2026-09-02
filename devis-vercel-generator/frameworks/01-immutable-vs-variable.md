@@ -11,13 +11,13 @@ Tout ce qui se trouve dans `templates/template.html` tombe dans une des 2 catég
 **Bloc Émetteur** (section PARTIES) :
 ```
 [Your Company LLC]
-the operator, CEO
+{{AGENCY_OWNER_NAME}}, CEO
 you@example.com
 ```
 
-Ces 3 lignes sont **verrouillées**. [Your Company LLC] est la raison sociale de votre agence. L'email contact est `you@example.com`. Jamais remplacer par "the platform" ou "the platform.my" ou une autre adresse.
+Ces 3 lignes sont **verrouillées**. [Your Company LLC] est la raison sociale de votre agence. L'email contact est `you@example.com`. Jamais remplacer par une adresse au domaine de l'agence ou une autre adresse.
 
-### Chiffres de preuve the platform (section PREUVE)
+### Chiffres de preuve de l'agence (section PREUVE)
 
 Les 4 stat cards contiennent **ces valeurs exactes** :
 
@@ -40,7 +40,7 @@ Bloc pill jaune sous la table devis, **verbatim** :
 
 Ne **jamais** personnaliser ces chiffres, même si la vraie économie calculée est différente. C'est un argument de vente figé, pas un calcul sur-mesure.
 
-### Prix test the platform
+### Prix test de l'agence
 
 - Prix test 1er mois = **790 €** par défaut
 - Surcharger **uniquement** si `pricing.lf_fee_eur` dans le brief est différent de 790 (rare — négociations exceptionnelles).
@@ -71,7 +71,7 @@ Toujours présentes, toujours ces libellés exacts, toujours "Inclus" :
 ### Footer
 
 ```
-the platform  ·  Leads qualifiés en automatique.  ·  Devis {{DEVIS_REF}}
+{{AGENCY_NAME}}  ·  {{AGENCY_TAGLINE}}  ·  Devis {{DEVIS_REF}}
 ```
 
 **Jamais** "[Your Company]" dans le footer. [Your Company] apparaît uniquement dans le bloc Émetteur (obligation légale).
@@ -99,7 +99,7 @@ Tout ce qui est détaillé dans `brand-identity.md` est IMMUABLE :
 
 - H1 (`headline_hook` du brief) — rythme "X. Y. Sans Z." obligatoire, voir framework 03
 - Les 3 "Fini les…" (verbatim des objections du call)
-- Subtitle wrapper autour des 3 bullets (défaut : `Fini les X. Fini les Y. Fini les Z. the platform filtre 5 à 10 fois vos leads Meta avant qu'ils n'atteignent l'agenda de votre commercial.`)
+- Subtitle wrapper autour des 3 bullets (défaut : `Fini les X. Fini les Y. Fini les Z. {{AGENCY_NAME}} filtre 5 à 10 fois vos leads Meta avant qu'ils n'atteignent l'agenda de votre commercial.`)
 
 ### Vocabulaire industrie (`meta.industry_vocab`)
 

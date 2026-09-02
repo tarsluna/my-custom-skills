@@ -1,11 +1,11 @@
 # Framework 01 — Offer Audit & Reconstruction
 
-> Source : the platform + Imperium Acquisition (Acquisition Catalysts) + Fiche de Création d'Offre FR.
+> Source : Hormozi + Imperium Acquisition (Acquisition Catalysts) + Fiche de Création d'Offre FR.
 > Used in **Phase 2** of the skill. This is the gate before any ad is written.
 
 ---
 
-## A. The Value Equation (the platform)
+## A. The Value Equation (Hormozi)
 
 ```
 Value = (Dream Outcome × Perceived Likelihood) / (Time Delay × Effort & Sacrifice)
@@ -96,7 +96,7 @@ Une offre forte contient :
 
 ---
 
-## D. the platform-style FR offer creation — 10 steps
+## D. Hormozi-style FR offer creation — 10 steps
 
 Workflow complet pour reconstruire une offre. À utiliser quand l'offre échoue le diagnostic Value Equation.
 
@@ -168,7 +168,7 @@ Transforme une offre banale en offre irrésistible via le positionnement.
 
 ---
 
-## E. Pricing Philosophy (the platform)
+## E. Pricing Philosophy (Hormozi)
 
 ### Price-to-Value discrepancy
 Les gens achètent quand ils croient que la valeur reçue >> prix payé.

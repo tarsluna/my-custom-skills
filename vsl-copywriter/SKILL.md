@@ -1,11 +1,11 @@
-s---
+---
 name: vsl-copywriter
-description: Generate world-class Video Sales Letter (VSL) scripts for your clients by consuming the 3 deep-search reports (market awareness, competitors, psychographic) and applying elite copywriting frameworks (Schwartz, the platform, Imperium Acquisition, RMBC). Use when the user asks to "write a VSL", "écrire une VSL", "script VSL", "VSL copywriter", "build VSL script for {client}", "fais le script VSL", "génère la VSL". Trigger phrases: "VSL pour {client}", "écris la VSL", "script de vente vidéo", "the platform VSL", "VSL copywriter {client}".
+description: Generate world-class Video Sales Letter (VSL) scripts for your clients by consuming the 3 deep-search reports (market awareness, competitors, psychographic) and applying elite copywriting frameworks (Schwartz, Hormozi, Imperium Acquisition, RMBC). Use when the user asks to "write a VSL", "écrire une VSL", "script VSL", "VSL copywriter", "build VSL script for {client}", "fais le script VSL", "génère la VSL". Trigger phrases: "VSL pour {client}", "écris la VSL", "script de vente vidéo", "VSL agence", "VSL copywriter {client}".
 ---
 
 # VSL Copywriter (Elite Script Generator)
 
-End-to-end skill that transforms the 3 DeepSearch reports produced by `deep-search` into a complete, high-converting VSL script + strategy doc for a client. Combines the best of Eugene Schwartz, the platform, Imperium Acquisition, RMBC Method, and B2B Meta Ads playbooks.
+End-to-end skill that transforms the 3 DeepSearch reports produced by `deep-search` into a complete, high-converting VSL script + strategy doc for a client. Combines the best of Eugene Schwartz, Hormozi, Imperium Acquisition, RMBC Method, and B2B Meta Ads playbooks.
 
 ## 🎚️ Modes (à choisir avant génération)
 
@@ -101,7 +101,7 @@ Build the strategic spine:
 Coaches/consultants and marketing agencies are **almost always level 4–5** in France today → default to identity + named mechanism + radical specificity.
 
 ### Step 4 — Script structure (16 blocks + timestamps)
-Write the script in the following structure (adapted from coach VSL framework + French structure_vsl + the platform What-Who-When). Target length: **8–12 minutes** (1200–1800 words).
+Write the script in the following structure (adapted from coach VSL framework + French structure_vsl + Hormozi What-Who-When). Target length: **8–12 minutes** (1200–1800 words).
 
 Format every block as:
 ```
@@ -124,7 +124,7 @@ Voice-over text in French, written for the ear (short sentences, oral rhythm, 2n
 11. **[7:30–8:30] NEW LIFE / TRANSFORMATION** — Dream Outcome made tangible. Sensory details. Time/financial/identity freedom.
 12. **[8:30–9:15] PROOF STACK** — 3+ concrete proofs: client results, screenshots described, named names, before/after numbers. Sourced from `02-competitors.md` benchmarks + brief.
 13. **[9:15–10:00] BENEFITS OF THE METHOD** — 4 bullet-style benefits of the mechanism (read aloud as a list, slow rhythm).
-14. **[10:00–10:45] OFFER REVEAL** — Apply the platform **What-Who-When + 8 value elements**: Dream Outcome ↑, Likelihood ↑, Time Delay ↓, Effort ↓. Stack everything included. Anchor price.
+14. **[10:00–10:45] OFFER REVEAL** — Apply Hormozi **What-Who-When + 8 value elements**: Dream Outcome ↑, Likelihood ↑, Time Delay ↓, Effort ↓. Stack everything included. Anchor price.
 15. **[10:45–11:30] OBJECTION HANDLING + SAFETY NET** — Address top 3 objections from `03-psychographic.md` head-on. Add guarantee / risk reversal.
 16. **[11:30–12:00] CTA (single, clear, urgent)** — One action only: "Clique sur le bouton, réserve ton call." Repeat the dream outcome + scarcity element. NO secondary CTA, NO "or you can also…".
 
@@ -138,7 +138,7 @@ Voice-over text in French, written for the ear (short sentences, oral rhythm, 2n
 → Increase **Pain** with the 5 Pools (Problem, Unmet needs, How would it work, What would it hurt, Consequences).
 → Increase **Confidence** with the 3 Pools (Confidence in the Offer, in You, in the Clients).
 
-**the platform 8 Value Elements** (apply at offer reveal):
+**Hormozi 8 Value Elements** (apply at offer reveal):
 - ↑ Dream Outcome
 - ↑ Perceived Likelihood of Achievement
 - ↓ Time Delay
@@ -225,6 +225,15 @@ projects/clients/{client-slug}/vsl/
 ...
 ```
 
+**Livrable client (.docx)** — générateur fourni dans `assets/build_vsl_docx.py` (chemin relatif au dossier du skill ; python-docx, branding minimal noir/blanc Calibri, footer « Confidentiel · {client} », nom d'agence optionnel via `--brand`) :
+
+```bash
+python3 assets/build_vsl_docx.py script-v1.md VSL-Script-{Client}.docx \
+  --client "{Client}" --date "{date}" --subtitle "{Nom de l'offre}" --brand "{Ton agence}"
+```
+
+Il rend le markdown du script tel quel (titres, tableaux, listes, citations) et met en forme les conventions VSL : horodatage de bloc, `**VO —**`, `**À L'ÉCRAN —**`, lignes en italique = indications de réalisation, `>` = encadré (placeholders de preuve). Si `python-docx` manque : `pip3 install python-docx`.
+
 **`script-v1.md` template:**
 ```markdown
 # Script VSL v1 — {CLIENT}
@@ -292,11 +301,11 @@ After saving:
 **5 Pools of Pain**: Problem / Unmet needs / How Would It Work / What Would It Hurt / Consequences
 **Action Threshold**: (Pain% + Confidence%) / 2
 
-### D. the platform — Value Equation (What-Who-When)
+### D. Hormozi — Value Equation (What-Who-When)
 **Value = (Dream Outcome × Likelihood) / (Time Delay × Effort)**
 Maximize numerator, minimize denominator at the offer reveal.
 
-### E. the platform — More-Better-New (Rule of 100)
+### E. Hormozi — More-Better-New (Rule of 100)
 Daily output: 100 outreach OR 100 minutes of content OR $100 of ads.
 
 ### F. RMBC Method — Research questions (use to extract from `03-psychographic.md`)

@@ -15,7 +15,7 @@
 4. **Single CTA = book discovery 30-45 min**. Jamais essayer de closer en cold call B2B service. Toujours proposer 2 créneaux concrets ("mardi 14h ou jeudi 10h ?").
 5. **15 secondes pour gagner le droit de continuer**. Au-delà, attention perdue. Source : Will Aitken, Cegelski.
 6. **Tonalité = 70% du résultat** (Voss). Pace modéré, baisse en fin de phrase, pauses délibérées de 1-2 sec après chaque insight.
-7. **1 résultat max, daté et nommé** (style 30MPC "Heard the name tossed around"). "On a fait 103 leads à 7€ CPL pour Maje Conseil sur 30 jours" — pas de "on génère beaucoup de leads".
+7. **1 résultat max, daté et nommé** (style 30MPC "Heard the name tossed around"). "On a fait 103 leads à 7€ CPL pour un cabinet de conseil sur 30 jours" — pas de "on génère beaucoup de leads".
 8. **Esquiver le prix en cold call** ; renvoyer en discovery.
 9. **Anti-patterns interdits** : "Comment allez-vous ?", "Est-ce un bon moment ?", "Je vous appelle pour vous présenter…", hyperboles ("révolutionnaire"), 2 CTA dans un seul call.
 10. **Personnalisation peer-context > generic**. "On bosse avec 3 agences Meta Ads parisiennes de votre taille" > "On aide des entreprises comme la vôtre".

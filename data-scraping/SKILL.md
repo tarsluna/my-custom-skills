@@ -2,7 +2,7 @@
 name: data-scraping
 description: >
   Build autonomous B2B data-sourcing engines that scrape, qualify, dedupe and export prospect
-  bases from public/legal data — the platform way. Broad data-scraping skill whose flagship
+  bases from public/legal data — the agency way. Broad data-scraping skill whose flagship
   method is the FREE FRENCH STACK: source companies from open-data SIRENE
   (recherche-entreprises.api.gouv.fr, no key, no cost), score them against an ICP, dedupe by SIREN,
   export multi-sheet CSV/XLSX, then enrich (director name + email) cheapest-first. Use whenever the
@@ -14,7 +14,7 @@ description: >
 
 # Data Scraping Engine
 
-How to build a **prospect-sourcing engine** the platform way: real, legal, free data first;
+How to build a **prospect-sourcing engine** the agency way: real, legal, free data first;
 deterministic code for the scraping loop; sub-agents for building & validation; cheapest-first
 enrichment last. Scope is broad (any B2B data scraping) — but the **default method** below is the
 one to reach for unless the data lives elsewhere.

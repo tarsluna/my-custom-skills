@@ -1,4 +1,4 @@
-# Règles de détection des "ads winners" — the platform
+# Règles de détection des "ads winners"
 
 Une ad gagnante (winner) est une ad qu'un concurrent laisse tourner longtemps. Sur Meta, **personne ne brûle son budget sur des ads qui ne convertissent pas**. Donc la durée d'activité est notre proxy #1 pour la performance.
 
@@ -12,7 +12,7 @@ Une ad gagnante (winner) est une ad qu'un concurrent laisse tourner longtemps. S
 | **> 60 jours** | **Hero ✓✓** | Top performer du concurrent |
 | > 180 jours | Evergreen ✓✓✓ | Pilier du compte, à étudier en priorité |
 
-**Règle d'or** : **on annote `winner = true` dès 21 jours**. C'est le seuil the platform.
+**Règle d'or** : **on annote `winner = true` dès 21 jours**. C'est le seuil maison.
 
 ## Critères secondaires (renforcement)
 

@@ -1,6 +1,6 @@
 ---
 name: cold-traffic-landing-page
-description: Generate a high-converting, branded, responsive landing page for a client, optimized for COLD Meta/TikTok/YouTube traffic. Inputs = client website URL + onboarding form (questionnaire the platform) + 3 deepsearch reports + (optional) VSL strategy. Output = a production-ready static landing page (HTML/CSS/JS or Next.js), brand-faithful, mobile-first, optimized for opt-in / lead capture / call booking. Use when the user asks to "génère une landing page", "fais une LP pour {client}", "landing page trafic froid", "page d'opt-in {client}", "build a cold-traffic landing page", "LP pour ma campagne Meta", "page de capture {client}". Trigger phrases: "landing page {client}", "LP {client}", "page froid {client}", "build LP", "génère la LP".
+description: Generate a high-converting, branded, responsive landing page for a client, optimized for COLD Meta/TikTok/YouTube traffic. Inputs = client website URL + onboarding form (agency questionnaire) + 3 deepsearch reports + (optional) VSL strategy. Output = a production-ready static landing page (HTML/CSS/JS or Next.js), brand-faithful, mobile-first, optimized for opt-in / lead capture / call booking. Use when the user asks to "génère une landing page", "fais une LP pour {client}", "landing page trafic froid", "page d'opt-in {client}", "build a cold-traffic landing page", "LP pour ma campagne Meta", "page de capture {client}". Trigger phrases: "landing page {client}", "LP {client}", "page froid {client}", "build LP", "génère la LP".
 ---
 
 # Cold Traffic Landing Page Builder
@@ -44,7 +44,7 @@ DO NOT trigger when the user asks for:
    - Brand colors (CSS, screenshots, hero), logo, typography, tone of voice
    - Existing offer language (so we can sharpen, not contradict)
    - Existing CTA targets (Calendly, Tally, custom form)
-2. **Onboarding form** (questionnaire the platform `responses`) — usually in:
+2. **Onboarding form** (agency questionnaire `responses`) — usually in:
    - `projects/{client-slug}/00-brief.md` or
    - the original JSON/text the user paste
    - Extract: offer, prix, ICP, douleurs, bénéfices, CTA, preuves, branding (h_logo, h_visuels, h_preuves), e_url, e_post_clic_phrase1/2
@@ -371,5 +371,5 @@ When in doubt about aesthetic direction, lean toward these references (do not co
 ## 📚 Notes
 
 - Default tech = static HTML/CSS/JS + Tailwind CDN. Switch to Next.js/shadcn ONLY if explicitly asked.
-- This skill encodes lessons from: `static-vercel-landing-page` (workflow), `frontend-design` (anti-AI-slop), the platform (offer stack), Schwartz (awareness levels), Sugarman (slippery slide), Brunson (squeeze pages), shadcn/ui blocks (component composition).
+- This skill encodes lessons from: `static-vercel-landing-page` (workflow), `frontend-design` (anti-AI-slop), Hormozi (offer stack), Schwartz (awareness levels), Sugarman (slippery slide), Brunson (squeeze pages), shadcn/ui blocks (component composition).
 - Always sanity-check the LP against the winning Meta ad hook BEFORE deploying — if they don't match, you'll burn ad spend.

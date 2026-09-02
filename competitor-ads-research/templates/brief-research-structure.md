@@ -1,6 +1,6 @@
 # Template markdown source du livrable
 
-Ce template est consommé par `assets/build_research_brief.py` pour générer le `.docx` final the platform.
+Ce template est consommé par `assets/build_research_brief.py` pour générer le `.docx` final.
 
 ---
 
@@ -65,7 +65,7 @@ Exemple :
 - [Angle 1] — [N concurrents]
 - [Angle 2] — [N concurrents]
 
-**White spaces (opportunités the platform)** :
+**White spaces (opportunités pour l'agence)** :
 - [Angle 1] — aucun concurrent ne l'exploite
 - [Angle 2] — aucun concurrent ne l'exploite
 
@@ -94,7 +94,7 @@ Exemple :
 
 ---
 
-## Section 7 — Recommandations the platform
+## Section 7 — Recommandations
 
 **Recommandation 1** — Lance l'angle [X] en format [Y] avec hook inspiré de "[Z]".
 

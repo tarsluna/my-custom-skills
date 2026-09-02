@@ -1,11 +1,11 @@
 ---
 name: competitor-ads-research
-description: Extrait et analyse les publicités Meta (Facebook + Instagram) des concurrents d'un client depuis la Meta Ads Library, puis génère un brief stratégique au branding. Output = bibliothèque de créatives téléchargées (PNG/MP4), CSV des copies, analyse markdown des angles/patterns/hooks gagnants, et document .docx final livrable client. Adapté du skill ComposioHQ "competitive-ads-extractor" et calibré sur le process the platform (5 angles : Douleur/Désir/Preuve/Contre-intuitif/Urgence). Use when the user asks to "analyse les pubs des concurrents", "scrape les ads de {concurrent}", "veille concurrentielle Meta {client}", "competitor ads research", "ad library {marque}", "extraire les pubs Facebook de {marque}", "brief concurrents {client}". Trigger phrases : "analyse concurrentielle Meta", "scrape ad library", "veille pubs Facebook", "research concurrents Meta Ads", "spy ads {marque}".
+description: Extrait et analyse les publicités Meta (Facebook + Instagram) des concurrents d'un client depuis la Meta Ads Library, puis génère un brief stratégique au branding. Output = bibliothèque de créatives téléchargées (PNG/MP4), CSV des copies, analyse markdown des angles/patterns/hooks gagnants, et document .docx final livrable client. Adapté du skill ComposioHQ "competitive-ads-extractor" et calibré sur le process de l'agence (5 angles : Douleur/Désir/Preuve/Contre-intuitif/Urgence). Use when the user asks to "analyse les pubs des concurrents", "scrape les ads de {concurrent}", "veille concurrentielle Meta {client}", "competitor ads research", "ad library {marque}", "extraire les pubs Facebook de {marque}", "brief concurrents {client}". Trigger phrases : "analyse concurrentielle Meta", "scrape ad library", "veille pubs Facebook", "research concurrents Meta Ads", "spy ads {marque}".
 ---
 
 # Competitor Meta Ads Research
 
-Skill qui extrait les publicités Meta des concurrents d'un client, les télécharge, les catégorise, identifie les patterns gagnants et produit un brief stratégique au branding. Adapté du skill open-source [`ComposioHQ/competitive-ads-extractor`](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/competitive-ads-extractor/SKILL.md) et calibré sur le process the platform (angles, structure de campagne, livrable .docx final).
+Skill qui extrait les publicités Meta des concurrents d'un client, les télécharge, les catégorise, identifie les patterns gagnants et produit un brief stratégique au branding. Adapté du skill open-source [`ComposioHQ/competitive-ads-extractor`](https://github.com/ComposioHQ/awesome-claude-skills/blob/master/competitive-ads-extractor/SKILL.md) et calibré sur le process de l'agence (angles, structure de campagne, livrable .docx final).
 
 **Crédit** : structure inspirée du skill `competitive-ads-extractor` de ComposioHQ + use case original de Sumant Subrahmanya (Lenny's Newsletter).
 
@@ -60,7 +60,7 @@ Le skill bascule en **mode fallback dégradé** :
 
 ### Phase 1 — Inputs & cadrage
 Le user doit fournir (ou tu dois demander) :
-- **Nom du client** the platform (pour structurer les outputs)
+- **Nom du client** (pour structurer les outputs)
 - **Marché / niche** du client (ex : closing francophone, SaaS B2B, coaching mindset...)
 - **Liste des concurrents à analyser** (3 à 10 marques) — par nom de page Facebook
 - **Géographie cible** (FR / BE / CH / international)
@@ -83,13 +83,13 @@ Pour chaque `page_id` :
    - `ad_active_status` : ACTIVE
    - `limit` : selon profondeur (10 / 25 / 50)
 2. Récupérer pour chaque ad : ID, texte primaire, headline, description, CTA, format, durée d'activité, URL média, dates start/stop
-3. **Indicateur "winner"** : ad active depuis > 21 jours = signal fort de performance (the platform rule)
+3. **Indicateur "winner"** : ad active depuis > 21 jours = signal fort de performance (règle maison)
 
 ### Phase 4 — Analyse des créatives (MCP)
 1. Téléchargement local des médias dans `creatives/[concurrent]/`
 2. Pour images : `mcp__fb_ad_library__analyze_ad_image` → extraction texte, couleurs, composition, hook visuel
 3. Pour vidéos : `mcp__fb_ad_library__analyze_ad_videos_batch` (en batch pour économiser les tokens) → hook 3s, structure, CTA, ton, format
-4. Catégorisation automatique de chaque ad selon les **5 angles the platform** :
+4. Catégorisation automatique de chaque ad selon les **5 angles** :
    - **Douleur** (Pain) — verbalise la galère du prospect
    - **Désir** (Dream) — peint la transformation finale
    - **Preuve** (Social Proof) — case study, testimonial, chiffre
@@ -104,9 +104,9 @@ Pour chaque concurrent ET en agrégé sur tous les concurrents :
 - **Distribution par format** (FaceCam vs UGC vs Static vs Carousel vs VSL)
 - **Frameworks de copy récurrents** (extraction des structures : Hook → Problem → Solution → CTA, etc.)
 - **Pain points partagés** (problèmes que TOUS les concurrents ciblent — angle saturé)
-- **White spaces** (angles qu'AUCUN concurrent n'exploite — opportunités the platform)
+- **White spaces** (angles qu'AUCUN concurrent n'exploite — opportunités pour l'agence)
 
-### Phase 6 — Génération du livrable the platform
+### Phase 6 — Génération du livrable
 Trois outputs sont produits dans `projects/{client}/competitor-research/{date}/` :
 
 1. **`creatives/[concurrent]/`** — toutes les images et vidéos téléchargées
@@ -138,7 +138,7 @@ Pour chaque pattern (3-5 patterns max) :
 
 ### Section 4 — Angles saturés vs white spaces
 - **Saturé** : angles que TOUS les concurrents jouent → à éviter ou à twister
-- **White space** : angles qu'AUCUN concurrent n'exploite → opportunité the platform
+- **White space** : angles qu'AUCUN concurrent n'exploite → opportunité pour l'agence
 
 ### Section 5 — Top hooks détectés
 Liste de 8-12 hooks verbatim extraits des ads winners (>21j d'activité). Pas d'analyse, juste les hooks bruts.
@@ -146,7 +146,7 @@ Liste de 8-12 hooks verbatim extraits des ads winners (>21j d'activité). Pas d'
 ### Section 6 — Top CTAs détectés
 Liste de 5-8 CTAs récurrents.
 
-### Section 7 — Recommandations the platform
+### Section 7 — Recommandations
 3-5 recommandations actionnables pour la prochaine campagne du client. Format direct :
 - **Recommandation 1** : Test l'angle "[X]" en format [Y] avec hook "[Z]"
 - **Recommandation 2** : Évite l'angle "[saturé]" — déjà couvert par 4 concurrents
@@ -163,7 +163,7 @@ Tableau simple : Concurrent | Ad ID | Angle | Hook | Jours actif | Winner ✓
 competitor-ads-research/
 ├── SKILL.md                              ← orchestration (ce fichier)
 ├── frameworks/
-│   ├── 5-angles-the platform.md           ← référence des 5 angles + critères de classification
+│   ├── 5-angles.md                       ← référence des 5 angles + critères de classification
 │   ├── winner-detection-rules.md         ← règles "ad winner" (>21j, fréquence, etc.)
 │   └── pattern-extraction.md             ← comment extraire les patterns récurrents
 ├── templates/
@@ -173,19 +173,19 @@ competitor-ads-research/
 │   ├── classify-angle.md                 ← prompt pour classifier une ad dans un des 5 angles
 │   └── extract-hook.md                   ← prompt pour extraire le hook 3s
 └── assets/
-    └── build_research_brief.py           ← générateur .docx the platform ultra-simple
+    └── build_research_brief.py           ← générateur .docx ultra-simple
 ```
 
 ---
 
-## 🎯 Règles non négociables (the platform)
+## 🎯 Règles non négociables (agence)
 
-1. **Toujours classifier en 5 angles the platform**, jamais inventer d'autres catégories
+1. **Toujours classifier en 5 angles**, jamais inventer d'autres catégories
 2. **Toujours flagger les "winners"** (> 21 jours d'activité) — c'est notre signal #1
 3. **Toujours identifier les white spaces** — c'est ce qui justifie nos campagnes
 4. **Le brief final est en français**, ton direct, anti style IA
 5. **Pas plus de 5 recommandations** dans le doc final (sinon noyé)
-6. **Le .docx est noir sur blanc Calibri** — branding minimal the platform (titre uniquement)
+6. **Le .docx est noir sur blanc Calibri** — branding minimal de l'agence (titre uniquement)
 7. **Confidentialité** : ne JAMAIS recommander de copier verbatim. On s'inspire, on twiste, on dépasse.
 
 ---
@@ -223,7 +223,7 @@ Focus sur l'angle "transformation 6 mois".
 - [ ] Au moins 80% des ads attendues ont été extraites (vs profondeur demandée)
 - [ ] Tous les médias sont téléchargés dans `creatives/[concurrent]/`
 - [ ] `data.csv` contient une ligne par ad avec toutes les colonnes
-- [ ] Chaque ad est classifiée dans UN des 5 angles the platform (pas "Autre")
+- [ ] Chaque ad est classifiée dans UN des 5 angles (pas "Autre")
 - [ ] Les winners (>21j) sont flaggés
 - [ ] L'analyse markdown identifie au moins 3 patterns gagnants
 - [ ] L'analyse markdown identifie au moins 1 white space

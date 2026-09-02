@@ -349,8 +349,8 @@ Chaque seat ouvre les PNG (Read), score /10, 3 recommandations chiffrées → `c
 ### Sécurité
 - `HF_KEY` **jamais en clair** dans un script versionné. Lire depuis env ou Keychain :
   ```sh
-  security add-generic-password -a "the platform" -s "HF_KEY" -w "key_id:key_secret"
-  export HF_KEY=$(security find-generic-password -a "the platform" -s "HF_KEY" -w)
+  security add-generic-password -a "$USER" -s "HF_KEY" -w "key_id:key_secret"
+  export HF_KEY=$(security find-generic-password -a "$USER" -s "HF_KEY" -w)
   ```
 - Ne jamais renvoyer la clé dans un chat (Telegram/Discord) — « clé configurée ✅ ».
 

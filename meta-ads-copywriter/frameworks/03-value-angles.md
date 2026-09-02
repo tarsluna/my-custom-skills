@@ -1,6 +1,6 @@
 # Framework 03 — Value Angles (What-Who-When)
 
-> Source : `value_angle_generator_v1` + `MetaAds_Value_Framework` + the platform + Imperium 5 Pools of Pain.
+> Source : `value_angle_generator_v1` + `MetaAds_Value_Framework` + Hormozi + Imperium 5 Pools of Pain.
 > Used in **Phase 3** of the skill (angle palette generation).
 
 ---

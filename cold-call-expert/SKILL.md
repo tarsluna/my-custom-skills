@@ -9,7 +9,7 @@ Skill méta qui consolide la recherche marché complète sur le cold call B2B
 services et l'expose en :
 
 1. **Corpus baked** → `output/cold-call-expertise.md` (synthèse en 14 sections)
-2. **System prompt** intégré dans la feature SaaS the platform
+2. **System prompt** intégré dans la feature SaaS de l'agence
    (`app/apps/web/src/lib/cold-call-script-writer/script-prompt.ts`)
 3. **UI live** dans l'espace client : `/client/sales/cold-call-script`
    (à côté de la carte Sales Call Analyzer)

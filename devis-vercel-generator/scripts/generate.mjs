@@ -183,6 +183,12 @@ const prequalFiltersShort = m.prequal_filters_short || 'budget, projet, urgence,
 
 const panierHint = m.panier_hint || `Montant moyen d'un ${dealWord} facturé`;
 
+// Agency identity (placeholders — brief.agency.* > env > défaut neutre)
+const agency = brief.agency || {};
+const agencyName = agency.name || process.env.AGENCY_NAME || 'Votre agence';
+const agencyTagline = agency.tagline || process.env.AGENCY_TAGLINE || 'Leads qualifiés en automatique.';
+const agencyOwnerName = agency.owner_name || process.env.AGENCY_OWNER_NAME || '[Your Name]';
+
 // Pricing
 const lfFee = p.lf_fee_eur || 790;
 const stripeLink = p.stripe_link;
@@ -209,6 +215,10 @@ const tokens = {
   FINI_LES_2: fini2,
   FINI_LES_3: fini3,
   SERVICES_INTRO: servicesIntro,
+
+  AGENCY_NAME: agencyName,
+  AGENCY_TAGLINE: agencyTagline,
+  AGENCY_OWNER_NAME: agencyOwnerName,
 
   LF_FEE: String(lfFee),
   STRIPE_LINK: stripeLink,

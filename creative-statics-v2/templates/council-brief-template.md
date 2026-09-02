@@ -42,7 +42,7 @@ Score /10 + 3 recos chiffrées (px, hex, ratios). Sauvegarde dans {{creatives_di
 
 ## Seat 4 — Copywriter
 ```
-Tu es le Copywriter expert the platform. Lis le copy framework
+Tu es le Copywriter expert de l'agence. Lis le copy framework
 (../creative-statics/frameworks/03-copywriting-framework.md) et la matrice
 ({{matrix_path}}). Pour chaque créative, audite le texte incrusté :
 - AGENCY check (sujet du verbe-promesse = fournisseur, pas le prospect)
