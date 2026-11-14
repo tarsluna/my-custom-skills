@@ -1,0 +1,288 @@
+{
+ "data": [
+  {
+   "id": "000000000501",
+   "name": "P01 devis-perdus Vertical",
+   "status": "ACTIVE",
+   "effective_status": "ACTIVE",
+   "adset_id": "000000000401",
+   "creative": {
+    "id": "000000000601",
+    "name": "Pépinière Exemple | Chiffrage P01-V",
+    "url_tags": "utm_source=meta&utm_medium=paid&utm_campaign=chiffrage&utm_content=P01-V",
+    "degrees_of_freedom_spec": {
+     "creative_features_spec": {
+      "standard_enhancements": {
+       "enroll_status": "OPT_OUT"
+      }
+     }
+    },
+    "object_story_spec": {
+     "page_id": "000000000001",
+     "instagram_user_id": "000000000003",
+     "video_data": {
+      "video_id": "000000000201",
+      "image_hash": "vignettefictive0001",
+      "call_to_action": {
+       "type": "LEARN_MORE",
+       "value": {
+        "link": "https://pepiniere-exemple.test/paysagistes"
+       }
+      }
+     }
+    },
+    "asset_feed_spec": {
+     "bodies": [
+      {
+       "text": "Votre dernier devis est parti trop tard, et le client a signé ailleurs.\nLe prix des plantes ne devrait plus vous faire perdre un chantier.\n\nDans votre chiffrage :\n– la liste de plantes adaptée à votre sol\n– les prix par quantité\n– les dates de livraison sur votre chantier\n\nVotre chiffrage complet arrive sous 24 heures, sans engagement.\n\nDemandez votre chiffrage offert."
+      },
+      {
+       "text": "Votre client attend un devis, et votre fournisseur ne répond pas.\nEnvoyez-nous votre plan de plantation : on vous rend les prix et les délais.\n\nVotre chiffrage complet arrive sous 24 heures, sans engagement.\n\nDemandez votre chiffrage offert."
+      },
+      {
+       "text": "Vous passez vos soirées à appeler des pépinières pour un seul devis ?\nUne demande suffit, vos végétaux sont chiffrés pour vous.\n\nVotre chiffrage complet arrive sous 24 heures, sans engagement.\n\nDemandez votre chiffrage offert."
+      },
+      {
+       "text": "Un jardin se vend quand le prix arrive vite.\nRecevez le détail des plantes, quantité par quantité, avant votre rendez-vous.\n\nVotre chiffrage complet arrive sous 24 heures, sans engagement.\n\nDemandez votre chiffrage offert."
+      },
+      {
+       "text": "Paysagiste, votre marge se joue au moment du chiffrage.\nComparez vos végétaux avant de signer, sans y passer la journée.\n\nVotre chiffrage complet arrive sous 24 heures, sans engagement.\n\nDemandez votre chiffrage offert."
+      }
+     ],
+     "titles": [
+      {
+       "text": "Paysagistes : votre chiffrage offert en 24 heures"
+      },
+      {
+       "text": "Votre chiffrage de végétaux, prêt demain"
+      },
+      {
+       "text": "Un chiffrage clair pour votre prochain jardin"
+      },
+      {
+       "text": "Paysagistes : le chiffrage sans relance"
+      },
+      {
+       "text": "Chiffrage offert pour votre prochain chantier"
+      }
+     ],
+     "descriptions": [
+      {
+       "text": "Vos végétaux chiffrés avant votre rendez-vous."
+      }
+     ],
+     "optimization_type": "DEGREES_OF_FREEDOM"
+    }
+   }
+  },
+  {
+   "id": "000000000502",
+   "name": "P02 plantes-en-retard Emplacements",
+   "status": "ACTIVE",
+   "effective_status": "ACTIVE",
+   "adset_id": "000000000401",
+   "creative": {
+    "id": "000000000602",
+    "name": "Pépinière Exemple | Chiffrage P02 emplacements",
+    "url_tags": "utm_source=meta&utm_medium=paid&utm_campaign=chiffrage&utm_content=P02",
+    "object_story_spec": {
+     "page_id": "000000000001",
+     "instagram_user_id": "000000000003"
+    },
+    "asset_feed_spec": {
+     "videos": [
+      {
+       "video_id": "000000000211",
+       "thumbnail_hash": "vignettefictive0011",
+       "adlabels": [
+        {
+         "id": "000000000701",
+         "name": "placement_vertical"
+        }
+       ]
+      },
+      {
+       "video_id": "000000000212",
+       "thumbnail_hash": "vignettefictive0012",
+       "adlabels": [
+        {
+         "id": "000000000702",
+         "name": "placement_carre"
+        }
+       ]
+      },
+      {
+       "video_id": "000000000213",
+       "thumbnail_hash": "vignettefictive0013",
+       "adlabels": [
+        {
+         "id": "000000000703",
+         "name": "placement_horizontal"
+        }
+       ]
+      }
+     ],
+     "bodies": [
+      {
+       "text": "Une livraison en retard, c'est une équipe payée à attendre.\nAvant de signer, sachez quand vos plantes arrivent.\n\nDans votre chiffrage :\n– la liste de plantes adaptée à votre sol\n– les prix par quantité\n– les dates de livraison sur votre chantier\n\nVotre chiffrage complet arrive sous 24 heures, sans engagement.\n\nDemandez votre chiffrage offert."
+      }
+     ],
+     "titles": [
+      {
+       "text": "Paysagistes : votre chiffrage offert en 24 heures"
+      }
+     ],
+     "descriptions": [
+      {
+       "text": "Vos dates de livraison écrites noir sur blanc."
+      }
+     ],
+     "call_to_action_types": [
+      "LEARN_MORE"
+     ],
+     "link_urls": [
+      {
+       "website_url": "https://pepiniere-exemple.test/paysagistes",
+       "display_url": ""
+      }
+     ],
+     "ad_formats": [
+      "AUTOMATIC_FORMAT"
+     ],
+     "asset_customization_rules": [
+      {
+       "customization_spec": {
+        "publisher_platforms": [
+         "facebook",
+         "instagram"
+        ],
+        "facebook_positions": [
+         "story",
+         "facebook_reels"
+        ],
+        "instagram_positions": [
+         "story",
+         "reels"
+        ]
+       },
+       "video_label": {
+        "id": "000000000701",
+        "name": "placement_vertical"
+       },
+       "priority": 1
+      },
+      {
+       "customization_spec": {
+        "publisher_platforms": [
+         "facebook",
+         "instagram"
+        ],
+        "facebook_positions": [
+         "feed"
+        ],
+        "instagram_positions": [
+         "stream"
+        ]
+       },
+       "video_label": {
+        "id": "000000000702",
+        "name": "placement_carre"
+       },
+       "priority": 2
+      },
+      {
+       "customization_spec": {},
+       "video_label": {
+        "id": "000000000703",
+        "name": "placement_horizontal"
+       },
+       "priority": 3
+      }
+     ],
+     "optimization_type": "PLACEMENT",
+     "additional_data": {
+      "multi_share_end_card": false,
+      "is_click_to_message": false
+     },
+     "reasons_to_shop": false,
+     "shops_bundle": false
+    }
+   }
+  },
+  {
+   "id": "000000000503",
+   "name": "P03 refusee Vertical",
+   "status": "ACTIVE",
+   "effective_status": "DISAPPROVED",
+   "adset_id": "000000000401",
+   "creative": {
+    "id": "000000000601",
+    "name": "Pépinière Exemple | Chiffrage P01-V",
+    "url_tags": "utm_source=meta&utm_medium=paid&utm_campaign=chiffrage&utm_content=P01-V",
+    "degrees_of_freedom_spec": {
+     "creative_features_spec": {
+      "standard_enhancements": {
+       "enroll_status": "OPT_OUT"
+      }
+     }
+    },
+    "object_story_spec": {
+     "page_id": "000000000001",
+     "instagram_user_id": "000000000003",
+     "video_data": {
+      "video_id": "000000000201",
+      "image_hash": "vignettefictive0001",
+      "call_to_action": {
+       "type": "LEARN_MORE",
+       "value": {
+        "link": "https://pepiniere-exemple.test/paysagistes"
+       }
+      }
+     }
+    },
+    "asset_feed_spec": {
+     "bodies": [
+      {
+       "text": "Votre dernier devis est parti trop tard, et le client a signé ailleurs.\nLe prix des plantes ne devrait plus vous faire perdre un chantier.\n\nDans votre chiffrage :\n– la liste de plantes adaptée à votre sol\n– les prix par quantité\n– les dates de livraison sur votre chantier\n\nVotre chiffrage complet arrive sous 24 heures, sans engagement.\n\nDemandez votre chiffrage offert."
+      },
+      {
+       "text": "Votre client attend un devis, et votre fournisseur ne répond pas.\nEnvoyez-nous votre plan de plantation : on vous rend les prix et les délais.\n\nVotre chiffrage complet arrive sous 24 heures, sans engagement.\n\nDemandez votre chiffrage offert."
+      },
+      {
+       "text": "Vous passez vos soirées à appeler des pépinières pour un seul devis ?\nUne demande suffit, vos végétaux sont chiffrés pour vous.\n\nVotre chiffrage complet arrive sous 24 heures, sans engagement.\n\nDemandez votre chiffrage offert."
+      },
+      {
+       "text": "Un jardin se vend quand le prix arrive vite.\nRecevez le détail des plantes, quantité par quantité, avant votre rendez-vous.\n\nVotre chiffrage complet arrive sous 24 heures, sans engagement.\n\nDemandez votre chiffrage offert."
+      },
+      {
+       "text": "Paysagiste, votre marge se joue au moment du chiffrage.\nComparez vos végétaux avant de signer, sans y passer la journée.\n\nVotre chiffrage complet arrive sous 24 heures, sans engagement.\n\nDemandez votre chiffrage offert."
+      }
+     ],
+     "titles": [
+      {
+       "text": "Paysagistes : votre chiffrage offert en 24 heures"
+      },
+      {
+       "text": "Votre chiffrage de végétaux, prêt demain"
+      },
+      {
+       "text": "Un chiffrage clair pour votre prochain jardin"
+      },
+      {
+       "text": "Paysagistes : le chiffrage sans relance"
+      },
+      {
+       "text": "Chiffrage offert pour votre prochain chantier"
+      }
+     ],
+     "descriptions": [
+      {
+       "text": "Vos végétaux chiffrés avant votre rendez-vous."
+      }
+     ],
+     "optimization_type": "DEGREES_OF_FREEDOM"
+    }
+   }
+  }
+ ]
+}

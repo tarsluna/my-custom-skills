@@ -1,0 +1,211 @@
+{
+  "operator": {
+    "name": "Votre Agence",
+    "logoUrl": null,
+    "websiteUrl": "https://exemple.fr",
+    "motto": "Vous faites votre métier. Nous remplissons votre agenda."
+  },
+  "theme": {
+    "background": "#0f1115",
+    "backgroundAlt": "#171a21",
+    "backgroundLight": "#eef0f3",
+    "foreground": "#f4f5f7",
+    "foregroundSoft": "#c9ced6",
+    "muted": "#8d95a1",
+    "accent": "#5b8def"
+  },
+  "business": {
+    "nom": "institut",
+    "le": "l’institut",
+    "du": "de l’institut",
+    "un": "un institut",
+    "au": "à l’institut",
+    "ce": "cet institut",
+    "votre": "votre institut"
+  },
+  "sector": {
+    "description": "instituts de beauté et centres de soins esthétiques",
+    "reader": "une personne qui cherche un soin de confiance près de chez elle",
+    "country": "FR",
+    "projectWord": "soin",
+    "portfolioWord": "soins",
+    "professions": [
+      {
+        "key": "institut",
+        "label": "institut de beauté",
+        "evidence": "institut|esth[ée]ti|soins?",
+        "neverCalled": [
+          "médecin",
+          "docteur",
+          "dermatologue"
+        ]
+      }
+    ],
+    "defaultProfession": "institut"
+  },
+  "competitors": {
+    "keep": "un institut de beauté ou un centre de soins esthétiques proche, proposant des soins comparables",
+    "exclude": "écoles et formations, annuaires, marques de cosmétiques, parfumeries, pages sans rapport",
+    "excludedNameWords": [
+      "[ée]coles?",
+      "formations?",
+      "academy",
+      "acad[ée]mie",
+      "campus",
+      "universit[ée]",
+      "lyc[ée]e",
+      "annuaire",
+      "immobili[èe]re?",
+      "notaire"
+    ],
+    "excludedBodyWords": [
+      "bachelor",
+      "mba",
+      "alternance",
+      "cpf",
+      "portes ouvertes",
+      "inscriptions?",
+      "dipl[ôo]mante?",
+      "publi-?r[ée]dactionnel",
+      "investissement locatif"
+    ]
+  },
+  "assistant": {
+    "topics": [
+      "le soin recherché",
+      "la zone concernée",
+      "le budget",
+      "le moment souhaité",
+      "une première visite ou non"
+    ],
+    "budgetLabel": "budget",
+    "priceLabel": "tarifs",
+    "pricePattern": "tarifs?|combien\\s+(vous\\s+)?(co[uû]t|prend|prenez|facturez)|vos\\s+prix|pourcentage|devis",
+    "replyPrice": "Les tarifs se voient directement avec {le} lors du rendez-vous. Quel budget envisagez-vous pour ce projet ?",
+    "replyAngle": "C’est un point à voir directement avec {le}. Revenons à votre projet : de quel lieu s’agit-il ?",
+    "replyAi": "Je suis l’assistant IA de {le}. Parlons de votre projet : de quel type de projet s’agit-il ?",
+    "replyDeflect": "Je suis là pour échanger sur votre projet. De quel type de projet s’agit-il ?",
+    "replyClosing": "Merci pour ces précisions. {le_maj} reviendra vers vous pour fixer un rendez-vous.",
+    "fallbackProject": "un soin du visage",
+    "fallbackReplies": [
+      "C’est pour un soin du visage",
+      "Un budget autour de 80 €",
+      "Plutôt un samedi matin",
+      "C’est une première visite"
+    ]
+  },
+  "vocabulary": {
+    "banned": [
+      "pipeline",
+      "leads?",
+      "panier moyen",
+      "appels? d[ée]couverte",
+      "closers?",
+      "closing",
+      "setters?",
+      "setting",
+      "funnels?",
+      "tunnel de vente"
+    ],
+    "forbiddenAngles": [
+      "r[ée]sultats?\\s+garantis?",
+      "gu[ée]ri(t|son)",
+      "traitement\\s+m[ée]dical",
+      "sans\\s+risque"
+    ],
+    "noExclamation": true
+  },
+  "creatives": {
+    "visible": 3,
+    "directorOf": "instituts de beauté",
+    "voice": "rassure, valorise, connaît le métier",
+    "headlineExamples": [
+      "Une heure pour vous. Enfin.",
+      "Votre peau ne demandait qu’un peu d’attention.",
+      "Et si vous preniez ce rendez-vous pour vous ?"
+    ],
+    "bulletExample": "« Une heure où plus rien ne vous sollicite » plutôt que « Modelage du visage »",
+    "ctaExamples": [
+      "PRENDRE RENDEZ-VOUS",
+      "CHOISIR MON SOIN",
+      "RÉSERVER MON CRÉNEAU"
+    ],
+    "fallbackBullets": [
+      "Un moment pour vous",
+      "Des gestes précis",
+      "Des produits choisis",
+      "Un conseil personnalisé",
+      "Un cadre apaisant",
+      "Un créneau près de chez vous"
+    ]
+  },
+  "visuals": {
+    "subject": "treatment room",
+    "subjectFr": "la cabine de soin",
+    "photoStyle": "Photorealistic interior photograph, indistinguishable from a real photograph by a professional photographer: full-frame camera, wide lens, tripod, strictly vertical lines, natural daylight from the windows, real shadows and reflections, believable material imperfections.",
+    "calmSurface": "the plain, calm surface of the upper wall or ceiling",
+    "defaultBefore": "a plain, dated treatment room with harsh lighting",
+    "defaultAfter": "the same room turned into a calm, warm treatment space",
+    "defaultScene": "a calm, warm treatment room with soft natural light",
+    "workTable": "a clean consultation table",
+    "workDocument": "a printed treatment menu with no readable words",
+    "sketchStyle": "a hand-drawn perspective sketch in fine black ink and graphite on cream paper",
+    "noPeople": true
+  },
+  "page": {
+    "title": "Nous avons préinstallé ce système pour vous, {nom}.",
+    "lockedSentence": "Le reste de vos bonus vous sera présenté dans l'appel.",
+    "conceptNote": "Visuel de concept généré pour votre entreprise",
+    "indexCta": "Voir vos publicités locales",
+    "sections": {
+      "business": "Votre entreprise",
+      "competitors": "Vos concurrents",
+      "creatives": "Vos publicités locales",
+      "projects": "Vos réalisations",
+      "assistant": "Votre assistant",
+      "next": "La suite"
+    },
+    "businessTitle": "Ce que nous avons compris de votre entreprise.",
+    "creativesTitle": "Vos publicités locales.",
+    "creativesLead": "Montrées précisément à une audience qui a besoin de vos services, autour de {ville}. {n} publicités dessinées pour {nom}.",
+    "projectsTitle": "Vos réalisations, déjà en ligne.",
+    "projectsLead": "Ces images viennent de votre site. Ce sont elles que vos prochains clients doivent voir.",
+    "assistantTitle": "Votre assistant de premier contact.",
+    "assistantLead": "Jouez le rôle d’un client qui écrit à {nom}.",
+    "assistantNotes": [
+      {
+        "tag": "En votre nom",
+        "text": "Il répond à toute heure, au nom de {nom}."
+      },
+      {
+        "tag": "Le tri",
+        "text": "Il demande le budget et le délai. Les curieux s’arrêtent là."
+      },
+      {
+        "tag": "Le rendez-vous",
+        "text": "Chaque demande sérieuse devient un rendez-vous dans votre agenda."
+      }
+    ],
+    "nextTitle": "La suite vous attend au rendez-vous.",
+    "closing": "Votre prochaine cliente commence ici.",
+    "closingWithName": "{prenom}, votre prochaine cliente commence ici.",
+    "teaser": [
+      {
+        "title": "Votre plan d’action",
+        "sub": "Semaine par semaine, sur 90 jours"
+      },
+      {
+        "title": "Votre estimation",
+        "sub": "Ce que votre zone peut apporter à votre agenda"
+      },
+      {
+        "title": "Vos recherches locales",
+        "sub": "Ce que vos clients tapent, ville par ville"
+      }
+    ],
+    "costLabel": "Coût par prospect préqualifié estimé",
+    "costLabelShort": "par prospect préqualifié estimé",
+    "costAverageLabel": "Coût moyen par prospect préqualifié estimé",
+    "footerLegal": "Les visuels de concept sont générés."
+  }
+}

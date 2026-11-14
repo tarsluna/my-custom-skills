@@ -1,0 +1,488 @@
+{
+  "meta": {
+    "agence": "Votre Agence",
+    "prospect": "Jardins Exemple",
+    "entete": "Votre Agence × Jardins Exemple",
+    "pied": "Votre Agence",
+    "site": "votre-agence.example",
+    "sortie": "Proposition-Jardins-Exemple",
+    "langue": "fr"
+  },
+  "controles": {
+    "prix_plein": "3 000 €",
+    "interdits_dans_le_pdf": [
+      "1 000 €",
+      "sans engagement",
+      "20 demandes"
+    ]
+  },
+  "ordre": [
+    "couverture",
+    "presentation",
+    "situation",
+    "objectifs",
+    "preuve_chiffres",
+    "preuve_cas",
+    "preuve_autres",
+    "temoignages",
+    "deroule",
+    "systeme",
+    "offre",
+    "garantie",
+    "devis",
+    "suite"
+  ],
+  "couverture": {
+    "mention": "Proposition commerciale · 3 mars 2031",
+    "surtitre": "Préparée pour Camille · Jardins Exemple",
+    "titre": "Des demandes de création qualifiées pour **Jardins Exemple**.",
+    "sous_titre": "Un système d'acquisition installé en 72 heures, garanti sur 3 mois.",
+    "pastilles": [
+      "3 000 € HT · 3 mois",
+      "40 demandes qualifiées garanties",
+      "Mise en place en 72 h"
+    ],
+    "pied_gauche": "8 chemin de l'Exemple, 44000 Nantes"
+  },
+  "presentation": {
+    "label": "Jardins Exemple",
+    "surtitre": "Paysagiste à Nantes depuis 2011",
+    "slogan": "Des jardins qui vivent\ntoute l'année.",
+    "phrase": "Conception, création et entretien de jardins pour des particuliers, de la terrasse au potager. Une équipe de six, qui plante et entretient elle-même ce qu'elle dessine.",
+    "photos": [
+      {
+        "fichier": "photos/exemple-1.svg",
+        "legende": "Terrasse et massifs · Nantes"
+      },
+      {
+        "fichier": "photos/exemple-2.svg",
+        "legende": "Jardin sec · Rezé"
+      },
+      {
+        "fichier": "photos/exemple-3.svg",
+        "legende": "Potager en carrés · Orvault"
+      },
+      {
+        "fichier": "photos/exemple-4.svg",
+        "legende": "Allée et pelouse · Vertou"
+      }
+    ],
+    "faits": [
+      {
+        "valeur": "Depuis 2011",
+        "texte": "année de création"
+      },
+      {
+        "valeur": "6 personnes",
+        "texte": "conception, plantation et entretien en interne"
+      },
+      {
+        "valeur": "4,9 sur 5",
+        "texte": "sur 47 avis en ligne"
+      },
+      {
+        "valeur": "Nantes et alentours",
+        "texte": "dans un rayon de 20 km"
+      }
+    ]
+  },
+  "situation": {
+    "titre": "Ce que nous avons retenu de notre échange.",
+    "colonnes": [
+      {
+        "titre": "Vos atouts",
+        "items": [
+          "Un client sur deux vous arrive par la recommandation d'un voisin ou d'un ancien client.",
+          "Des contrats d'entretien qui se renouvellent d'une année sur l'autre.",
+          "Chaque réalisation photographiée avant et après."
+        ]
+      },
+      {
+        "titre": "Ce qui vous coûte",
+        "items": [
+          "Des contacts d'annuaire à 35 € pièce, envoyés à quatre concurrents à la fois.",
+          "Un devis sur sept signé, les autres perdus sur le prix.",
+          "Un printemps débordé, puis un automne creux, sans visibilité."
+        ]
+      },
+      {
+        "titre": "Ce que vous voulez",
+        "sombre": true,
+        "items": [
+          "Des projets de création à plus de 10 000 €.",
+          "Des clients qui viennent pour la conception, pas pour comparer.",
+          "Un planning rempli trois mois à l'avance.",
+          "Un engagement écrit. **Il est en page {page:garantie}.**"
+        ]
+      }
+    ]
+  },
+  "objectifs": {
+    "titre": "Vos objectifs.",
+    "items": [
+      {
+        "titre": "Signer plus de créations",
+        "texte": "Des projets à votre niveau de prix : 10 000 € et plus."
+      },
+      {
+        "titre": "Ne plus dépendre des annuaires",
+        "texte": "Plus de contacts achetés, plus de mise en concurrence."
+      },
+      {
+        "titre": "Payer un coût par contact clair",
+        "texte": "Vous savez ce que coûte chaque demande et d'où elle vient."
+      },
+      {
+        "titre": "Avoir votre propre système d'acquisition",
+        "texte": "À votre nom, sur vos comptes. Il reste à vous."
+      },
+      {
+        "titre": "Lisser votre année",
+        "texte": "Des demandes de création signées avant l'automne, pas seulement au printemps."
+      },
+      {
+        "titre": "Ne plus perdre de temps",
+        "texte": "Fini les visites chez ceux qui veulent seulement un prix."
+      }
+    ]
+  },
+  "preuve_chiffres": {
+    "titre": "Faire venir des demandes qualifiées, c'est notre métier.",
+    "chiffres": [
+      {
+        "valeur": "90",
+        "texte": "clients accompagnés"
+      },
+      {
+        "valeur": "1,2 M€",
+        "texte": "de chiffre d'affaires généré pour nos clients"
+      },
+      {
+        "valeur": "2 600",
+        "texte": "demandes qualifiées transmises"
+      },
+      {
+        "valeur": "4,6 / 5",
+        "texte": "de note moyenne laissée par nos clients"
+      }
+    ],
+    "note": {
+      "label": "La méthode ne change pas",
+      "texte": "Une publicité au nom de l'entreprise, des questions de tri, une demande transmise avec sa fiche. Les pages suivantes montrent ce que cela a donné, client par client, avec le métier de chacun."
+    }
+  },
+  "preuve_cas": {
+    "titre": "Quatre campagnes, chiffres relevés dans les comptes.",
+    "cas": [
+      {
+        "client": "Client A",
+        "metier": "Couverture",
+        "valeur": "46",
+        "resultat": "demandes en 2 mois",
+        "detail": "21 € par demande en moyenne, pour environ 950 € de publicité."
+      },
+      {
+        "client": "Client B",
+        "metier": "Menuiserie",
+        "valeur": "8 €",
+        "resultat": "de chiffre d'affaires pour 1 € de publicité",
+        "detail": "26 € par demande qualifiée, après cinq questions de tri."
+      },
+      {
+        "client": "Client C",
+        "metier": "Ostéopathie",
+        "valeur": "12",
+        "resultat": "rendez-vous en 3 semaines",
+        "detail": "28 € par rendez-vous. Les premiers sont arrivés huit jours après le démarrage."
+      },
+      {
+        "client": "Client D",
+        "metier": "Piscines",
+        "valeur": "37",
+        "resultat": "visites à domicile en un mois",
+        "detail": "180 demandes pour environ 800 € de publicité."
+      }
+    ],
+    "bandeau": {
+      "gauche": "Sur ces campagnes, une demande a coûté entre 4 et 28 €.",
+      "droite": "Vos contacts d'annuaire : 35 € pièce, partagés à quatre."
+    }
+  },
+  "preuve_autres": {
+    "titre": "Et chez d'autres clients.",
+    "resultats": [
+      {
+        "valeur": "24",
+        "texte": "rendez-vous qualifiés sur 31 pris",
+        "client": "Client E · Formation"
+      },
+      {
+        "valeur": "38",
+        "texte": "rendez-vous planifiés",
+        "client": "Client F · Logiciel"
+      },
+      {
+        "valeur": "16",
+        "texte": "rendez-vous en sept semaines",
+        "client": "Client G · Recrutement"
+      },
+      {
+        "valeur": "150",
+        "texte": "prises de contact en huit mois",
+        "client": "Client H · Immobilier"
+      },
+      {
+        "valeur": "260",
+        "texte": "inscriptions en quatre mois",
+        "client": "Client I · Événementiel"
+      },
+      {
+        "valeur": "22",
+        "texte": "réponses positives",
+        "client": "Client J · Location de matériel"
+      }
+    ],
+    "note": "Ces résultats ont été obtenus dans d'autres métiers que le vôtre. C'est pour cela que notre engagement est écrit : 40 demandes qualifiées en 3 mois, ou vos frais d'installation remboursés."
+  },
+  "temoignages": {
+    "titre": "Leurs mots.",
+    "mention": "4,6 / 5 · 90 clients",
+    "citations": [
+      {
+        "texte": "Ils ont pris le temps de comprendre comment je travaille avant de proposer quoi que ce soit.",
+        "auteur": "Gérant, Client A"
+      },
+      {
+        "texte": "Les premières demandes sont arrivées plus vite que prévu, et elles étaient sérieuses.",
+        "auteur": "Fondatrice, Client B"
+      },
+      {
+        "texte": "Un interlocuteur unique, qui répond le jour même.",
+        "auteur": "Associé, Client C"
+      },
+      {
+        "texte": "Tout a été installé dans les délais annoncés.",
+        "auteur": "Dirigeant, Client D"
+      },
+      {
+        "texte": "Pour la première fois, je sais ce que me coûte un nouveau client.",
+        "auteur": "Directrice, Client E"
+      },
+      {
+        "texte": "Simple, clair, efficace. Je recommande.",
+        "auteur": "Gérant, Client F"
+      }
+    ]
+  },
+  "deroule": {
+    "titre": "Installé en 72 heures, piloté pendant 3 mois.",
+    "etapes": [
+      {
+        "quand": "Jour 0",
+        "titre": "Démarrage",
+        "texte": "Un appel de 30 minutes. Nous fixons vos critères de qualification. Vous nous donnez les accès et quelques photos."
+      },
+      {
+        "quand": "Jours 1 à 3",
+        "titre": "Installation",
+        "texte": "Annonces, formulaire, agent IA et suivi sont montés. Vous relisez et vous validez."
+      },
+      {
+        "quand": "Jour 3",
+        "titre": "Lancement",
+        "texte": "Les campagnes démarrent sur votre compte, avec au moins 300 € de budget par mois."
+      },
+      {
+        "quand": "Mois 1 à 3",
+        "titre": "Pilotage",
+        "texte": "Les demandes qualifiées vous arrivent en direct. Un point chaque semaine avec vos chiffres."
+      },
+      {
+        "quand": "Fin du 3e mois",
+        "titre": "Bilan",
+        "texte": "Demandes reçues, devis envoyés, projets signés. Moins de 40 demandes qualifiées : frais d'installation remboursés."
+      }
+    ],
+    "encadres": [
+      {
+        "label": "Votre part",
+        "texte": "Une heure pour démarrer, les accès, quelques photos, et rappeler chaque contact le jour même."
+      },
+      {
+        "label": "Ce que vous gardez",
+        "texte": "Les comptes publicitaires, les annonces, le formulaire et l'historique des contacts sont à votre nom. Ils restent à vous."
+      }
+    ]
+  },
+  "systeme": {
+    "titre": "Quatre briques, un seul objectif : ne vous faire rappeler que des projets qui valent un déplacement.",
+    "briques": [
+      {
+        "titre": "Campagnes publicitaires",
+        "texte": "Vos réalisations montrées aux propriétaires de votre zone qui préparent un projet de jardin."
+      },
+      {
+        "titre": "Préqualification",
+        "texte": "Avant de vous joindre, chaque personne répond à vos questions : projet, commune, délai, budget."
+      },
+      {
+        "titre": "Agent IA",
+        "texte": "Il répond à chaque demande en quelques minutes, vérifie vos critères et écarte les curieux."
+      }
+    ],
+    "arrivee": {
+      "label": "Vous",
+      "titre": "Une fiche complète",
+      "texte": "Le contact arrive sur votre téléphone avec son projet. Vous rappelez le jour même."
+    },
+    "continu": {
+      "label": "04 · En continu",
+      "titre": "Référencement automatisé",
+      "texte": "Votre site et votre fiche d'établissement sont enrichis chaque semaine pour remonter dans les moteurs de recherche et dans les réponses des assistants IA."
+    }
+  },
+  "offre": {
+    "titre": "Tout ce que comprend l'accompagnement de 3 mois.",
+    "lignes": [
+      {
+        "nom": "Campagnes publicitaires",
+        "fait": "Annonces créées à partir de vos réalisations, ciblage local, pilotage quotidien.",
+        "gain": "Des demandes à votre nom, que personne d'autre ne reçoit."
+      },
+      {
+        "nom": "Système de préqualification",
+        "fait": "Un formulaire bâti sur vos critères : projet, commune, délai, budget.",
+        "gain": "Vous ne vous déplacez que pour des projets à votre niveau de prix."
+      },
+      {
+        "nom": "Agent IA de qualification",
+        "fait": "Réponse automatique à chaque demande, questions de tri, fiche transmise sur votre téléphone.",
+        "gain": "Plus de visites chez ceux qui veulent juste un prix."
+      },
+      {
+        "nom": "Référencement automatisé",
+        "fait": "Site et fiche d'établissement optimisés en continu.",
+        "gain": "Un canal gratuit qui grossit, en plus de la publicité."
+      }
+    ],
+    "inclus": {
+      "nom": "Inclus sans supplément",
+      "texte": "Mise en place en 72 heures · comptes publicitaires à votre nom · point chaque semaine avec vos chiffres · ligne directe avec l'équipe · garantie de 40 demandes qualifiées, ou frais d'installation remboursés."
+    },
+    "prix": {
+      "note": "Engagement de 3 mois. Budget publicitaire en plus : au moins 300 € par mois, réglés directement à la régie.",
+      "montant": "3 000 €",
+      "unite": "HT",
+      "legende": "3 mois · résultat garanti"
+    }
+  },
+  "garantie": {
+    "citation": "Si nous ne vous avons pas apporté **40 demandes qualifiées** en 3 mois, nous vous **remboursons intégralement** les frais d'installation.",
+    "faits": [
+      {
+        "valeur": "40",
+        "texte": "demandes qualifiées en 3 mois, selon vos critères de qualification."
+      },
+      {
+        "valeur": "100 %",
+        "texte": "des frais d'installation remboursés si le compte n'y est pas à la fin des 3 mois."
+      },
+      {
+        "valeur": "300 €",
+        "unite": "/ mois",
+        "texte": "de budget publicitaire au minimum, réglés directement à la régie."
+      }
+    ],
+    "definition": "Une demande qualifiée est une personne qui a rempli le formulaire et qui répond aux critères que nous fixons ensemble au démarrage : type de projet, commune, budget minimum, délai."
+  },
+  "devis": {
+    "numero": "2031-0303-01",
+    "emis_le": "3 mars 2031",
+    "valable_jusqu_au": "18 mars 2031",
+    "emetteur": [
+      "Votre Agence SAS",
+      "SIRET 000 000 000 00000",
+      "1 place de l'Exemple, 69000 Lyon",
+      "votre-agence.example"
+    ],
+    "client": [
+      "Jardins Exemple, à l'attention de Camille",
+      "8 chemin de l'Exemple, 44000 Nantes",
+      "SIRET 111 111 111 00011"
+    ],
+    "objet": [
+      "Système d'acquisition, 3 mois",
+      "Demandes qualifiées",
+      "Mise en place en 72 heures"
+    ],
+    "lignes": [
+      {
+        "nom": "Campagnes publicitaires",
+        "detail": "Création des annonces, paramétrage et pilotage pendant 3 mois"
+      },
+      {
+        "nom": "Système de préqualification",
+        "detail": "Formulaire de tri selon les critères définis avec le client"
+      },
+      {
+        "nom": "Agent IA de qualification",
+        "detail": "Qualification automatique des demandes et transmission de la fiche"
+      },
+      {
+        "nom": "Référencement automatisé",
+        "detail": "Optimisation continue du site et de la fiche d'établissement"
+      },
+      {
+        "nom": "Garantie",
+        "detail": "40 demandes qualifiées apportées en 3 mois, ou remboursement intégral des frais d'installation"
+      }
+    ],
+    "total": {
+      "nom": "Frais d'installation",
+      "detail": "Système complet, 3 mois d'accompagnement compris",
+      "montant": "3 000,00 € HT"
+    },
+    "mentions": [
+      {
+        "label": "Budget publicitaire, hors devis",
+        "texte": "au moins 300 € par mois pendant 3 mois, réglés directement par le client à la régie."
+      },
+      {
+        "label": "Conditions",
+        "texte": "engagement de 3 mois. Mise en place sous 72 heures à compter de la réception des accès. Comptes publicitaires au nom du client. Règlement à la commande."
+      },
+      {
+        "label": "Garantie",
+        "texte": "si l'agence n'a pas apporté 40 demandes qualifiées pendant ces 3 mois, les frais d'installation sont intégralement remboursés."
+      }
+    ],
+    "apres_total": [
+      {
+        "nom": "TVA 20 %",
+        "montant": "600,00 €"
+      },
+      {
+        "nom": "Total TTC",
+        "montant": "3 600,00 €"
+      }
+    ]
+  },
+  "suite": {
+    "titre": "Trois étapes, et vos\ncampagnes tournent.",
+    "etapes": [
+      {
+        "titre": "Votre accord",
+        "texte": "Vous nous donnez votre accord par retour de mail."
+      },
+      {
+        "titre": "L'appel de démarrage",
+        "texte": "Trente minutes pour fixer vos critères de qualification et récupérer les accès."
+      },
+      {
+        "titre": "72 heures plus tard",
+        "texte": "Vos annonces sont en ligne et les premières demandes qualifiées arrivent."
+      }
+    ],
+    "pied_gauche": "3 000 € HT · 3 mois · 40 demandes qualifiées ou frais d'installation remboursés"
+  }
+}

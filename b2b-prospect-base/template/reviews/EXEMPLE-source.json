@@ -1,0 +1,10 @@
+{
+  "source": "open-data",
+  "kind": "source",
+  "robots_url": "https://opendata.example/robots.txt",
+  "terms_url": "https://opendata.example/licence",
+  "read_at": "",
+  "verdict": "",
+  "licence": "",
+  "quote": ""
+}

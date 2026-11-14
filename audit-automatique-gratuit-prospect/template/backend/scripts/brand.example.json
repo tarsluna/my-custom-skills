@@ -1,0 +1,17 @@
+{
+  "businessName": "Exemple Rénovation",
+  "profession": "renovation",
+  "professionLabel": "entreprise de rénovation",
+  "city": "Exempleville",
+  "region": "Région Exemple",
+  "specialties": ["Rénovation complète", "Cuisines", "Salles de bains"],
+  "projectTypes": ["Appartement ancien", "Maison de ville"],
+  "summary": "Une entreprise fictive utilisée pour tester la génération d'une image.",
+  "tone": "sobre et précis",
+  "palette": { "primary": "#1f2937", "secondary": "#94a3b8", "accent": "#d97706", "background": "#f8fafc", "text": "#111827" },
+  "fonts": [],
+  "logoPath": null,
+  "logoIsFallback": true,
+  "projectImages": [],
+  "facts": []
+}

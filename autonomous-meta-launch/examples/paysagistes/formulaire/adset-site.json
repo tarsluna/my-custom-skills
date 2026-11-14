@@ -1,0 +1,28 @@
+{
+ "id": "000000000401",
+ "name": "Paysagistes indépendants",
+ "campaign_id": "000000000301",
+ "status": "ACTIVE",
+ "optimization_goal": "OFFSITE_CONVERSIONS",
+ "destination_type": "WEBSITE",
+ "billing_event": "IMPRESSIONS",
+ "targeting": {
+  "geo_locations": {
+   "countries": [
+    "FR"
+   ]
+  },
+  "age_min": 30,
+  "age_max": 65,
+  "locales": [
+   9
+  ],
+  "publisher_platforms": [
+   "facebook",
+   "instagram"
+  ],
+  "targeting_automation": {
+   "advantage_audience": 0
+  }
+ }
+}

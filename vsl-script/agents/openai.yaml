@@ -1,0 +1,5 @@
+interface:
+  display_name: "VSL Script"
+  short_description: "Write a 5-part VSL and stage it as an animated HTML deck"
+  brand_color: "#E9C48F"
+  default_prompt: "Use $vsl-script to write my video sales letter on the 5-part framework and build the animated presentation I will read and film."

@@ -1,0 +1,10 @@
+{
+  "source": "sites-officiels",
+  "kind": "sites",
+  "robots_url": "par site, lu automatiquement avant la premiere page",
+  "terms_url": "par site, page legale lue automatiquement avant extraction",
+  "read_at": "",
+  "verdict": "",
+  "licence": "Contenu publie par chaque entreprise sur son propre site",
+  "quote": ""
+}

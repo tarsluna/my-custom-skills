@@ -1,0 +1,11 @@
+{
+  "name": "vsl-deck",
+  "private": true,
+  "scripts": {
+    "build": "python3 build.py",
+    "verify": "node verify.cjs"
+  },
+  "devDependencies": {
+    "puppeteer-core": "25.12.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+ "id": "000000000402",
+ "name": "Paysagistes indépendants | formulaire",
+ "campaign_id": "000000000302",
+ "status": "PAUSED",
+ "optimization_goal": "LEAD_GENERATION",
+ "destination_type": "ON_AD",
+ "billing_event": "IMPRESSIONS",
+ "targeting": {
+  "geo_locations": {
+   "countries": [
+    "BE",
+    "FR"
+   ]
+  },
+  "age_min": 25,
+  "age_max": 60,
+  "locales": [
+   9
+  ],
+  "targeting_automation": {
+   "advantage_audience": 0
+  }
+ }
+}

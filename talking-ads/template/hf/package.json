@@ -1,0 +1,9 @@
+{
+  "name": "talking-ad",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "check": "npx --yes hyperframes@0.9.23 check",
+    "render": "npx --yes hyperframes@0.9.23 render"
+  }
+}

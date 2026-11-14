@@ -1,0 +1,58 @@
+{
+  "font": {
+    "family": "Bricolage Grotesque",
+    "file": "fonts/BricolageGrotesque.ttf",
+    "weight": 800,
+    "weight_range": "200 800",
+    "tracking_em": -0.04
+  },
+  "colors": {
+    "caption": "#FFFFFF",
+    "keyword": "#FFFFFF",
+    "hook": "#FFFFFF",
+    "background": "#100F0D",
+    "keyword_dim": "rgba(16,15,13,.5)",
+    "scrim": "rgba(16,15,13,.46)"
+  },
+  "captions": {
+    "size": 72,
+    "line_height": 1.08,
+    "max_words": 4,
+    "max_chars": 22,
+    "top_vertical": 1350,
+    "top_horizontal": 1095
+  },
+  "keywords": {
+    "min_size": 80,
+    "max_size": 200,
+    "char_width_em": 0.66
+  },
+  "hook": {
+    "on_vertical": false,
+    "bottom_vertical": 1325,
+    "bottom_horizontal": 1352,
+    "char_width_em": 0.52,
+    "target_min": 70,
+    "target_max": 116,
+    "goal_min": 54,
+    "goal_max": 66,
+    "alone_min": 64,
+    "alone_max": 84
+  },
+  "zoom": {
+    "levels_vertical": [1.0, 1.09, 1.04, 1.13, 1.02, 1.1],
+    "levels_horizontal": [1.0, 1.16, 1.07, 1.22, 1.03, 1.18],
+    "min_shot": 3.0,
+    "max_shot": 4.6,
+    "drift_per_s": 0.006,
+    "drift_max": 0.03
+  },
+  "sfx": {
+    "dir": "sounds",
+    "keyword": [
+      { "file": "whoosh.mp3", "offset": -0.14, "volume": 0.15 },
+      { "file": "thump.mp3", "offset": 0, "volume": 0.8 }
+    ],
+    "zoom": { "file": "flick.mp3", "offset": -0.03, "volume": 0.5, "every": 2 }
+  }
+}

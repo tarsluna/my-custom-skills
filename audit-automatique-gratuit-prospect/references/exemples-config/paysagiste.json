@@ -1,0 +1,208 @@
+{
+  "operator": {
+    "name": "Votre Agence",
+    "logoUrl": null,
+    "websiteUrl": "https://exemple.fr",
+    "motto": "Vous faites votre métier. Nous remplissons votre agenda."
+  },
+  "theme": {
+    "background": "#0f1115",
+    "backgroundAlt": "#171a21",
+    "backgroundLight": "#eef0f3",
+    "foreground": "#f4f5f7",
+    "foregroundSoft": "#c9ced6",
+    "muted": "#8d95a1",
+    "accent": "#5b8def"
+  },
+  "business": {
+    "nom": "entreprise",
+    "le": "l’entreprise",
+    "du": "de l’entreprise",
+    "un": "une entreprise",
+    "au": "à l’entreprise",
+    "ce": "cette entreprise",
+    "votre": "votre entreprise"
+  },
+  "sector": {
+    "description": "paysagistes et créateurs de jardins",
+    "reader": "un propriétaire qui rêve d’un jardin à vivre",
+    "country": "FR",
+    "projectWord": "projet",
+    "portfolioWord": "réalisations",
+    "professions": [
+      {
+        "key": "paysagiste",
+        "label": "paysagiste",
+        "evidence": "paysagistes?|jardins?|espaces? verts?",
+        "neverCalled": []
+      }
+    ],
+    "defaultProfession": "paysagiste"
+  },
+  "competitors": {
+    "keep": "une entreprise de création ou d’aménagement de jardins, dont les projets sont proches de ceux de l’entreprise analysée",
+    "exclude": "écoles et formations, annuaires, jardineries, marchands de plantes, tondeuses et outillage, pages sans rapport",
+    "excludedNameWords": [
+      "[ée]coles?",
+      "formations?",
+      "academy",
+      "acad[ée]mie",
+      "campus",
+      "universit[ée]",
+      "lyc[ée]e",
+      "annuaire",
+      "immobili[èe]re?",
+      "notaire"
+    ],
+    "excludedBodyWords": [
+      "bachelor",
+      "mba",
+      "alternance",
+      "cpf",
+      "portes ouvertes",
+      "inscriptions?",
+      "dipl[ôo]mante?",
+      "publi-?r[ée]dactionnel",
+      "investissement locatif"
+    ]
+  },
+  "assistant": {
+    "topics": [
+      "le type de jardin",
+      "le lieu",
+      "la surface",
+      "le budget",
+      "le délai",
+      "les personnes qui décident"
+    ],
+    "budgetLabel": "budget d’aménagement",
+    "priceLabel": "tarifs",
+    "pricePattern": "tarifs?|combien\\s+(vous\\s+)?(co[uû]t|prend|prenez|facturez)|vos\\s+prix|pourcentage|devis",
+    "replyPrice": "Les tarifs se voient directement avec {le} lors du rendez-vous. Quel budget envisagez-vous pour ce projet ?",
+    "replyAngle": "C’est un point à voir directement avec {le}. Revenons à votre projet : de quel lieu s’agit-il ?",
+    "replyAi": "Je suis l’assistant IA de {le}. Parlons de votre projet : de quel type de projet s’agit-il ?",
+    "replyDeflect": "Je suis là pour échanger sur votre projet. De quel type de projet s’agit-il ?",
+    "replyClosing": "Merci pour ces précisions. {le_maj} reviendra vers vous pour fixer un rendez-vous.",
+    "fallbackProject": "un projet d’aménagement de jardin",
+    "fallbackReplies": [
+      "Un terrain d’environ 500 m²",
+      "Un budget autour de 20 000 €",
+      "Nous aimerions commencer au printemps",
+      "Nous décidons à deux"
+    ]
+  },
+  "vocabulary": {
+    "banned": [
+      "pipeline",
+      "leads?",
+      "panier moyen",
+      "appels? d[ée]couverte",
+      "closers?",
+      "closing",
+      "setters?",
+      "setting",
+      "funnels?",
+      "tunnel de vente"
+    ],
+    "forbiddenAngles": [
+      "r[ée]sultats?\\s+garantis?",
+      "satisfait\\s+ou\\s+rembours[ée]"
+    ],
+    "noExclamation": true
+  },
+  "creatives": {
+    "visible": 3,
+    "directorOf": "métiers du paysage et du jardin",
+    "voice": "fait rêver, affirme, connaît le métier",
+    "headlineExamples": [
+      "Même terrain. Un autre été.",
+      "Ce jardin ne demandait qu’une allée.",
+      "Et si votre pelouse était le problème ?"
+    ],
+    "bulletExample": "« L’ombre au bon endroit à 16 heures » plutôt que « Plantation d’arbres »",
+    "ctaExamples": [
+      "PARLER DE MON PROJET",
+      "PRENDRE RENDEZ-VOUS",
+      "VOIR NOS RÉALISATIONS",
+      "DÉMARRER MON PROJET",
+      "DÉCRIRE MON PROJET"
+    ],
+    "fallbackBullets": [
+      "Terrasse ombragée",
+      "Allées dessinées",
+      "Plantes adaptées",
+      "Arrosage pensé",
+      "Vue dégagée",
+      "Entretien réduit"
+    ]
+  },
+  "visuals": {
+    "subject": "garden",
+    "subjectFr": "le jardin",
+    "photoStyle": "Photorealistic outdoor photograph of a private garden, indistinguishable from a real photograph by a professional landscape photographer: wide lens, tripod, natural golden-hour light, real shadows, believable plants and materials.",
+    "calmSurface": "the plain, calm area of open sky",
+    "defaultBefore": "an empty, neglected plot with patchy grass and bare soil",
+    "defaultAfter": "the same plot turned into a designed garden with a terrace, paths and generous planting",
+    "defaultScene": "a finished private garden with a terrace and generous planting",
+    "workTable": "a large working table",
+    "workDocument": "a large printed garden plan on tracing paper (the plan shows only drawn lines, no words)",
+    "sketchStyle": "a hand-drawn perspective sketch in fine black ink and graphite on cream paper",
+    "noPeople": true
+  },
+  "page": {
+    "title": "Nous avons préinstallé ce système pour vous, {nom}.",
+    "lockedSentence": "Le reste de vos bonus vous sera présenté dans l'appel.",
+    "conceptNote": "Visuel de concept généré pour votre entreprise",
+    "indexCta": "Voir vos publicités locales",
+    "sections": {
+      "business": "Votre entreprise",
+      "competitors": "Vos concurrents",
+      "creatives": "Vos publicités locales",
+      "projects": "Vos réalisations",
+      "assistant": "Votre assistant",
+      "next": "La suite"
+    },
+    "businessTitle": "Ce que nous avons compris de votre entreprise.",
+    "creativesTitle": "Vos publicités locales.",
+    "creativesLead": "Montrées précisément à une audience qui a besoin de vos services, autour de {ville}. {n} publicités dessinées pour {nom}.",
+    "projectsTitle": "Vos réalisations, déjà en ligne.",
+    "projectsLead": "Ces images viennent de votre site. Ce sont elles que vos prochains clients doivent voir.",
+    "assistantTitle": "Votre assistant de premier contact.",
+    "assistantLead": "Jouez le rôle d’un client qui écrit à {nom}.",
+    "assistantNotes": [
+      {
+        "tag": "En votre nom",
+        "text": "Il répond à toute heure, au nom de {nom}."
+      },
+      {
+        "tag": "Le tri",
+        "text": "Il demande le budget et le délai. Les curieux s’arrêtent là."
+      },
+      {
+        "tag": "Le rendez-vous",
+        "text": "Chaque demande sérieuse devient un rendez-vous dans votre agenda."
+      }
+    ],
+    "nextTitle": "La suite vous attend au rendez-vous.",
+    "closing": "Votre prochain client commence ici.",
+    "closingWithName": "{prenom}, votre prochain client commence ici.",
+    "teaser": [
+      {
+        "title": "Votre plan d’action",
+        "sub": "Semaine par semaine, sur 90 jours"
+      },
+      {
+        "title": "Votre estimation",
+        "sub": "Ce que votre zone peut apporter à votre agenda"
+      },
+      {
+        "title": "Vos recherches locales",
+        "sub": "Ce que vos clients tapent, ville par ville"
+      }
+    ],
+    "costLabel": "Coût par prospect préqualifié estimé",
+    "costLabelShort": "par prospect préqualifié estimé",
+    "costAverageLabel": "Coût moyen par prospect préqualifié estimé",
+    "footerLegal": "Les visuels de concept sont générés."
+  }
+}

@@ -1,0 +1,15 @@
+node_modules/
+.next/
+dist/
+out/
+data/
+coverage/
+.vercel/
+.railway/
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+*.log
+.DS_Store
+.leak-terms

@@ -1,0 +1,6 @@
+numpy>=1.24
+soundfile>=0.12
+opencv-python-headless>=4.8
+faster-whisper>=1.1
+# Facultatif : débruitage DPDFNet. Sans lui, cut.py se rabat sur ffmpeg afftdn.
+sherpa-onnx>=2.0.1

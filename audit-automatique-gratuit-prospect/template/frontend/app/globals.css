@@ -1,0 +1,49 @@
+/* Socle commun de la page d'audit et de l'admin. Le thème vient de audit.config.json. */
+:root {
+  color-scheme: dark;
+  --bg: #0f1115;
+  --bg-alt: #171a21;
+  --fg: #f4f5f7;
+  --bg-light: #eef0f3;
+  --fg-soft: #c9ced6;
+  --fg-muted: #8d95a1;
+  --fg-muted-l: #5d6470;
+  --line: rgba(244, 245, 247, 0.2);
+  --line-l: rgba(15, 17, 21, 0.2);
+  --accent: #5b8def;
+  --gut: clamp(20px, 4vw, 64px);
+  --display: var(--font-display), system-ui, sans-serif;
+  --body: var(--font-body), system-ui, sans-serif;
+  --mono: var(--font-code), ui-monospace, monospace;
+  --out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; background: var(--bg); scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 400 17px/1.55 var(--body); -webkit-font-smoothing: antialiased; overflow-x: clip; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; padding: 0; }
+ul, ol { list-style: none; }
+button, input, select { font: inherit; color: inherit; }
+:focus-visible { outline: 1px solid var(--accent); outline-offset: 3px; }
+::selection { background: var(--accent); color: var(--bg); }
+.d1, .d2, .d3, .d4 { font-family: var(--display); font-weight: 300; text-wrap: balance; }
+.d1 { font-size: clamp(38px, 6.2vw, 112px); line-height: 1.02; letter-spacing: -0.026em; }
+.d2 { font-size: clamp(30px, 4.3vw, 76px); line-height: 1.06; letter-spacing: -0.02em; }
+.d3 { font-size: clamp(23px, 2.6vw, 42px); line-height: 1.18; letter-spacing: -0.012em; }
+.d4 { font-size: clamp(21px, 1.9vw, 30px); line-height: 1.16; letter-spacing: -0.01em; }
+.mono-tag { font: 400 11px/1.4 var(--mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--fg-muted); }
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 15px 24px; white-space: nowrap;
+  font: 500 15px/1 var(--body); text-decoration: none; color: var(--bg); background: var(--fg);
+  border: 1px solid var(--fg); border-radius: 999px; cursor: pointer;
+  transition: background-color 0.35s var(--out), color 0.35s var(--out), border-color 0.35s var(--out);
+}
+.btn:hover { background: transparent; color: var(--fg); }
+.btn--sm { padding: 11px 17px; font-size: 13.5px; }
+.btn--line { background: transparent; color: var(--fg); border-color: var(--line); }
+.btn--line:hover { border-color: var(--fg); background: rgba(244, 245, 247, 0.08); }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+}

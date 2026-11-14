@@ -1,0 +1,103 @@
+{
+  "_lisez_moi": "Exemple fictif : des paysagistes. Aucun nom, domaine ou chiffre reel. Copie ce fichier en config.json dans le dossier du projet et remplace tout pour ton metier. Les regex s'appliquent a du texte sans accents et en minuscules.",
+
+  "user_agent": "paysages-prospects/1.0 (+https://votre-site.example/contact)",
+  "min_interval_seconds": 1.1,
+  "excluded_hosts": ["annuaire-paysagistes-fictif.example"],
+
+  "segments": [
+    {"name": "paysagiste_concepteur", "title_regex": "paysagistes? concepteurs?"},
+    {"name": "paysagiste", "title_regex": "paysagistes?|amenagement paysager"},
+    {"name": "jardinier", "title_regex": "jardiniers?|entretien de jardins?"}
+  ],
+
+  "registry": {
+    "naf": {"81.30Z": "paysagiste"},
+    "name_filter": {"81.30Z": "jardin|paysag|espaces? verts?"},
+    "departments": null
+  },
+
+  "domains": {
+    "keywords": "paysag|jardin|espaces-?verts|elagage",
+    "strong_keywords": "paysag",
+    "false_friends": "jardinerie|paysagerie",
+    "trade_words": ["paysagiste", "paysagistes", "paysage", "paysages", "jardin", "jardins"],
+    "stem_suffixes": ["-paysagiste", "paysages"]
+  },
+
+  "generic_mail_locals": ["paysagiste", "paysages", "jardin", "jardins"],
+
+  "site_signals": {
+    "metier": "paysagist|amenagement paysager|jardinier",
+    "metier_titre": "paysagiste concepteur|diplome.{0,20}paysag",
+    "boutique": "panier|ajouter au|boutique en ligne|e-?commerce",
+    "ecole": "\\becoles?\\b|formations?\\b|etudiants?\\b",
+    "media": "magazine|webzine|redaction",
+    "vente": "jardinerie|grossiste|fournisseur",
+    "hors_france": "belgique|suisse|luxembourg|quebec|geneve|bruxelles"
+  },
+
+  "quality_filter": {
+    "hard": {
+      "annuaire": "annuaire|comparateur|meilleurs? paysagiste|mise en relation",
+      "magasin": "jardinerie|boutique|e-?shop|catalogue",
+      "ecole": "\\becoles?\\b|lycee|universite|etudiant",
+      "media": "\\bblog\\b|magazine|webzine",
+      "fournisseur": "fabricant|fournisseur|logiciel|photographe",
+      "etranger": "belgique|suisse|geneve|luxembourg|quebec"
+    },
+    "soft": {
+      "magasin": "mobilier|plantes en ligne|graines",
+      "artisan": "maconnerie|terrassement|clotures?",
+      "media": "actualite|conseils|tendances"
+    },
+    "explicit_regex": "paysagistes?|amenagement paysager",
+    "domain_trade_regex": "paysag|jardin",
+    "signal_thresholds": {"boutique": 15, "vente": 8, "hors_france": 3}
+  },
+
+  "open_data": {
+    "search_queries": ["paysagistes", "annuaire paysagistes", "entretien espaces verts"],
+    "overpass": {
+      "endpoint": "https://overpass.openstreetmap.fr/api/interpreter",
+      "filters": {"craft": "gardener|landscaper"},
+      "areas": ["FR-IDF", "FR-ARA", "FR-NAQ", "FR-HDF", "FR-CVL", "FR-BFC"],
+      "tag_segments": {"craft=gardener": "jardinier", "craft=landscaper": "paysagiste"},
+      "exclude_name_regex": "mairie|ville de|ecole|lycee|universite|formation|ministere|departement|metropole|collectivit",
+      "chains_regex": "jardinerie"
+    },
+    "datasets": [
+      {
+        "name": "jeu-fictif",
+        "url": "https://opendata.example/api/lines?size=1000",
+        "results_key": "results",
+        "next_key": "next",
+        "fields": {"email": "email", "entreprise": "nom", "ville": "commune", "code_postal": "cp", "siret": "siret", "site": "site"},
+        "segment": "paysagiste",
+        "source_url_template": "https://opendata.example/api/lines?qs=siret:{siret}"
+      }
+    ]
+  },
+
+  "merge": {
+    "personal_mailboxes": "exclude",
+    "max_per_domain": 3,
+    "max_bad_rate": 0.1,
+    "public_mail_regex": "\\.gouv\\.fr$|^mairie|^ville-|\\.ac-[a-z-]+\\.fr$|\\.edu$",
+    "arbitrate": [
+      {"flag": "liste_a_verifier", "url_contains": "opendata.example"}
+    ]
+  },
+
+  "judge": {
+    "choices": {
+      "paysagiste": "Landscape design or garden creation business.",
+      "jardinier": "Garden maintenance business.",
+      "hors_cible": "Anything else: shop, garden centre, supplier, directory or lead-generation site, media, school, public body, association.",
+      "incertain": "Not enough information to decide."
+    },
+    "reject_choice": "hors_cible",
+    "min_confidence": 0.8,
+    "review_segments": ["jardinier"]
+  }
+}

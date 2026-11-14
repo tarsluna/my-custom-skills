@@ -1,0 +1,5 @@
+interface:
+  display_name: "Talking Ads"
+  short_description: "Turn a folder of talking-head takes into a batch of edited ads, vertical and horizontal"
+  brand_color: "#E9C48F"
+  default_prompt: "Use $talking-ads to edit the takes in this folder into a series of ads, vertical and horizontal, text only."

@@ -1,0 +1,361 @@
+{
+  "_fixture": "ENTREPRISE FICTIVE : données de démonstration.",
+  "operator": {
+    "name": "Votre Agence",
+    "logoUrl": null,
+    "websiteUrl": "https://exemple.fr",
+    "motto": "Vous faites votre métier. Nous remplissons votre agenda."
+  },
+  "theme": {
+    "background": "#0f1115",
+    "backgroundAlt": "#171a21",
+    "backgroundLight": "#eef0f3",
+    "foreground": "#f4f5f7",
+    "foregroundSoft": "#c9ced6",
+    "muted": "#8d95a1",
+    "accent": "#5b8def"
+  },
+  "copy": {
+    "lockedSentence": "Le reste de vos bonus vous sera présenté dans l'appel.",
+    "conceptNote": "Visuel de concept généré pour votre entreprise",
+    "indexCta": "Voir vos publicités locales",
+    "sections": {
+      "business": "Votre entreprise",
+      "competitors": "Vos concurrents",
+      "creatives": "Vos publicités locales",
+      "projects": "Vos réalisations",
+      "assistant": "Votre assistant",
+      "next": "La suite"
+    },
+    "teaser": [
+      {
+        "title": "Votre plan d’action",
+        "sub": "Semaine par semaine, sur 90 jours"
+      },
+      {
+        "title": "Votre estimation",
+        "sub": "Ce que votre zone peut apporter à votre agenda"
+      },
+      {
+        "title": "Vos recherches locales",
+        "sub": "Ce que vos clients tapent, ville par ville"
+      }
+    ],
+    "costLabel": "Coût par prospect préqualifié estimé",
+    "costLabelShort": "par prospect préqualifié estimé",
+    "costAverageLabel": "Coût moyen par prospect préqualifié estimé",
+    "footerLegal": "Les visuels de concept sont générés.",
+    "title": "Nous avons préinstallé ce système pour vous, Exemple Rénovation.",
+    "businessTitle": "Ce que nous avons compris de votre entreprise.",
+    "creativesTitle": "Vos publicités locales.",
+    "creativesLead": "Montrées précisément à une audience qui a besoin de vos services, autour de Exempleville. Dix publicités dessinées pour Exemple Rénovation.",
+    "projectsTitle": "Vos réalisations, déjà en ligne.",
+    "projectsLead": "Ces images viennent de votre site. Ce sont elles que vos prochains clients doivent voir.",
+    "assistantTitle": "Votre assistant de premier contact.",
+    "assistantLead": "Jouez le rôle d’un client qui écrit à Exemple Rénovation.",
+    "nextTitle": "La suite vous attend au rendez-vous.",
+    "assistantNotes": [
+      {
+        "tag": "En votre nom",
+        "text": "Il répond à toute heure, au nom de Exemple Rénovation."
+      },
+      {
+        "tag": "Le tri",
+        "text": "Il demande le budget et le délai. Les curieux s’arrêtent là."
+      },
+      {
+        "tag": "Le rendez-vous",
+        "text": "Chaque demande sérieuse devient un rendez-vous dans votre agenda."
+      }
+    ],
+    "closing": "Claire, votre prochain client commence ici."
+  },
+  "token": "exemple-renovation-Q7vK2mXp9LsT4bYw1Zc8Rd",
+  "status": "ready",
+  "contact": {
+    "firstName": "Claire"
+  },
+  "meetingAt": "2030-01-15T13:30:00.000Z",
+  "bookingUrl": "https://exemple.fr/rendez-vous",
+  "business": {
+    "name": "Exemple Rénovation",
+    "profession": "renovation",
+    "professionLabel": "entreprise de rénovation",
+    "city": "Exempleville",
+    "region": "Région Exemple",
+    "domain": "renovation.exemple.fr",
+    "websiteUrl": "https://renovation.exemple.fr",
+    "logoUrl": "/fixtures/logo.svg",
+    "logoIsFallback": false,
+    "palette": {
+      "primary": "#1f2937",
+      "secondary": "#94a3b8",
+      "accent": "#d97706",
+      "background": "#f8fafc",
+      "text": "#111827"
+    },
+    "specialties": [
+      "Rénovation complète",
+      "Cuisines",
+      "Salles de bains"
+    ],
+    "projectTypes": [
+      "Appartement ancien",
+      "Maison de ville",
+      "Cuisine et séjour"
+    ],
+    "summary": "Une entreprise fictive qui sert à montrer la page. Aucune de ces données n’est réelle."
+  },
+  "competitors": {
+    "radiusKm": 100,
+    "widened": false,
+    "insights": [
+      "Constat fictif numéro un.",
+      "Constat fictif numéro deux.",
+      "Constat fictif numéro trois."
+    ],
+    "items": [
+      {
+        "pageName": "Concurrent Fictif 1",
+        "city": "Exempleville",
+        "distanceKm": 4,
+        "logoUrl": null,
+        "activeDays": 40,
+        "adLibraryUrl": "https://www.facebook.com/ads/library/",
+        "imageUrl": "/fixtures/ads/ad-1.svg",
+        "title": "Titre fictif d’annonce",
+        "body": "Texte fictif d’une publicité concurrente.",
+        "why": "Même métier, même zone."
+      },
+      {
+        "pageName": "Concurrent Fictif 2",
+        "city": "Exempleville",
+        "distanceKm": 8,
+        "logoUrl": null,
+        "activeDays": 80,
+        "adLibraryUrl": "https://www.facebook.com/ads/library/",
+        "imageUrl": "/fixtures/ads/ad-2.svg",
+        "title": "Titre fictif d’annonce",
+        "body": "Texte fictif d’une publicité concurrente.",
+        "why": "Même métier, même zone."
+      },
+      {
+        "pageName": "Concurrent Fictif 3",
+        "city": "Exempleville",
+        "distanceKm": 12,
+        "logoUrl": null,
+        "activeDays": 120,
+        "adLibraryUrl": "https://www.facebook.com/ads/library/",
+        "imageUrl": "/fixtures/ads/ad-3.svg",
+        "title": "Titre fictif d’annonce",
+        "body": "Texte fictif d’une publicité concurrente.",
+        "why": "Même métier, même zone."
+      },
+      {
+        "pageName": "Concurrent Fictif 4",
+        "city": "Exempleville",
+        "distanceKm": 16,
+        "logoUrl": null,
+        "activeDays": 160,
+        "adLibraryUrl": "https://www.facebook.com/ads/library/",
+        "imageUrl": "/fixtures/ads/ad-4.svg",
+        "title": "Titre fictif d’annonce",
+        "body": "Texte fictif d’une publicité concurrente.",
+        "why": "Même métier, même zone."
+      },
+      {
+        "pageName": "Concurrent Fictif 5",
+        "city": "Exempleville",
+        "distanceKm": 20,
+        "logoUrl": null,
+        "activeDays": 200,
+        "adLibraryUrl": "https://www.facebook.com/ads/library/",
+        "imageUrl": "/fixtures/ads/ad-5.svg",
+        "title": "Titre fictif d’annonce",
+        "body": "Texte fictif d’une publicité concurrente.",
+        "why": "Même métier, même zone."
+      }
+    ]
+  },
+  "creatives": [
+    {
+      "id": "c01",
+      "index": 1,
+      "concept": "Avant-après, coupe verticale",
+      "format": "4:5",
+      "locked": false,
+      "imageUrl": "/fixtures/creatives/crea-01.svg",
+      "headline": "Le même point de départ. Un autre résultat.",
+      "primaryText": "Exemple Rénovation, entreprise de rénovation à Exempleville. Votre projet peut vous ressembler.",
+      "bullets": [
+        "Une première puce",
+        "Une deuxième puce",
+        "Une troisième puce"
+      ],
+      "estimatedCostEur": null
+    },
+    {
+      "id": "c02",
+      "index": 2,
+      "concept": "Avant-après, coupe horizontale",
+      "format": "9:16",
+      "locked": true,
+      "imageUrl": "/fixtures/creatives/crea-02.svg",
+      "headline": null,
+      "primaryText": null,
+      "bullets": null,
+      "estimatedCostEur": null
+    },
+    {
+      "id": "c03",
+      "index": 3,
+      "concept": "Avant-après, curseur de comparaison",
+      "format": "4:5",
+      "locked": true,
+      "imageUrl": "/fixtures/creatives/crea-03.svg",
+      "headline": null,
+      "primaryText": null,
+      "bullets": null,
+      "estimatedCostEur": null
+    },
+    {
+      "id": "c04",
+      "index": 4,
+      "concept": "Avant-après, tirages sur table de travail",
+      "format": "4:5",
+      "locked": true,
+      "imageUrl": "/fixtures/creatives/crea-04.svg",
+      "headline": null,
+      "primaryText": null,
+      "bullets": null,
+      "estimatedCostEur": null
+    },
+    {
+      "id": "c05",
+      "index": 5,
+      "concept": "Avant-après, du dessin à la photo",
+      "format": "4:5",
+      "locked": true,
+      "imageUrl": "/fixtures/creatives/crea-05.svg",
+      "headline": null,
+      "primaryText": null,
+      "bullets": null,
+      "estimatedCostEur": null
+    },
+    {
+      "id": "c06",
+      "index": 6,
+      "concept": "Photo plein cadre avec puces",
+      "format": "4:5",
+      "locked": false,
+      "imageUrl": "/fixtures/creatives/crea-06.svg",
+      "headline": "Le même point de départ. Un autre résultat.",
+      "primaryText": "Exemple Rénovation, entreprise de rénovation à Exempleville. Votre projet peut vous ressembler.",
+      "bullets": [
+        "Une première puce",
+        "Une deuxième puce",
+        "Une troisième puce"
+      ],
+      "estimatedCostEur": null
+    },
+    {
+      "id": "c07",
+      "index": 7,
+      "concept": "Conversation iMessage",
+      "format": "9:16",
+      "locked": false,
+      "imageUrl": "/fixtures/creatives/crea-07.svg",
+      "headline": "Le même point de départ. Un autre résultat.",
+      "primaryText": "Exemple Rénovation, entreprise de rénovation à Exempleville. Votre projet peut vous ressembler.",
+      "bullets": [
+        "Une première puce",
+        "Une deuxième puce",
+        "Une troisième puce"
+      ],
+      "estimatedCostEur": null
+    },
+    {
+      "id": "c08",
+      "index": 8,
+      "concept": "Notes iOS",
+      "format": "1:1",
+      "locked": true,
+      "imageUrl": "/fixtures/creatives/crea-08.svg",
+      "headline": null,
+      "primaryText": null,
+      "bullets": null,
+      "estimatedCostEur": null
+    },
+    {
+      "id": "c09",
+      "index": 9,
+      "concept": "Publireportage façon magazine",
+      "format": "4:5",
+      "locked": true,
+      "imageUrl": "/fixtures/creatives/crea-09.svg",
+      "headline": null,
+      "primaryText": null,
+      "bullets": null,
+      "estimatedCostEur": null
+    },
+    {
+      "id": "c10",
+      "index": 10,
+      "concept": "Listicle d’erreurs à éviter",
+      "format": "9:16",
+      "locked": true,
+      "imageUrl": "/fixtures/creatives/crea-10.svg",
+      "headline": null,
+      "primaryText": null,
+      "bullets": null,
+      "estimatedCostEur": null
+    }
+  ],
+  "projects": [
+    {
+      "title": "Réalisation fictive 1",
+      "location": "Exempleville",
+      "imageUrl": "/fixtures/projects/p1.svg",
+      "sourceUrl": "https://renovation.exemple.fr/realisations/1"
+    },
+    {
+      "title": "Réalisation fictive 2",
+      "location": "Exempleville",
+      "imageUrl": "/fixtures/projects/p2.svg",
+      "sourceUrl": "https://renovation.exemple.fr/realisations/2"
+    },
+    {
+      "title": "Réalisation fictive 3",
+      "location": "Exempleville",
+      "imageUrl": "/fixtures/projects/p3.svg",
+      "sourceUrl": "https://renovation.exemple.fr/realisations/3"
+    },
+    {
+      "title": "Réalisation fictive 4",
+      "location": "Exempleville",
+      "imageUrl": "/fixtures/projects/p4.svg",
+      "sourceUrl": "https://renovation.exemple.fr/realisations/4"
+    },
+    {
+      "title": "Réalisation fictive 5",
+      "location": "Exempleville",
+      "imageUrl": "/fixtures/projects/p5.svg",
+      "sourceUrl": "https://renovation.exemple.fr/realisations/5"
+    },
+    {
+      "title": "Réalisation fictive 6",
+      "location": "Exempleville",
+      "imageUrl": "/fixtures/projects/p6.svg",
+      "sourceUrl": "https://renovation.exemple.fr/realisations/6"
+    }
+  ],
+  "setter": {
+    "assistantName": "Assistant de Exemple Rénovation",
+    "firstProspectMessage": "Bonjour, nous venons d’acheter un appartement de 80 m² et nous aimerions tout rénover.",
+    "suggestedReplies": [
+      "Autour de 40 000 €",
+      "Nous voulons commencer au printemps",
+      "Nous décidons à deux"
+    ]
+  }
+}

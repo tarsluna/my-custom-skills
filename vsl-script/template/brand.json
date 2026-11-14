@@ -1,0 +1,44 @@
+{
+  "slug": "votre-marque-vsl",
+  "name": "Votre Marque",
+  "wordmark": "Votre Marque",
+  "logo": null,
+  "lang": "fr",
+  "format": "short",
+  "voice": "Prénom (modèle à données fictives)",
+  "wpm": 138,
+  "colors": {
+    "bg": "#0d0c0a",
+    "fg": "#efe9dd",
+    "soft": "#cfc8bb",
+    "mut": "#9a9386",
+    "accent": "#e9c48f",
+    "node": "#161411",
+    "panel": "#201d17",
+    "on_accent": "#14120e"
+  },
+  "mechanism": "méthode Relais",
+  "cta": {
+    "button": "Réserver mon appel offert",
+    "question": "combien de membres actifs avez-vous aujourd’hui ?",
+    "reminder": "Réservez"
+  },
+  "verbatims": [
+    "la salle se vide dès le mois de mars",
+    "et ils disparaissent"
+  ],
+  "banned": [],
+  "allow": [],
+  "proof_inventory": [
+    { "value": "40", "label": "salles accompagnées", "source": "Exemple fictif" },
+    { "value": "16 / 20", "label": "demandes venues à leur essai", "source": "Exemple fictif" },
+    { "value": "9 jours", "label": "entre le lancement et la première demande", "source": "Exemple fictif" },
+    { "value": "210", "label": "demandes transmises", "source": "Exemple fictif" },
+    { "value": "5 €", "label": "encaissés pour 1 € de publicité", "source": "Exemple fictif" },
+    { "value": "4,7 / 5", "label": "note Google", "source": "Exemple fictif" },
+    { "value": "28", "label": "inscriptions en 60 jours", "source": "Exemple fictif" },
+    { "value": "14 €", "label": "par demande", "source": "Exemple fictif" },
+    { "value": "33", "label": "essais réservés le premier mois", "source": "Exemple fictif" },
+    { "value": "11 jours", "label": "avant la première inscription", "source": "Exemple fictif" }
+  ]
+}

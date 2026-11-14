@@ -1,0 +1,5 @@
+interface:
+  display_name: "B2B Prospect Base"
+  short_description: "Build a B2B email base from published sources, with guardrails built in"
+  brand_color: "#2F6B4F"
+  default_prompt: "Use $b2b-prospect-base to build a B2B email base from open sources for my trade, with every guardrail on."

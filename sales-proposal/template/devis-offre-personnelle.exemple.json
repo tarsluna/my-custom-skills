@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "agence": "Votre Agence",
+    "prospect": "Jardins Exemple",
+    "pied": "Votre Agence",
+    "site": "votre-agence.example",
+    "sortie": "Devis-offre-personnelle-Jardins-Exemple"
+  },
+  "controles": {
+    "prix_plein": "1 000 €"
+  },
+  "ordre": [
+    "devis"
+  ],
+  "devis": {
+    "numero": "2031-0303-02",
+    "emis_le": "3 mars 2031",
+    "valable_jusqu_au": "3 mars 2031",
+    "emetteur": [
+      "Votre Agence SAS",
+      "SIRET 000 000 000 00000",
+      "1 place de l'Exemple, 69000 Lyon",
+      "votre-agence.example"
+    ],
+    "client": [
+      "Jardins Exemple, à l'attention de Camille",
+      "8 chemin de l'Exemple, 44000 Nantes",
+      "SIRET 111 111 111 00011"
+    ],
+    "objet": [
+      "Offre personnalisée : premier mois",
+      "Sans engagement",
+      "Démarrage le jour de l'accord"
+    ],
+    "lignes": [
+      {
+        "nom": "Campagnes publicitaires",
+        "detail": "Création des annonces, paramétrage et pilotage"
+      },
+      {
+        "nom": "Système de préqualification",
+        "detail": "Formulaire de tri selon les critères définis avec le client"
+      },
+      {
+        "nom": "Agent IA de qualification",
+        "detail": "Qualification automatique des demandes et transmission de la fiche"
+      },
+      {
+        "nom": "Référencement automatisé",
+        "detail": "Optimisation continue du site et de la fiche d'établissement"
+      },
+      {
+        "nom": "Garantie",
+        "detail": "20 demandes qualifiées selon les critères du client. Si elles ne sont pas obtenues, l'agence continue gratuitement jusqu'à les obtenir"
+      }
+    ],
+    "total": {
+      "nom": "Premier mois",
+      "detail": "Sans engagement",
+      "montant": "1 000,00 € HT"
+    },
+    "apres_total": [
+      {
+        "nom": "TVA 20 %",
+        "montant": "200,00 €"
+      },
+      {
+        "nom": "Total TTC",
+        "montant": "1 200,00 €"
+      }
+    ],
+    "mentions": [
+      {
+        "label": "Budget publicitaire, hors devis",
+        "texte": "10 € par jour pendant 30 jours, soit 300 €, réglés directement par le client à la régie."
+      },
+      {
+        "label": "Conditions",
+        "texte": "offre valable pour un démarrage le jour de l'accord. Aucun engagement au-delà du premier mois. Mise en place sous 72 heures à compter de la réception des accès. Règlement à la commande."
+      }
+    ]
+  }
+}

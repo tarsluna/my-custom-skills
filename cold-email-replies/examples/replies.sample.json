@@ -1,0 +1,120 @@
+{
+  "_comment": "Réponses fictives à une campagne fictive. Personnes, entreprises et domaines inventés (.example). Champs facultatifs : tool_category (Interested, Meeting Request), simulate_verdict (sortie imposée, comme celle d'un modèle), simulate_send (sent, false_success, rejected, uncertain, rate_limited), no_thread_id, already_unsubscribed, note.",
+  "campaign_id": "101",
+  "failing_deliverables": [],
+  "replies": [
+    {
+      "email": "camille.martin@jardins-martin.example",
+      "first_name": "Camille",
+      "last_name": "Martin",
+      "company_name": "Jardins Martin",
+      "website": "https://www.jardins-martin.example",
+      "text": "Ok, envoyez-moi ça.\n\nLe mar. 10 mars 2026 à 08:30, Camille <camille@canopee.example> a écrit :\n> Bonjour Camille, je vous propose un audit offert...",
+      "tool_category": "Interested",
+      "note": "Un oui net : l'audit part dans le fil avec le lien de réservation."
+    },
+    {
+      "email": "paul@paysages-dubois.example",
+      "first_name": "Paul",
+      "company_name": "PAYSAGES DUBOIS",
+      "website": "paysages-dubois.example",
+      "text": "Je préfère qu'on s'appelle, vous êtes dispo jeudi ?",
+      "tool_category": "Meeting Request",
+      "note": "Une demande de rendez-vous vaut un oui. Le nom en capitales est remplacé par la formule neutre."
+    },
+    {
+      "email": "contact@vert-tendre.example",
+      "first_name": "Sarah",
+      "company_name": "Vert Tendre",
+      "text": "C'est combien votre truc ?",
+      "note": "Une question : pas de réponse automatique, l'équipe répond à la main."
+    },
+    {
+      "email": "luc@les-allees.example",
+      "first_name": "Luc",
+      "company_name": "Les Allées",
+      "text": "Intéressant. Vous travaillez aussi avec des pépiniéristes ?",
+      "tool_category": "Interested",
+      "note": "L'outil dit Interested, mais c'est une question : elle reste à la main."
+    },
+    {
+      "email": "direction@terrasses-sud.example",
+      "first_name": "Nora",
+      "company_name": "Terrasses du Sud",
+      "text": "Non merci, retirez-moi de votre liste.",
+      "note": "Un non : désinscription et blocage, jamais de réponse."
+    },
+    {
+      "email": "bureau@haies-et-bosquets.example",
+      "first_name": "Marc",
+      "company_name": "Haies & Bosquets",
+      "text": "Pas intéressé, merci.",
+      "tool_category": "Interested",
+      "note": "L'outil se trompe et dit Interested : le non l'emporte."
+    },
+    {
+      "email": "agence@gazon-royal.example",
+      "first_name": "Inès",
+      "company_name": "Gazon Royal",
+      "text": "Réponse automatique : je suis absente jusqu'au 17 mars.",
+      "note": "Une absence : enregistrée, rien à faire."
+    },
+    {
+      "email": "eric@bois-joli.example",
+      "first_name": "Éric",
+      "company_name": "Bois Joli",
+      "text": "Pas pour le moment, recontactez-moi en septembre.",
+      "note": "Un « plus tard » : enregistré, pas de désinscription."
+    },
+    {
+      "email": "julie@clos-fleuri.example",
+      "first_name": "Julie",
+      "company_name": "Clos Fleuri",
+      "website": "clos-fleuri.example",
+      "text": "Ok, et c'est vraiment gratuit ?",
+      "tool_category": "Interested",
+      "note": "L'agent hésite (oui avec une question), l'outil dit Interested : le oui est confirmé."
+    },
+    {
+      "email": "durand.paysage@gmail.example",
+      "first_name": "Hugo",
+      "company_name": "Durand Paysage",
+      "text": "Oui je veux bien.",
+      "note": "Un oui depuis une boîte grand public, sans site renseigné : alerte, pas de livrable automatique."
+    },
+    {
+      "email": "anne@verdure-conseil.example",
+      "first_name": "Anne",
+      "company_name": "Verdure Conseil",
+      "website": "verdure-conseil.example",
+      "text": "Go !",
+      "simulate_send": "false_success",
+      "note": "L'outil répond 200 mais le corps dit success: false : ce n'est pas un succès."
+    },
+    {
+      "email": "camille.martin@jardins-martin.example",
+      "first_name": "Camille",
+      "last_name": "Martin",
+      "company_name": "Jardins Martin",
+      "website": "https://www.jardins-martin.example",
+      "text": "Ok !",
+      "note": "Deuxième « ok » du même contact : ni deuxième alerte, ni deuxième mail."
+    },
+    {
+      "email": "tom@jardin-zen.example",
+      "first_name": "Tom",
+      "company_name": "Jardin Zen",
+      "website": "jardin-zen.example",
+      "text": "Ok pourquoi pas.",
+      "note": "Un oui, puis un non quelques minutes plus tard : l'envoi est annulé."
+    },
+    {
+      "email": "tom@jardin-zen.example",
+      "first_name": "Tom",
+      "company_name": "Jardin Zen",
+      "website": "jardin-zen.example",
+      "text": "Finalement non, ne m'écrivez plus.",
+      "note": "Le non qui annule le oui précédent."
+    }
+  ]
+}

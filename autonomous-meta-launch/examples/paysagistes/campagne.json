@@ -1,0 +1,137 @@
+{
+  "campaign": {
+    "name": "Pépinière Exemple | Chiffrage",
+    "objective": "OUTCOME_LEADS",
+    "daily_budget_minor": 3000,
+    "currency": "EUR",
+    "bid_strategy": "LOWEST_COST_WITHOUT_CAP",
+    "special_ad_categories": []
+  },
+  "conversion": {
+    "name": "Demande de chiffrage envoyée",
+    "event": "PageView",
+    "url_contains": "merci",
+    "custom_event_type": "LEAD",
+    "thank_you_url": "https://pepiniere-exemple.test/merci"
+  },
+  "dsa": {
+    "beneficiary": "Pépinière Exemple",
+    "payor": "Pépinière Exemple"
+  },
+  "targeting_base": {
+    "geo_locations": {"countries": ["FR"]},
+    "age_min": 30,
+    "age_max": 65,
+    "locales": [9],
+    "targeting_automation": {"advantage_audience": 0}
+  },
+  "video_dir": "videos",
+  "video_pattern": "{id}-{slug}-{format}.mp4",
+  "thumbnail_at_seconds": 1.2,
+  "url_tags": "utm_source=meta&utm_medium=paid&utm_campaign=chiffrage&utm_content={key}",
+  "copy": {
+    "offer": "Votre chiffrage complet arrive sous 24 heures, sans engagement.",
+    "cta": "Demandez votre chiffrage offert.",
+    "cta_type": "LEARN_MORE",
+    "rules": {
+      "first_line_max": 125,
+      "banned": ["\\bpas cher\\b", "\\bmeilleur", "\\bgaranti\\b"]
+    }
+  },
+  "adsets": [
+    {
+      "name": "Paysagistes indépendants",
+      "link": "https://pepiniere-exemple.test/paysagistes",
+      "title_must_contain": "chiffrage",
+      "audience_forbidden": ["espaces? verts?", "collectivit"],
+      "allowed_hook_targets": ["Paysagiste", ""],
+      "allowed_hook_offers": ["Chiffrage offert en 24 heures", "Vos végétaux chiffrés sans engagement"],
+      "stack": "Dans votre chiffrage :\n– la liste de plantes adaptée à votre sol\n– les prix par quantité\n– les dates de livraison sur votre chantier",
+      "titles": [
+        "Paysagistes : votre chiffrage offert en 24 heures",
+        "Votre chiffrage de végétaux, prêt demain",
+        "Un chiffrage clair pour votre prochain jardin",
+        "Paysagistes : le chiffrage sans relance",
+        "Chiffrage offert pour votre prochain chantier"
+      ],
+      "variants": [
+        "Votre client attend un devis, et votre fournisseur ne répond pas.\nEnvoyez-nous votre plan de plantation : on vous rend les prix et les délais.",
+        "Vous passez vos soirées à appeler des pépinières pour un seul devis ?\nUne demande suffit, vos végétaux sont chiffrés pour vous.",
+        "Un jardin se vend quand le prix arrive vite.\nRecevez le détail des plantes, quantité par quantité, avant votre rendez-vous.",
+        "Paysagiste, votre marge se joue au moment du chiffrage.\nComparez vos végétaux avant de signer, sans y passer la journée."
+      ]
+    },
+    {
+      "name": "Entreprises d'espaces verts",
+      "link": "https://pepiniere-exemple.test/espaces-verts",
+      "title_must_contain": "chiffrage",
+      "audience_forbidden": ["paysagistes? ind[ée]pendant"],
+      "allowed_hook_targets": ["Espaces verts", ""],
+      "allowed_hook_offers": ["Chiffrage offert en 24 heures", "Gros volumes chiffrés sans engagement"],
+      "stack": "Dans votre chiffrage :\n– les volumes par essence\n– les tarifs dégressifs\n– le planning de livraison par lot",
+      "titles": [
+        "Espaces verts : votre chiffrage offert en 24 heures",
+        "Votre chiffrage de gros volumes, prêt demain",
+        "Un chiffrage par lot pour vos marchés",
+        "Espaces verts : le chiffrage sans relance",
+        "Chiffrage offert pour votre prochain marché"
+      ],
+      "variants": [
+        "Votre marché se joue sur le prix des végétaux, et les délais sont courts.\nEnvoyez votre bordereau : on vous rend un chiffrage par lot.",
+        "Vos équipes attendent les plantes, et trois fournisseurs vous répondent trois prix.\nUne seule demande, un chiffrage complet.",
+        "Répondre à un marché demande des chiffres fiables.\nRecevez vos volumes, vos tarifs et vos dates de livraison.",
+        "Espaces verts : planifiez vos livraisons avant de signer.\nChaque lot chiffré, chaque date écrite."
+      ]
+    }
+  ],
+  "ads": [
+    {
+      "id": "P01",
+      "slug": "devis-perdus",
+      "adset": "Paysagistes indépendants",
+      "description": "Vos végétaux chiffrés avant votre rendez-vous.",
+      "body": "Votre dernier devis est parti trop tard, et le client a signé ailleurs.\nLe prix des plantes ne devrait plus vous faire perdre un chantier.",
+      "hook": {"target": "Paysagiste", "offer": "Chiffrage offert en 24 heures"}
+    },
+    {
+      "id": "P02",
+      "slug": "plantes-en-retard",
+      "adset": "Paysagistes indépendants",
+      "description": "Vos dates de livraison écrites noir sur blanc.",
+      "body": "Une livraison en retard, c'est une équipe payée à attendre.\nAvant de signer, sachez quand vos plantes arrivent.",
+      "hook": {"target": "", "offer": "Vos végétaux chiffrés sans engagement"}
+    },
+    {
+      "id": "P03",
+      "slug": "marge-chantier",
+      "adset": "Paysagistes indépendants",
+      "description": "Le coût de vos plantes, avant de chiffrer le chantier.",
+      "body": "Vous découvrez votre marge une fois le chantier fini ?\nCommencez par connaître le prix exact de vos végétaux.",
+      "hook": {"target": "Paysagiste", "offer": "Vos végétaux chiffrés sans engagement"}
+    },
+    {
+      "id": "P04",
+      "slug": "appel-offres",
+      "adset": "Entreprises d'espaces verts",
+      "description": "Un chiffrage par lot, prêt pour votre réponse.",
+      "body": "Un marché se perd souvent sur une ligne du bordereau.\nChiffrez vos végétaux lot par lot avant la date limite.",
+      "hook": {"target": "Espaces verts", "offer": "Chiffrage offert en 24 heures"}
+    },
+    {
+      "id": "P05",
+      "slug": "gros-volumes",
+      "adset": "Entreprises d'espaces verts",
+      "description": "Des tarifs dégressifs, écrits avant la commande.",
+      "body": "À partir de quel volume votre fournisseur baisse-t-il vraiment ses prix ?\nDemandez-le par écrit, essence par essence.",
+      "hook": {"target": "", "offer": "Gros volumes chiffrés sans engagement"}
+    },
+    {
+      "id": "P06",
+      "slug": "livraison-chantier",
+      "adset": "Entreprises d'espaces verts",
+      "description": "Chaque lot livré à la date prévue sur votre chantier.",
+      "body": "Vos équipes sont prêtes, mais le camion n'arrive pas.\nPlanifiez chaque livraison au moment du chiffrage.",
+      "hook": {"target": "Espaces verts", "offer": "Gros volumes chiffrés sans engagement"}
+    }
+  ]
+}

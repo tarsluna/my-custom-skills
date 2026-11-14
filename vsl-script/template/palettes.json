@@ -1,0 +1,6 @@
+{
+  "ink-gold": { "bg": "#0d0c0a", "fg": "#efe9dd", "soft": "#cfc8bb", "mut": "#9a9386", "accent": "#e9c48f", "node": "#161411", "panel": "#201d17", "on_accent": "#14120e" },
+  "midnight-mint": { "bg": "#0b1220", "fg": "#e8eef7", "soft": "#c3cedd", "mut": "#8d9bb0", "accent": "#7ee0c0", "node": "#121b2e", "panel": "#1a2540", "on_accent": "#06231b" },
+  "ember": { "bg": "#120b0b", "fg": "#f5ece6", "soft": "#d9c9c0", "mut": "#a08f87", "accent": "#ff8a5c", "node": "#1c1210", "panel": "#2a1a16", "on_accent": "#1f0d06" },
+  "paper": { "bg": "#f6f2ea", "fg": "#171512", "soft": "#3d3932", "mut": "#6b655a", "accent": "#8a5a14", "node": "#fffdf8", "panel": "#ffffff", "on_accent": "#fffaf0" }
+}
