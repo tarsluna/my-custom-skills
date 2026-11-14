@@ -1,5 +1,0 @@
-interface:
-  display_name: "Sales Proposal"
-  short_description: "Proposition commerciale PDF en 14 diapos et mail d'offre personnelle, après un premier rendez-vous"
-  brand_color: "#C9A46A"
-  default_prompt: "Use $sales-proposal to build the 14-slide proposal PDF and the follow-up email for this prospect from my meeting notes, my offer, my price and my guarantee."

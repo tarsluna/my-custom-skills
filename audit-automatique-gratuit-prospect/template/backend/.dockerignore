@@ -1,9 +1,0 @@
-node_modules
-data
-test
-coverage
-.env
-.env.*
-!.env.example
-*.log
-.DS_Store

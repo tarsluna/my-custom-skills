@@ -1,5 +1,0 @@
-interface:
-  display_name: "Cold Email Replies"
-  short_description: "Classify cold email replies, send the free deliverable to every yes, alert the team"
-  brand_color: "#E9C48F"
-  default_prompt: "Use $cold-email-replies to set up the reply agent for my Smartlead campaign: classify replies, send our free audit with a booking link to every yes, unsubscribe every no, and alert the team on Slack. Simulate first on my own replies."
